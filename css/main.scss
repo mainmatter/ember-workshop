@@ -1,6 +1,73 @@
 ---
 ---
 
-body {
-  color: red;
+.title {
+  padding: 150px 0;
+  text-align: center;
+  background-color: #e7f2ef;
+
+  h1 {
+    color: #e04a31;
+    margin: 0 0 40px 0;
+
+    span {
+      border: 3px solid #e04a31;
+      padding: 10px 30px;
+    }
+  }
+}
+
+.synopsis {
+  padding: 30px 0;
+
+  h3 {
+    color: #e04a31;
+    margin: 0;
+  }
+
+  p {
+    text-align: justify;
+  }
+}
+
+.topics {
+  background-color: #e4f7fd;
+  padding: 30px 0;
+
+  h3 {
+    color: #1f71b5;
+    margin: 0;
+  }
+}
+
+.instructors {
+  background-color: #e7f2ef;
+  padding: 30px 0;
+
+  h3 {
+    color: #688e85;
+    margin: 0;
+  }
+}
+
+.tickets {
+  padding: 30px 0;
+
+  h3 {
+    color: #688e85;
+    margin: 0;
+  }
+}
+
+.footer {
+  background-color: #e4f7fd;
+  padding: 10px 0;
+
+  a {
+    color: #656565;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
 }
