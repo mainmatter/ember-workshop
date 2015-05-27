@@ -124,11 +124,16 @@ p {
 }
 
 .tickets {
-  padding-bottom: 20px;
+  padding-bottom: 50px;
 
   h3 {
     color: #688e85;
     margin-bottom: 60px;
+  }
+
+  a {
+    display: block;
+    margin-top: -50px;
   }
 }
 
