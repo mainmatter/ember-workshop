@@ -37,6 +37,14 @@
   h3 {
     color: #1f71b5;
     margin: 0;
+
+    &.day-mark {
+      margin-bottom: 20px;
+    }
+  }
+
+  ul {
+    margin-bottom: 30px;
   }
 }
 
