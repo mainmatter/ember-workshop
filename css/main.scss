@@ -10,7 +10,7 @@ p {
 }
 
 .title {
-  padding: 180px 0;
+  padding: 180px 0 100px 0;
   text-align: center;
   background-color: #e7f2ef;
 
@@ -33,6 +33,16 @@ p {
   h2 {
     color: #343434;
     font-weight: 300;
+  }
+
+  h3 {
+    margin-top: 100px;
+    font-weight: 400;
+
+    a {
+      color: #688f85;
+      text-decoration: underline;
+    }
   }
 }
 
