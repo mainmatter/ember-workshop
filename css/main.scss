@@ -28,6 +28,12 @@
   p {
     text-align: justify;
   }
+
+  .logo {
+    display: table-cell;
+    vertical-align: middle;
+    float: none;
+  }
 }
 
 .topics {
