@@ -119,8 +119,11 @@ p {
 
   .profile-link {
     display: block;
-    margin: 20px 0 0 0;
     font-size: 80%;
+
+    &:first-child {
+      margin: 20px 0 0 0;
+    }
   }
 }
 
