@@ -37,13 +37,19 @@ p {
   }
 
   h3 {
-    margin-top: 100px;
+    margin: 80px 0;
     font-weight: 400;
 
     a {
-      color: #688f85;
+      color: #e04a31;
       text-decoration: underline;
     }
+  }
+
+  h4 {
+    color: #688f85;
+    line-height: 150%;
+    padding: 0 20%
   }
 }
 
