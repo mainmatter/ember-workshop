@@ -68,7 +68,6 @@ p {
   }
 
   p {
-    text-align: justify;
     font-size: 16px;
   }
 
@@ -104,6 +103,16 @@ p {
       padding: 8px 0;
       font-size: 16px;
     }
+  }
+}
+
+.venue {
+  h3 {
+    color: #e04a31;
+  }
+
+  p {
+    font-size: 16px;
   }
 }
 
