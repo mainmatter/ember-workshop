@@ -10,7 +10,7 @@ module.exports = function(app) {
           id: '1',
           type: 'song',
           attributes: {
-            name: 'The Bodyguard',
+            name: 'I will always love you',
             cover: 'https://upload.wikimedia.org/wikipedia/en/f/f3/TheBodyguardSoundtrack.jpg'
           }
         },
