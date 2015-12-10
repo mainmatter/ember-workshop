@@ -1,5 +1,9 @@
 <h1>{{songCount}} songs</h1>
 
-{{#each model as |song|}}
-  {{song-tile song=song}}
-{{/each}}
+<div class="list-group">
+  {{#each model as |song|}}
+    <div class="list-group-item">
+      {{song-tile song=song}}
+    </div>
+  {{/each}}
+</div>

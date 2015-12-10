@@ -1,7 +1,7 @@
 {
-  "name": "core-concepts",
+  "name": "song-list",
   "version": "0.0.0",
-  "description": "Small description for core-concepts goes here",
+  "description": "Small description for song-list goes here",
   "private": true,
   "directories": {
     "doc": "doc",
