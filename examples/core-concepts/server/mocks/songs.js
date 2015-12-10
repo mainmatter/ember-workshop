@@ -18,8 +18,16 @@ module.exports = function(app) {
           id: '2',
           type: 'song',
           attributes: {
-            name: 'Faith',
-            cover: 'https://upload.wikimedia.org/wikipedia/en/c/cc/Faith_-_George_Michael_-_CD_Single.jpg'
+            name: 'The Greatest Love of All',
+            cover: 'https://upload.wikimedia.org/wikipedia/en/d/d2/Whitney_Houston_-_Whitney_Houston_%28album%29.jpg'
+          }
+        },
+        {
+          id: '3',
+          type: 'song',
+          attributes: {
+            name: "It's Not Right, But It's Okay",
+            cover: 'https://upload.wikimedia.org/wikipedia/en/5/51/Whitney_Houston_-_My_Love_Is_Your_Love_album_cover.jpg'
           }
         }
       ]
