@@ -11,7 +11,7 @@ module.exports = function(app) {
           type: 'song',
           attributes: {
             name: 'I will always love you',
-            cover: 'https://upload.wikimedia.org/wikipedia/en/f/f3/TheBodyguardSoundtrack.jpg'
+            'cover-url': 'https://upload.wikimedia.org/wikipedia/en/f/f3/TheBodyguardSoundtrack.jpg'
           }
         },
         {
@@ -19,7 +19,7 @@ module.exports = function(app) {
           type: 'song',
           attributes: {
             name: 'The Greatest Love of All',
-            cover: 'https://upload.wikimedia.org/wikipedia/en/d/d2/Whitney_Houston_-_Whitney_Houston_%28album%29.jpg'
+            'cover-url': 'https://upload.wikimedia.org/wikipedia/en/d/d2/Whitney_Houston_-_Whitney_Houston_%28album%29.jpg'
           }
         },
         {
@@ -27,7 +27,7 @@ module.exports = function(app) {
           type: 'song',
           attributes: {
             name: "It's Not Right, But It's Okay",
-            cover: 'https://upload.wikimedia.org/wikipedia/en/5/51/Whitney_Houston_-_My_Love_Is_Your_Love_album_cover.jpg'
+            'cover-url': 'https://upload.wikimedia.org/wikipedia/en/5/51/Whitney_Houston_-_My_Love_Is_Your_Love_album_cover.jpg'
           }
         }
       ]
