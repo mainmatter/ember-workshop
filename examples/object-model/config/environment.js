@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'core-concepts',
+    modulePrefix: 'object-model',
     environment: environment,
     baseURL: '/',
     locationType: 'auto',

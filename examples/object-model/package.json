@@ -1,7 +1,7 @@
 {
-  "name": "core-concepts",
+  "name": "object-model",
   "version": "0.0.0",
-  "description": "Small description for core-concepts goes here",
+  "description": "Small description for object-model goes here",
   "private": true,
   "directories": {
     "doc": "doc",
