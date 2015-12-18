@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'song-list',
+    modulePrefix: 'core-concepts',
     environment: environment,
     baseURL: '/',
     locationType: 'auto',

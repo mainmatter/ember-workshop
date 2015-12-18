@@ -1,5 +1,5 @@
 {
-  "name": "song-list",
+  "name": "core-concepts",
   "dependencies": {
     "bootstrap": "~4.0.0-alpha.2",
     "ember": "2.3.0-beta.1",
