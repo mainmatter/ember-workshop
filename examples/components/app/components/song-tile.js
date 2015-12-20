@@ -12,5 +12,9 @@ export default Ember.Component.extend({
         }
       }
     });
+  },
+
+  willDestroyElement() {
+    this.$('.rating').barrating('destroy');
   }
 });
