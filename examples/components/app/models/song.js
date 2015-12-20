@@ -4,5 +4,6 @@ const { attr } = DS;
 
 export default DS.Model.extend({
   name:     attr('string'),
-  coverUrl: attr('string')
+  coverUrl: attr('string'),
+  rating:   attr('number', { defaultValue: 0 })
 });
