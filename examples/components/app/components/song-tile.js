@@ -5,7 +5,7 @@ export default Ember.Component.extend({
     this.$('.rating').barrating({
       theme: 'css-stars',
       onSelect: (value) => {
-        const onRatingChange = this.attrs.onRatingChange;
+        const onRatingChange = this.attrs['on-rating-change'];
 
         if (onRatingChange) {
           onRatingChange(value);
