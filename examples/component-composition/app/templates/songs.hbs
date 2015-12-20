@@ -1,0 +1,8 @@
+<h1>{{songCount}} songs</h1>
+
+{{#list-view items=model on-remove-item=(action 'deleteSong') as |list item|}}
+  {{song-tile song=item}}
+  {{#list.delete-button}}
+    Delete
+  {{/list.delete-button}}
+{{/list-view}}
