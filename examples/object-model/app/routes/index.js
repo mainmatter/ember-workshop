@@ -12,10 +12,11 @@ const DebugMixin = Ember.Mixin.create({
 const Song = Ember.Object.extend(DebugMixin, {
   debugInfo: 'I am an instance of the Song class.',
 
-  _initComments: on('init', function() {
+  init() {
+    this._super(...arguments);
     const comments = Ember.A();
     this.set('comments', comments);
-  }),
+  },
 
   fullTitle: computed('title', 'album', 'artist', {
     get() {
@@ -60,10 +61,11 @@ const DebugSong = Song.extend({
 });
 
 const Album = Ember.Object.extend({
-  _initSongs: on('init', function() {
+  init() {
+    this._super(...arguments);
     const songs = Ember.A();
     this.set('songs', songs);
-  }),
+  },
 
   songTitles: computed('songs.@each.title', function() {
     return this.get('songs').map((song) => {
