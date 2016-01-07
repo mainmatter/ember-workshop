@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="col-xs-12">
+    <h4>{{album.name}}</h4>
+    <hr/>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-3">
+    <img src="{{album.coverUrl}}" width="100%" class="img-rounded">
+  </div>
+  <div class="col-xs-9">
+    <ol>
+      {{#each album.songs as |song|}}
+        <li>{{song.name}}</li>
+      {{/each}}
+    </ol>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+<h1>Albums</h1>
+
+<div class="list-group">
+  {{#each model as |album|}}
+    <div class="list-group-item">
+      {{album-tile album=album on-select-album=(action 'selectAlbum')}}
+    </div>
+  {{/each}}
+</div>
