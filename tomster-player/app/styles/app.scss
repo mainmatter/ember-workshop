@@ -1,3 +1,7 @@
+.main-content {
+  margin: 1rem auto 4rem;
+}
+
 .album-tile {
   cursor: pointer;
 }
@@ -9,4 +13,11 @@
   .play-song {
     cursor: pointer;
   }
+}
+
+.player {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: .5rem 1rem;
 }
