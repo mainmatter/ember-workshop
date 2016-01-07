@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row album">
   <div class="col-xs-3">
     <img src="{{model.coverUrl}}" width="100%" class="img-rounded">
   </div>
@@ -11,9 +11,11 @@
     </div>
     <div class="row">
       <div class="col-xs-12">
-        <ol>
+        <ol class="song-list">
           {{#each model.songs as |song|}}
-            <li>{{song.name}}</li>
+            <li>
+              {{song-tile song=song}}
+            </li>
           {{/each}}
         </ol>
       </div>

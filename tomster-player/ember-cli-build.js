@@ -22,5 +22,22 @@ module.exports = function(defaults) {
 
   app.import('bower_components/bootstrap/dist/css/bootstrap.css');
 
+  app.import({
+    development: 'bower_components/font-awesome/css/font-awesome.css',
+    production:  'bower_components/font-awesome/css/font-awesome.min.css'
+  });
+
+  [
+    'FontAwesome.otf',
+    'fontawesome-webfont.svg',
+    'fontawesome-webfont.woff',
+    'fontawesome-webfont.eot',
+    'fontawesome-webfont.ttf',
+    'fontawesome-webfont.woff2'
+  ].forEach(function(font) {
+    var file = 'bower_components/font-awesome/fonts/' + font;
+    app.import(file, { destDir: 'fonts' });
+  });
+
   return app.toTree();
 };

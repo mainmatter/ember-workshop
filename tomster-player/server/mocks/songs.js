@@ -6,6 +6,7 @@ var SONGS = [
     type: 'songs',
     attributes: {
       name: 'I will always love you',
+      duration: 30000,
       'mp3-url': 'https://p.scdn.co/mp3-preview/91e6d3e0b48cda2f3a1b2391a1c1384fbf73b8a8'
     },
     relationships: {
@@ -19,6 +20,7 @@ var SONGS = [
     type: 'songs',
     attributes: {
       name: 'Greatest Love of All',
+      duration: 30000,
       'mp3-url': 'https://p.scdn.co/mp3-preview/12144a766d983ea0484b29e7c43e70c4ccf535c3'
     },
     relationships: {
@@ -32,6 +34,7 @@ var SONGS = [
     type: 'songs',
     attributes: {
       name: "It's Not Right But It's Okay",
+      duration: 30000,
       'mp3-url': 'https://p.scdn.co/mp3-preview/73cdb98b6f4157d0f0ae1950366b022fcfa9a391'
     },
     relationships: {

@@ -3,8 +3,9 @@ import DS from 'ember-data';
 const { attr, belongsTo } = DS;
 
 export default DS.Model.extend({
-  name:   attr('string'),
-  mp3Url: attr('string'),
+  name:     attr('string'),
+  duration: attr('number'),
+  mp3Url:   attr('string'),
 
   album: belongsTo()
 });

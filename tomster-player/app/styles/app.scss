@@ -1,0 +1,12 @@
+.album-tile {
+  cursor: pointer;
+}
+
+.album .song-list li {
+  list-style-position: inside;
+  border-bottom: 1px solid rgba(0, 0, 0, .1);
+
+  .play-song {
+    cursor: pointer;
+  }
+}
