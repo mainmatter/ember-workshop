@@ -1,1 +1,30 @@
-PLAYER
+<div class='row'>
+  <div class="col-xs-3">
+    <i class="fa fa-backward"></i>
+    {{#if playing}}
+      <i class="fa fa-pause" {{action (action 'pause')}}></i>
+    {{else}}
+      <i class="fa fa-play" {{action (action 'play')}}></i>
+    {{/if}}
+    <i class="fa fa-forward"></i>
+  </div>
+  <div class="col-xs-9">
+    {{#if song}}
+    <div class='media'>
+      <div class='media-left media-middle'>
+        <img src="{{song.album.coverUrl}}" class="media-object">
+      </div>
+      <div class='media-body'>
+        <div class='media-heading'>
+          <strong>{{song.title}}</strong>
+        </div>
+        {{song.album.title}}
+      </div>
+    </div>
+    <div class="cover col-xs-2">
+    </div>
+    <div class="col-xs-7">
+    </div>
+    {{/if}}
+  </div>
+</div>

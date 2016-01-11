@@ -2,8 +2,10 @@ import Ember from 'ember';
 
 export default Ember.Service.extend({
   play(song) {
-    const sound = this.load(song);
-    sound.play();
+    if (song) {
+      const sound = this.load(song);
+      sound.play();
+    }
   },
 
   load(song) {
