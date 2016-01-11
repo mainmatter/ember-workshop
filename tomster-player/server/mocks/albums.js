@@ -1,4 +1,5 @@
 /*jshint node:true*/
+var respondWithDelay = require('../utils/respond-with-delay');
 
 var ALBUMS = [
   {
@@ -83,7 +84,7 @@ module.exports = function(app) {
   var albumsRouter = express.Router();
 
   albumsRouter.get('/', function(req, res) {
-    res.send({
+    respondWithDelay(res, {
       data: ALBUMS
     });
   });
@@ -92,7 +93,8 @@ module.exports = function(app) {
     var album = ALBUMS.filter(function(album) {
       return album.id === req.params.id
     })[0];
-    res.send({
+
+    respondWithDelay(res, {
       data: album
     });
   });

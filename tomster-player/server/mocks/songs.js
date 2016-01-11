@@ -493,6 +493,7 @@ module.exports = function(app) {
     var song = SONGS.filter(function(song) {
       return song.id === req.params.id
     })[0];
+
     res.send({
       data: song
     });
