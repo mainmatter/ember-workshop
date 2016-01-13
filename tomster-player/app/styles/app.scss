@@ -9,15 +9,32 @@
 .album .song-list li {
   list-style-position: inside;
   border-bottom: 1px solid rgba(0, 0, 0, .1);
-
-  .play-song {
-    cursor: pointer;
-  }
 }
 
-.player {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  padding: .5rem 1rem;
+.fa.play-song, .fa.stop-song {
+  cursor: pointer;
+}
+
+$playerHeight: 75px;
+
+.player-tile {
+  height: $playerHeight;
+
+  .cover-image {
+    height: $playerHeight;
+    margin-right: 20px;
+  }
+
+  .play-button {
+    margin-right: 20px;
+  }
+
+  .fa.play-song, .fa.stop-song {
+    line-height: $playerHeight;
+    font-size: $playerHeight;
+  }
+
+  p strong {
+    display: block;
+  }
 }
