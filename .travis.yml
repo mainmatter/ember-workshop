@@ -7,7 +7,7 @@ sudo: false
 
 cache:
   directories:
-    - node_modules
+    - tomster-player/node_modules
 
 before_install:
   - export PATH=/usr/local/phantomjs-2.0.0/bin:$PATH
@@ -15,9 +15,11 @@ before_install:
   - "npm install -g npm@^2"
 
 install:
+  - cd tomster-player
   - npm install -g bower
   - npm install
   - bower install
 
 script:
+  - cd tomster-player
   - npm test
