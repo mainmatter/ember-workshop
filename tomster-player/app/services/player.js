@@ -31,17 +31,20 @@ export default Ember.Service.extend({
 
   sound: computed('song', function() {
     const song = this.get('song');
-    const { _onPause: onPause, _onPlay: onPlay, _onEnd: onEnd } = this.getProperties(this.callbacks);
 
-    const sound = new Howl({
-      src: [song.get('mp3Url')],
-      html5: true,
-      onplay: onPlay.bind(this),
-      onpause: onPause.bind(this),
-      onend: onEnd.bind(this)
-    });
+    if (song) {
+      const { _onPause: onPause, _onPlay: onPlay, _onEnd: onEnd } = this.getProperties(this.callbacks);
 
-    return sound;
+      const sound = new Howl({
+        src: [song.get('mp3Url')],
+        html5: true,
+        onplay: onPlay.bind(this),
+        onpause: onPause.bind(this),
+        onend: onEnd.bind(this)
+      });
+
+      return sound;
+    }
   }),
 
   _persistCurrentSong() {
