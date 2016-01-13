@@ -8,6 +8,7 @@ module.exports = function(app) {
   commentsRouter.post('/', function(req, res) {
     var data = req.body.data;
     data.id = uuid.v1();
+    data.attributes['created-at'] = new Date();
 
     res.status(201).send({
       data: data

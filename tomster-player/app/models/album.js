@@ -6,5 +6,6 @@ export default DS.Model.extend({
   title:    attr('string'),
   coverUrl: attr('string'),
 
-  songs: hasMany()
+  songs: hasMany(),
+  comments: hasMany()
 });

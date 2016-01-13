@@ -1,0 +1,6 @@
+<form {{action (action 'createComment') on='submit'}}>
+  <fieldset class="form-group">
+    <textarea class="form-control" rows="3" onblur={{action (action 'textChanged')}}></textarea>
+  </fieldset>
+  <button type="submit" class="btn btn-primary">Comment</button>
+</form>
