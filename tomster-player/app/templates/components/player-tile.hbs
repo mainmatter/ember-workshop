@@ -1,8 +1,6 @@
 <div class='row player-tile'>
-  <div class="col-xs-3">
-    {{play-icon song=song}}
-  </div>
-  <div class="col-xs-9">
+  <div class="col-xs-12">
+    {{play-icon song=song classNames='pull-left play-button'}}
     {{#if song}}
       <img src="{{song.album.coverUrl}}" class="cover-image pull-left img-rounded">
       <p>
