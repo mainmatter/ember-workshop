@@ -4,7 +4,8 @@ export default Ember.Component.extend({
   classNames: ['album-tile'],
 
   click() {
-    const { album, 'on-select-album': onSelectAlbum } = this.getProperties('album', 'on-select-album');
+    const album = this.get('album');
+    const onSelectAlbum = this.attrs['on-select-album'];
 
     if (onSelectAlbum) {
       onSelectAlbum(album);

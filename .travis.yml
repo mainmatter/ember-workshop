@@ -21,5 +21,4 @@ install:
   - bower install
 
 script:
-  - cd tomster-player
   - npm test

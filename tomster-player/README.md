@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/simplabs/ember-workshop.svg?branch=master)](https://travis-ci.org/simplabs/ember-workshop)
+
 # Tomster Player
 
 This README outlines the details of collaborating on this Ember application.
