@@ -2,27 +2,37 @@
 import Ember from 'ember';
 
 export default Ember.Service.extend({
+  callbacks: ['_onPause', '_onPlay', '_onEnd'],
+
   play(song) {
     if (song) {
-      const sound = this.loadSound(song);
+      const sound = this._loadSound(song);
       sound.play();
     }
   },
 
-  loadSound(song) {
+  pause() {
+    const sound = this.get('sound');
+
+    sound.pause();
+
+    this.set('playing', false);
+  },
+
+  _loadSound(song) {
     let sound;
 
-    if (this.alreadyLoaded(song)) {
+    if (this._isAlreadyLoaded(song)) {
       sound = this.get('sound');
     } else {
-      this.stopCurrent();
-      sound = this.changeSong(song);
+      this._stop();
+      sound = this._changeSong(song);
     }
 
     return sound;
   },
 
-  stopCurrent() {
+  _stop() {
     const sound = this.get('sound');
 
     if (sound) {
@@ -30,8 +40,8 @@ export default Ember.Service.extend({
     }
   },
 
-  changeSong(song) {
-    const { onPause, onPlay, onEnd } = this.getProperties(this.callbacks);
+  _changeSong(song) {
+    const { _onPause: onPause, _onPlay: onPlay, _onEnd: onEnd } = this.getProperties(this.callbacks);
     const sound = new Howl({
       src: [song.get('mp3Url')],
       html5: true,
@@ -45,31 +55,21 @@ export default Ember.Service.extend({
     return sound;
   },
 
-  alreadyLoaded(song) {
+  _isAlreadyLoaded(song) {
     const loadedSongId = this.get('song.id');
 
     return loadedSongId === song.get('id');
   },
 
-  pause() {
-    const sound = this.get('sound');
-
-    sound.pause();
-
+  _onPause() {
     this.set('playing', false);
   },
 
-  callbacks: ['onPause', 'onPlay', 'onEnd'],
-
-  onPause() {
-    this.set('playing', false);
-  },
-
-  onPlay() {
+  _onPlay() {
     this.set('playing', true);
   },
 
-  onEnd() {
+  _onEnd() {
     this.set('playing', false);
   }
 });
