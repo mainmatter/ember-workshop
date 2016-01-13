@@ -1,5 +1,5 @@
 {{#if currentlyPlaying}}
-  <i class="fa fa-pause-circle stop-song" {{action (action 'pause')}}></i>
+  <i class="fa fa-pause-circle stop-song" {{action (action 'pause') bubbles=false}}></i>
 {{else}}
-  <i class="fa fa-play-circle play-song" {{action (action 'play')}}></i>
+  <i class="fa fa-play-circle play-song" {{action (action 'play') bubbles=false}}></i>
 {{/if}}
