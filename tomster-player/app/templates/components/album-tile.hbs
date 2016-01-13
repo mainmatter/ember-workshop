@@ -10,7 +10,7 @@
     <img src="{{album.coverUrl}}" width="100%" class="img-rounded">
   </div>
   <div class="col-xs-9">
-    <ol>
+    <ol class="song-list">
       {{#each album.songs as |song|}}
         <li>
           {{song-tile song=song}}
