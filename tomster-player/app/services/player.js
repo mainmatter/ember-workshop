@@ -4,12 +4,12 @@ import Ember from 'ember';
 export default Ember.Service.extend({
   play(song) {
     if (song) {
-      const sound = this.load(song);
+      const sound = this.loadSound(song);
       sound.play();
     }
   },
 
-  load(song) {
+  loadSound(song) {
     let sound;
 
     if (this.alreadyLoaded(song)) {
@@ -24,11 +24,14 @@ export default Ember.Service.extend({
 
   stopCurrent() {
     const sound = this.get('sound');
-    if (sound) { sound.stop(); }
+
+    if (sound) {
+      sound.stop();
+    }
   },
 
   changeSong(song) {
-    const {onPause, onPlay, onLoad, onEnd} = this.getProperties(this.callbacks);
+    const { onPause, onPlay, onLoad, onEnd } = this.getProperties(this.callbacks);
     const sound = new Howl({
       src: [song.get('mp3Url')],
       html5: true,
@@ -38,10 +41,7 @@ export default Ember.Service.extend({
       onend: onEnd.bind(this)
     });
 
-    this.setProperties({
-      sound: sound,
-      song: song
-    });
+    this.setProperties({ sound, song });
 
     return sound;
   },
@@ -63,17 +63,11 @@ export default Ember.Service.extend({
   callbacks: ['onPause', 'onPlay', 'onLoad', 'onEnd'],
 
   onPause() {
-    this.setProperties({
-      paused: true,
-      playing: false,
-    });
+    this.set('playing', false);
   },
 
   onPlay() {
-    this.setProperties({
-      paused: false,
-      playing: true
-    });
+    this.set('playing', true);
   },
 
   onLoad() {

@@ -1,11 +1,11 @@
 import Ember from 'ember';
 
-const { inject, computed } = Ember;
-const { service } = inject;
+const { inject: { service }, computed } = Ember;
 
 export default Ember.Component.extend({
   tagName: 'span',
   player: service(),
+
   songIsLoaded: computed('player.song.id', 'song.id', function() {
     const playedSongId = this.get('player.song.id');
     const songId       = this.get('song.id');
@@ -17,7 +17,7 @@ export default Ember.Component.extend({
 
   actions: {
     play() {
-      const {player, song} = this.getProperties('player', 'song');
+      const { player, song } = this.getProperties('player', 'song');
 
       player.play(song);
     },
