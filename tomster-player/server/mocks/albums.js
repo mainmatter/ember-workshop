@@ -11,7 +11,17 @@ var ALBUMS = [
     relationships: {
       songs: {
         data: [
-          { type: 'song', id: '1' }
+          { type: 'song', id: '1' },
+          { type: 'song', id: '2' },
+          { type: 'song', id: '3' },
+          { type: 'song', id: '4' },
+          { type: 'song', id: '5' },
+          { type: 'song', id: '6' },
+          { type: 'song', id: '7' },
+          { type: 'song', id: '8' },
+          { type: 'song', id: '9' },
+          { type: 'song', id: '10' },
+          { type: 'song', id: '11' }
         ]
       }
     }
@@ -26,7 +36,15 @@ var ALBUMS = [
     relationships: {
       songs: {
         data: [
-          { type: 'song', id: '2' }
+          { type: 'song', id: '12' },
+          { type: 'song', id: '13' },
+          { type: 'song', id: '14' },
+          { type: 'song', id: '15' },
+          { type: 'song', id: '16' },
+          { type: 'song', id: '17' },
+          { type: 'song', id: '18' },
+          { type: 'song', id: '19' },
+          { type: 'song', id: '20' }
         ]
       }
     }
@@ -41,7 +59,19 @@ var ALBUMS = [
     relationships: {
       songs: {
         data: [
-          { type: 'song', id: '3' }
+          { type: 'song', id: '21' },
+          { type: 'song', id: '22' },
+          { type: 'song', id: '23' },
+          { type: 'song', id: '24' },
+          { type: 'song', id: '25' },
+          { type: 'song', id: '26' },
+          { type: 'song', id: '27' },
+          { type: 'song', id: '28' },
+          { type: 'song', id: '29' },
+          { type: 'song', id: '30' },
+          { type: 'song', id: '31' },
+          { type: 'song', id: '32' },
+          { type: 'song', id: '33' }
         ]
       }
     }
