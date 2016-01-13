@@ -1,24 +1,5 @@
-<div class="row album">
-  <div class="col-xs-3">
-    <img src="{{model.coverUrl}}" width="100%" class="img-rounded">
-  </div>
-  <div class="col-xs-9">
-    <div class="row">
-      <div class="col-xs-12">
-        <h1>{{model.title}}</h1>
-        <hr/>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-xs-12">
-        <ol class="song-list">
-          {{#each model.songs as |song|}}
-            <li>
-              {{song-tile song=song}}
-            </li>
-          {{/each}}
-        </ol>
-      </div>
-    </div>
+<div class="list-group">
+  <div class="list-group-item">
+    {{album-tile album=model}}
   </div>
 </div>
