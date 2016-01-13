@@ -31,11 +31,10 @@ export default Ember.Service.extend({
   },
 
   changeSong(song) {
-    const { onPause, onPlay, onLoad, onEnd } = this.getProperties(this.callbacks);
+    const { onPause, onPlay, onEnd } = this.getProperties(this.callbacks);
     const sound = new Howl({
       src: [song.get('mp3Url')],
       html5: true,
-      onload: onLoad.bind(this),
       onplay: onPlay.bind(this),
       onpause: onPause.bind(this),
       onend: onEnd.bind(this)
@@ -60,7 +59,7 @@ export default Ember.Service.extend({
     this.set('playing', false);
   },
 
-  callbacks: ['onPause', 'onPlay', 'onLoad', 'onEnd'],
+  callbacks: ['onPause', 'onPlay', 'onEnd'],
 
   onPause() {
     this.set('playing', false);
@@ -68,10 +67,6 @@ export default Ember.Service.extend({
 
   onPlay() {
     this.set('playing', true);
-  },
-
-  onLoad() {
-    this.set('loading', false);
   },
 
   onEnd() {
