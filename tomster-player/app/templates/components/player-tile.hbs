@@ -1,11 +1,16 @@
 <div class='row player-tile'>
   <div class="col-xs-12">
-    {{play-icon song=song classNames='pull-left play-button'}}
     {{#if song}}
+      {{play-icon song=song classNames='pull-left play-button'}}
       <img src="{{song.album.coverUrl}}" class="cover-image pull-left img-rounded">
       <p>
         <strong>{{song.title}}</strong>
         {{song.album.title}}
+      </p>
+    {{else}}
+      <i class="fa fa-play-circle no-song pull-left"></i>
+      <p class="no-song">
+        Select a song
       </p>
     {{/if}}
   </div>

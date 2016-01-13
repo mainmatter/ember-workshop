@@ -29,12 +29,25 @@ $playerHeight: 75px;
     margin-right: 20px;
   }
 
-  .fa.play-song, .fa.stop-song {
+  .fa.play-song, .fa.stop-song, .fa.no-song {
     line-height: $playerHeight;
     font-size: $playerHeight;
   }
 
-  p strong {
-    display: block;
+  .fa.no-song {
+    opacity: 0.5;
+  }
+
+  p {
+    margin: 0;
+
+    strong {
+      display: block;
+    }
+
+    &.no-song {
+      line-height: $playerHeight;
+      font-style: italic;
+    }
   }
 }
