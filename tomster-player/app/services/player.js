@@ -1,14 +1,24 @@
 /* global Howl */
 import Ember from 'ember';
 
+const CURRENT_SONG_KEY_NAME = '_tomsterPlayerCurrentSong';
+
+const { inject: { service }, computed } = Ember;
+
 export default Ember.Service.extend({
+  store: service(),
   callbacks: ['_onPause', '_onPlay', '_onEnd'],
 
+  init() {
+    this._super();
+    this._restoreCurrentSong();
+  },
+
   play(song) {
-    if (song) {
-      const sound = this._loadSound(song);
-      sound.play();
-    }
+    this._stop();
+    this.set('song', song);
+    this._persistCurrentSong();
+    this.get('sound').play();
   },
 
   pause() {
@@ -19,29 +29,10 @@ export default Ember.Service.extend({
     this.set('playing', false);
   },
 
-  _loadSound(song) {
-    let sound;
-
-    if (this._isAlreadyLoaded(song)) {
-      sound = this.get('sound');
-    } else {
-      this._stop();
-      sound = this._changeSong(song);
-    }
-
-    return sound;
-  },
-
-  _stop() {
-    const sound = this.get('sound');
-
-    if (sound) {
-      sound.stop();
-    }
-  },
-
-  _changeSong(song) {
+  sound: computed('song', function() {
+    const song = this.get('song');
     const { _onPause: onPause, _onPlay: onPlay, _onEnd: onEnd } = this.getProperties(this.callbacks);
+
     const sound = new Howl({
       src: [song.get('mp3Url')],
       html5: true,
@@ -50,9 +41,33 @@ export default Ember.Service.extend({
       onend: onEnd.bind(this)
     });
 
-    this.setProperties({ sound, song });
-
     return sound;
+  }),
+
+  _persistCurrentSong() {
+    const song = this.get('song');
+
+    if (song) {
+      const songId = song.get('id');
+      localStorage.setItem(CURRENT_SONG_KEY_NAME, songId);
+    }
+  },
+
+  _restoreCurrentSong() {
+    const songId = localStorage.getItem(CURRENT_SONG_KEY_NAME);
+
+    if (songId) {
+      const song = this.get('store').find('song', songId);
+      this.set('song', song);
+    }
+  },
+
+  _stop() {
+    const { sound, playing } = this.getProperties('sound', 'playing');
+
+    if (sound && playing) {
+      sound.stop();
+    }
   },
 
   _isAlreadyLoaded(song) {
