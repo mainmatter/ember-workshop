@@ -1,14 +1,14 @@
 <div class="list-group">
   <div class="list-group-item">
     {{album-tile album=attrs.album}}
-
+  </div>
+  <div class="list-group-item">
     {{#each attrs.album.comments as |comment|}}
       {{comment.text}}
     {{/each}}
-
+  
     <div class="row">
       <div class="col-xs-12">
-        <hr/>
         {{new-comment album=attrs.album}}
       </div>
     </div>
