@@ -4,7 +4,7 @@ var respondWithDelay = require('../utils/respond-with-delay');
 var ALBUMS = [
   {
     id: '1',
-    type: 'albums',
+    type: 'album',
     attributes: {
       title: 'The Bodyguard',
       'cover-url': 'https://i.scdn.co/image/7bcb439989b592287aeac1599aaa36be17672b73'
@@ -29,7 +29,7 @@ var ALBUMS = [
   },
   {
     id: '2',
-    type: 'albums',
+    type: 'album',
     attributes: {
       title: 'Whitney Houston',
       'cover-url': 'https://i.scdn.co/image/3c61cf6b053cea492f3962b0b005b4e170afa37a'
@@ -52,7 +52,7 @@ var ALBUMS = [
   },
   {
     id: '3',
-    type: 'albums',
+    type: 'album',
     attributes: {
       title: 'My Love Is Your Love',
       'cover-url': 'https://i.scdn.co/image/b74dabbd83f6dcc259b7eaaa63fd1e4f5d112b1f'

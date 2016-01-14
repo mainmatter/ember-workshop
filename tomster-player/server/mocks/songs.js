@@ -3,7 +3,7 @@
 var SONGS = [
   {
     id: '1',
-    type: 'songs',
+    type: 'song',
     attributes: {
       title: 'I Will Always Love You',
       duration: 30000,
@@ -17,7 +17,7 @@ var SONGS = [
   },
   {
     id: '2',
-    type: 'songs',
+    type: 'song',
     attributes: {
       title: 'I Have Nothing',
       duration: 30000,
@@ -31,7 +31,7 @@ var SONGS = [
   },
   {
     id: '3',
-    type: 'songs',
+    type: 'song',
     attributes: {
       title: "I'm Every Woman",
       duration: 30000,
@@ -45,7 +45,7 @@ var SONGS = [
   },
   {
     id: '4',
-    type: 'songs',
+    type: 'song',
     attributes: {
       title: 'Run to You',
       duration: 30000,
@@ -59,7 +59,7 @@ var SONGS = [
   },
   {
     id: '5',
-    type: 'songs',
+    type: 'song',
     attributes: {
       title: 'Queen of the Night - Radio Edit',
       duration: 30000,
@@ -73,7 +73,7 @@ var SONGS = [
   },
   {
     id: '6',
-    type: 'songs',
+    type: 'song',
     attributes: {
       title: 'Jesus Loves Me',
       duration: 30000,
@@ -87,7 +87,7 @@ var SONGS = [
   },
   {
     id: '7',
-    type: 'songs',
+    type: 'song',
     attributes: {
       title: 'Even If My Heart Would Break',
       duration: 30000,
@@ -101,7 +101,7 @@ var SONGS = [
   },
   {
     id: '8',
-    type: 'songs',
+    type: 'song',
     attributes: {
       title: "Someday (I'm Coming Back)",
       duration: 30000,
@@ -115,7 +115,7 @@ var SONGS = [
   },
   {
     id: '9',
-    type: 'songs',
+    type: 'song',
     attributes: {
       title: "It's Gonna Be A Lovely Day",
       duration: 30000,
@@ -129,7 +129,7 @@ var SONGS = [
   },
   {
     id: '10',
-    type: 'songs',
+    type: 'song',
     attributes: {
       title: "What's So Funny 'Bout Peace, Love And Understanding",
       duration: 30000,
@@ -143,7 +143,7 @@ var SONGS = [
   },
   {
     id: '11',
-    type: 'songs',
+    type: 'song',
     attributes: {
       title: 'Theme From The Bodyguard',
       duration: 30000,
@@ -157,7 +157,7 @@ var SONGS = [
   },
   {
     id: '12',
-    type: 'songs',
+    type: 'song',
     attributes: {
       title: 'You Give Good Love',
       duration: 30000,
@@ -171,7 +171,7 @@ var SONGS = [
   },
   {
     id: '13',
-    type: 'songs',
+    type: 'song',
     attributes: {
       title: 'Thinking About You',
       duration: 30000,
@@ -185,7 +185,7 @@ var SONGS = [
   },
   {
     id: '14',
-    type: 'songs',
+    type: 'song',
     attributes: {
       title: 'Someone For Me',
       duration: 30000,
@@ -199,7 +199,7 @@ var SONGS = [
   },
   {
     id: '15',
-    type: 'songs',
+    type: 'song',
     attributes: {
       title: 'Saving All My Love for You',
       duration: 30000,
@@ -213,7 +213,7 @@ var SONGS = [
   },
   {
     id: '16',
-    type: 'songs',
+    type: 'song',
     attributes: {
       title: 'Nobody Loves Me Like You Do',
       duration: 30000,
@@ -227,7 +227,7 @@ var SONGS = [
   },
   {
     id: '17',
-    type: 'songs',
+    type: 'song',
     attributes: {
       title: 'How Will I Know',
       duration: 30000,
@@ -241,7 +241,7 @@ var SONGS = [
   },
   {
     id: '18',
-    type: 'songs',
+    type: 'song',
     attributes: {
       title: 'All at Once',
       duration: 30000,
@@ -255,7 +255,7 @@ var SONGS = [
   },
   {
     id: '19',
-    type: 'songs',
+    type: 'song',
     attributes: {
       title: 'Take Good Care of My Heart',
       duration: 30000,
@@ -269,7 +269,7 @@ var SONGS = [
   },
   {
     id: '20',
-    type: 'songs',
+    type: 'song',
     attributes: {
       title: 'Greatest Love of All',
       duration: 30000,
@@ -283,7 +283,7 @@ var SONGS = [
   },
   {
     id: '21',
-    type: 'songs',
+    type: 'song',
     attributes: {
       title: 'Hold Me',
       duration: 30000,
@@ -297,7 +297,7 @@ var SONGS = [
   },
   {
     id: '22',
-    type: 'songs',
+    type: 'song',
     attributes: {
       title: "It's Not Right But It's Okay",
       duration: 30000,
@@ -311,7 +311,7 @@ var SONGS = [
   },
   {
     id: '23',
-    type: 'songs',
+    type: 'song',
     attributes: {
       title: 'Heartbreak Hotel',
       duration: 30000,
@@ -325,7 +325,7 @@ var SONGS = [
   },
   {
     id: '24',
-    type: 'songs',
+    type: 'song',
     attributes: {
       title: 'My Love Is Your Love',
       duration: 30000,
@@ -339,7 +339,7 @@ var SONGS = [
   },
   {
     id: '25',
-    type: 'songs',
+    type: 'song',
     attributes: {
       title: 'When You Believe',
       duration: 30000,
@@ -353,7 +353,7 @@ var SONGS = [
   },
   {
     id: '26',
-    type: 'songs',
+    type: 'song',
     attributes: {
       title: 'If I Told You That',
       duration: 30000,
@@ -367,7 +367,7 @@ var SONGS = [
   },
   {
     id: '27',
-    type: 'songs',
+    type: 'song',
     attributes: {
       title: 'In My Business',
       duration: 30000,
@@ -381,7 +381,7 @@ var SONGS = [
   },
   {
     id: '28',
-    type: 'songs',
+    type: 'song',
     attributes: {
       title: 'I Learned from the Best',
       duration: 30000,
@@ -395,7 +395,7 @@ var SONGS = [
   },
   {
     id: '29',
-    type: 'songs',
+    type: 'song',
     attributes: {
       title: 'Oh Yes',
       duration: 30000,
@@ -409,7 +409,7 @@ var SONGS = [
   },
   {
     id: '30',
-    type: 'songs',
+    type: 'song',
     attributes: {
       title: 'Get It Back',
       duration: 30000,
@@ -423,7 +423,7 @@ var SONGS = [
   },
   {
     id: '31',
-    type: 'songs',
+    type: 'song',
     attributes: {
       title: 'Until You Come Back',
       duration: 30000,
@@ -437,7 +437,7 @@ var SONGS = [
   },
   {
     id: '32',
-    type: 'songs',
+    type: 'song',
     attributes: {
       title: 'I Bow Out',
       duration: 30000,
@@ -451,7 +451,7 @@ var SONGS = [
   },
   {
     id: '33',
-    type: 'songs',
+    type: 'song',
     attributes: {
       title: "You'll Never Stand Alone",
       duration: 30000,
@@ -465,7 +465,7 @@ var SONGS = [
   },
   {
     id: '34',
-    type: 'songs',
+    type: 'song',
     attributes: {
       title: 'I Was Made To Love Him',
       duration: 30000,
