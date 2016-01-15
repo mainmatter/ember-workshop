@@ -6,7 +6,8 @@ export default Ember.Component.extend({
   store: service(),
 
   actions: {
-    createComment() {
+    createComment(e) {
+      e.preventDefault();
       const { store, text, album } = this.getProperties('store', 'text', 'album');
 
       if (!isEmpty(text)) {
