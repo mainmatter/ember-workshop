@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'authentication',
+    modulePrefix: 'auth',
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
