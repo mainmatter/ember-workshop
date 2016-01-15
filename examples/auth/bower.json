@@ -1,5 +1,5 @@
 {
-  "name": "authentication",
+  "name": "auth",
   "dependencies": {
     "bootstrap": "~4.0.0-alpha.2",
     "ember": "components/ember#canary",

@@ -1,7 +1,7 @@
 {
-  "name": "authentication",
+  "name": "auth",
   "version": "0.0.0",
-  "description": "Small description for authentication goes here",
+  "description": "Small description for auth goes here",
   "private": true,
   "directories": {
     "doc": "doc",
