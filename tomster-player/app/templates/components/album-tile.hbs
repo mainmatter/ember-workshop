@@ -1,6 +1,9 @@
 <div class="row">
   <div class="col-xs-12">
-    <h4>{{attrs.album.title}}</h4>
+    <h4>
+      {{attrs.album.title}}
+      {{rating-indicator rating=attrs.album.averageRating classNames='pull-right'}}
+    </h4>
     <hr/>
   </div>
 </div>

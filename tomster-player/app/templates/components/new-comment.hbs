@@ -1,6 +1,17 @@
 <form onsubmit={{action (action 'createComment')}}>
-  <fieldset class="form-group">
-    <textarea class="form-control" rows="3" onblur={{action (action 'textChanged')}}></textarea>
+  <fieldset class="form-group {{if ratingSelected 'has-success' 'has-warning'}}">
+    <label for="song-rating">Rating</label>
+    <select class="c-select form-control {{if ratingSelected 'form-control-success' 'form-control-warning'}}" id="song-rating" onchange={{action (action 'ratingChanged')}}>
+      <option disabled selected>- select one -</option>
+      {{#each ratingOptions as |option|}}
+        <option value="{{option.value}}">{{option.label}}</option>
+      {{/each}}
+    </select>
   </fieldset>
-  <button type="submit" class="btn btn-primary">Comment</button>
+  <fieldset class="form-group {{if textEntered 'has-success' 'has-warning'}}">
+    <label for="song-comment">Comment</label>
+    <textarea id="song-comment" class="form-control {{if textEntered 'form-control-success' 'form-control-warning'}}" rows="3" onblur={{action (action 'textChanged')}}></textarea>
+  </fieldset>
+  <button type="submit" class="btn btn-primary" disabled="{{unless isSubmittable 'disabled'}}">Save Comment</button>
+  <button class="btn btn-secondary" onclick={{action attrs.on-cancel}}>Cancel</button>
 </form>

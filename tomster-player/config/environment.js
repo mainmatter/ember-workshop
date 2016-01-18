@@ -44,7 +44,7 @@ module.exports = function(environment) {
   }
 
   ENV.contentSecurityPolicy = {
-    'img-src': "'self' https://i.scdn.co",
+    'img-src': "'self' data: https://i.scdn.co",
     'media-src': "'self' https://p.scdn.co"
   }
 

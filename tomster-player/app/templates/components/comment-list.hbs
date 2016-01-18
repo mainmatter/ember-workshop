@@ -1,0 +1,4 @@
+{{#list-view items=attrs.album.comments newItem=(component 'new-comment' album=attrs.album) as |item|}}
+{{log item}}
+  {{comment-tile comment=item}}
+{{/list-view}}
