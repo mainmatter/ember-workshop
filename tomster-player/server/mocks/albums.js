@@ -24,6 +24,9 @@ var ALBUMS = [
           { type: 'song', id: '10' },
           { type: 'song', id: '11' }
         ]
+      },
+      comments: {
+        data: []
       }
     }
   },
@@ -46,6 +49,12 @@ var ALBUMS = [
           { type: 'song', id: '18' },
           { type: 'song', id: '19' },
           { type: 'song', id: '20' }
+        ]
+      },
+      comments: {
+        data: [
+          { type: 'comment', id: '1' },
+          { type: 'comment', id: '2' }
         ]
       }
     }
@@ -74,6 +83,9 @@ var ALBUMS = [
           { type: 'song', id: '32' },
           { type: 'song', id: '33' }
         ]
+      },
+      comments: {
+        data: []
       }
     }
   }

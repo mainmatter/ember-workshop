@@ -1,0 +1,9 @@
+<div class="card">
+  <div class="card-header">
+    {{format-datetime attrs.comment.createdAt}}
+  </div>
+  <div class="card-block">
+    <p class="card-text">{{attrs.comment.text}}</p>
+    <p class="card-text">{{rating-indicator rating=attrs.comment.rating}}</p>
+  </div>
+</div>
