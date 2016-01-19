@@ -1,0 +1,16 @@
+<h1>Media</h1>
+
+{{link-to 'Albums' (query-params filter='albums')}}
+{{link-to 'Movies' (query-params filter='movies')}}
+
+<ul>
+  {{#each media as |medium i|}}
+    <li>
+      {{#link-to 'media.medium' i}}
+        {{medium.title}}
+      {{/link-to}}
+    </li>
+  {{/each}}
+</ul>
+
+{{outlet}}
