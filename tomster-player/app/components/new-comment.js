@@ -16,6 +16,7 @@ export default Ember.Component.extend({
   ratingSelected: computed.notEmpty('rating'),
   textEntered: computed.notEmpty('text'),
   isSubmittable: computed.and('ratingSelected', 'textEntered'),
+  isNotSubmittable: computed.not('isSubmittable'),
 
   actions: {
     createComment(e) {
