@@ -1,0 +1,42 @@
+<h1>Ember Data Playground</h1>
+
+<p>You can play with the <code>store</code> in the browser console. The available model definition is this:</p>
+
+<h4>Album</h4>
+<pre><code>import DS from 'ember-data';
+
+const { attr, hasMany } = DS;
+
+export default DS.Model.extend({
+  title:    attr('string'),
+  coverUrl: attr('string'),
+
+  songs: hasMany(),
+  comments: hasMany()
+});</code></pre>
+
+<h4>Song</h4>
+<pre><code>import DS from 'ember-data';
+
+const { attr, belongsTo } = DS;
+
+export default DS.Model.extend({
+  title:    attr('string'),
+  duration: attr('number'),
+  mp3Url:   attr('string'),
+
+  album: belongsTo()
+});</code></pre>
+
+<h4>Comment</h4>
+<pre><code>import DS from 'ember-data';
+
+const { attr, belongsTo } = DS;
+
+export default DS.Model.extend({
+  rating:    attr('number'),
+  text:      attr('string'),
+  createdAt: attr('date'),
+
+  album: belongsTo()
+});</code></pre>
