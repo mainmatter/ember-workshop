@@ -21,7 +21,7 @@ export default Ember.Component.extend({
     },
 
     removeItem(item) {
-      this.attrs['on-remove-item'](item);
+      this.getAttr('on-remove-item')(item);
     }
   }
 });

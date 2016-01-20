@@ -25,7 +25,7 @@ export default Ember.Component.extend({
       if (isSubmittable) {
         const comment = store.createRecord('comment', { text, rating, album });
         comment.save().then(() => {
-          this.attrs['on-created']();
+          this.getAttr('on-created')();
         });
       }
     },
