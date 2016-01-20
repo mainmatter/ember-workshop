@@ -37,7 +37,7 @@ test('calculates its average rating based on the assigned comments', function(as
     return [204, {}, ''];
   });
 
-   return Ember.run(function() {
+  return Ember.run(() => {
     const comment1 = store.createRecord('comment', { album, rating: 1 });
     const comment2 = store.createRecord('comment', { album, rating: 5 });
     store.createRecord('comment', { album, rating: 5 });
