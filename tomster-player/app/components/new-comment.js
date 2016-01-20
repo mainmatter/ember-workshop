@@ -16,7 +16,8 @@ export default Ember.Component.extend({
   actions: {
     createComment(e) {
       e.preventDefault();
-      const { store, text, rating, album } = this.getProperties('store', 'text', 'rating', 'album');
+      const album = this.getAttr('album');
+      const { store, text, rating } = this.getProperties('store', 'text', 'rating');
 
       const comment = store.createRecord('comment', { text, rating, album });
       comment.save().then(() => {
