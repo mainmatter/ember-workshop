@@ -1,6 +1,6 @@
 import Ember from 'ember';
 
-export function formatDatetime([datetime]) {
+export function formatDatetime(datetime) {
   if (datetime) {
     return datetime.toLocaleString();
   }

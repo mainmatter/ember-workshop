@@ -33,7 +33,7 @@ test('has many comments', function(assert) {
 test('calculates its average rating based on the assigned comments', function(assert) {
   const store = this.store();
   const album = this.subject();
-  this.server.post('/comments', function(request){
+  this.server.post('/comments', function() {
     return [204, {}, ''];
   });
 
