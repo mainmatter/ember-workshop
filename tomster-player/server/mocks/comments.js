@@ -1,5 +1,6 @@
 /*jshint node:true*/
 var uuid = require('node-uuid');
+var respondWithDelay = require('../utils/respond-with-delay');
 
 var COMMENTS = [
   {
@@ -51,7 +52,7 @@ module.exports = function(app) {
       return comment.id === req.params.id
     })[0];
 
-    res.send({
+    respondWithDelay(res, {
       data: comment
     });
   });
