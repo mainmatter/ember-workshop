@@ -1,7 +1,7 @@
-/* global Howl */
+/* global Howl, localStorage */
 import Ember from 'ember';
 
-const CURRENT_SONG_KEY_NAME = '_tomsterPlayerCurrentSong';
+export const CURRENT_SONG_KEY_NAME = '_tomsterPlayerCurrentSong';
 
 const { inject: { service }, computed } = Ember;
 
