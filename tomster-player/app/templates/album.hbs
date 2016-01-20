@@ -1,1 +1,13 @@
-{{album-detail album=model}}
+<div class="list-group">
+  <div class="list-group-item">
+    {{album-tile album=model}}
+  </div>
+  <div class="list-group-item">
+    <div class="card">
+      <div class="card-block">
+        {{outlet}}
+      </div>
+    </div>
+    {{comment-list album=model}}
+  </div>
+</div>
