@@ -19,9 +19,5 @@ export default DS.Model.extend({
     const totalRating = _.sum(ratings);
 
     return totalRating / commentCount;
-  }),
-
-  sortedComments: computed('comments.@each.createdAt', function() {
-    return _.sortBy(this.get('comments').toArray(), (comment) => comment.get('createdAt')).reverse();
   })
 });
