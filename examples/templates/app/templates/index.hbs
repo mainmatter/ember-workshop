@@ -1,0 +1,49 @@
+<div class="row">
+  <div class="col-xs-12">
+    <h2>Data Binding</h2>
+
+    <dl class="dl-horizontal">
+      <dt class="col-sm-3">What's your favorite Whitney Houston song?</dt>
+      <dd class="col-sm-9">{{favoriteWhitneySong}}</dd>
+    </dl>
+
+    <div class="form-group {{if favoriteWhitneySong 'has-success' 'has-danger'}}">
+      <label class="form-control-label">Change your choice:</label>
+      {{input value=favoriteWhitneySong classNames=(if favoriteWhitneySong 'form-control form-control-success' 'form-control form-control-danger')}}
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+    <h2>Collections</h2>
+
+    <ul>
+      {{#each whiteneySongs as |song i|}}
+        <li>{{i}}: {{song}}</li>
+      {{/each}}
+    </ul>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+    <h2>Actions</h2>
+
+    <button type="button" class="btn btn-success" {{action (action 'handleAction')}}>Trigger action</button>
+    <button type="button" class="btn btn-warning" {{action 'handleLegacyAction'}}>Trigger legacy action</button>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+    <h2>Form</h2>
+
+    <form onsubmit={{action (action 'submitForm')}}>
+      <fieldset class="form-group">
+        <input type="text" onblur={{action (action 'textChanged' value='currentTarget.value')}} class="form-control"/>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </fieldset>
+    </form>
+  </div>
+</div>
