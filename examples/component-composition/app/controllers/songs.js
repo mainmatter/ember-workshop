@@ -1,6 +1,6 @@
 import Ember from 'ember';
 
-const { computed, computed: { alias } } = Ember;
+const { computed: { alias } } = Ember;
 
 export default Ember.Controller.extend({
   songCount: alias('model.length'),
