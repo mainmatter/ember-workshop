@@ -11,7 +11,7 @@ export default Ember.Route.extend({
         albums.invoke('get', 'comments')
       );
 
-      return RSVP.all(relationPromises).then(() => albums)
+      return RSVP.all(relationPromises).then(() => albums);
     });
   }
 });
