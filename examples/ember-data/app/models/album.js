@@ -1,8 +1,8 @@
-import DS from 'ember-data';
+import Model from 'ember-data/model';
+import attr from 'ember-data/attr';
+import { hasMany } from 'ember-data/relationships';
 
-const { attr, hasMany } = DS;
-
-export default DS.Model.extend({
+export default Model.extend({
   title:    attr('string'),
   coverUrl: attr('string'),
 

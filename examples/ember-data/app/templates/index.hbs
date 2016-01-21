@@ -3,11 +3,11 @@
 <p>You can play with the <code>store</code> in the browser console. The available model definition is this:</p>
 
 <h4>Album</h4>
-<pre><code>import DS from 'ember-data';
+<pre><code>import Model from 'ember-data/model';
+import attr from 'ember-data/attr';
+import { hasMany } from 'ember-data/relationships';
 
-const { attr, hasMany } = DS;
-
-export default DS.Model.extend({
+export default Model.extend({
   title:    attr('string'),
   coverUrl: attr('string'),
 
@@ -16,11 +16,11 @@ export default DS.Model.extend({
 });</code></pre>
 
 <h4>Song</h4>
-<pre><code>import DS from 'ember-data';
+<pre><code>import Model from 'ember-data/model';
+import attr from 'ember-data/attr';
+import { belongsTo } from 'ember-data/relationships';
 
-const { attr, belongsTo } = DS;
-
-export default DS.Model.extend({
+export default Model.extend({
   title:    attr('string'),
   duration: attr('number'),
   mp3Url:   attr('string'),
@@ -29,11 +29,11 @@ export default DS.Model.extend({
 });</code></pre>
 
 <h4>Comment</h4>
-<pre><code>import DS from 'ember-data';
+<pre><code>import Model from 'ember-data/model';
+import attr from 'ember-data/attr';
+import { belongsTo } from 'ember-data/relationships';
 
-const { attr, belongsTo } = DS;
-
-export default DS.Model.extend({
+export default Model.extend({
   rating:    attr('number'),
   text:      attr('string'),
   createdAt: attr('date'),

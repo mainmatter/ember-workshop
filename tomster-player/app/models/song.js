@@ -1,8 +1,8 @@
-import DS from 'ember-data';
+import Model from 'ember-data/model';
+import attr from 'ember-data/attr';
+import { belongsTo } from 'ember-data/relationships';
 
-const { attr, belongsTo } = DS;
-
-export default DS.Model.extend({
+export default Model.extend({
   title:    attr('string'),
   duration: attr('number'),
   mp3Url:   attr('string'),

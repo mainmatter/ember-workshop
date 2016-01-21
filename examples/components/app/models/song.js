@@ -1,8 +1,7 @@
-import DS from 'ember-data';
+import Model from 'ember-data/model';
+import attr from 'ember-data/attr';
 
-const { attr } = DS;
-
-export default DS.Model.extend({
+export default Model.extend({
   name:     attr('string'),
   coverUrl: attr('string'),
   rating:   attr('number', { defaultValue: 0 })

@@ -1,11 +1,12 @@
 import Ember from 'ember';
-import DS from 'ember-data';
+import Model from 'ember-data/model';
+import attr from 'ember-data/attr';
+import { hasMany } from 'ember-data/relationships';
 import _ from 'lodash/lodash';
 
 const { computed } = Ember;
-const { attr, hasMany } = DS;
 
-export default DS.Model.extend({
+export default Model.extend({
   title:    attr('string'),
   coverUrl: attr('string'),
 
