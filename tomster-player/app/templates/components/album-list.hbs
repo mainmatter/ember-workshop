@@ -1,7 +1,7 @@
 <div class="list-group">
   {{#each attrs.albums as |album|}}
     <div class="list-group-item">
-      {{album-tile album=album on-select-album=attrs.on-select-album class='selectable-album'}}
+      {{album-tile album=(readonly album) on-select-album=attrs.on-select-album class='selectable-album'}}
     </div>
   {{/each}}
 </div>

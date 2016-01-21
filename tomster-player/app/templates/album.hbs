@@ -1,6 +1,6 @@
 <div class="list-group">
   <div class="list-group-item">
-    {{album-tile album=model}}
+    {{album-tile album=(readonly model)}}
   </div>
   <div class="list-group-item">
     <div class="card">
@@ -8,6 +8,6 @@
         {{outlet}}
       </div>
     </div>
-    {{comment-list comments=model.comments}}
+    {{comment-list comments=(readonly model.comments)}}
   </div>
 </div>

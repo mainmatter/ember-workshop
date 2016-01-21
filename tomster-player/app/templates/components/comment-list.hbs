@@ -1,7 +1,7 @@
 <div class="row">
   <div class="col-xs-12">
     {{#each sortedComments as |comment|}}
-      {{comment-tile comment=comment}}
+      {{comment-tile comment=(readonly comment)}}
     {{/each}}
   </div>
 </div>

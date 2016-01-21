@@ -1,7 +1,7 @@
 <div class='row player-tile'>
   <div class="col-xs-12">
     {{#if song}}
-      {{play-icon song=song classNames='pull-left play-button'}}
+      {{play-icon song=(readonly song) classNames='pull-left play-button'}}
       <img src="{{song.album.coverUrl}}" class="cover-image pull-left img-rounded">
       <p>
         <strong>{{song.title}}</strong>

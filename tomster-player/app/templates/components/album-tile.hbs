@@ -2,7 +2,7 @@
   <div class="col-xs-12">
     <h4>
       {{attrs.album.title}}
-      {{rating-indicator rating=attrs.album.averageRating classNames='pull-right'}}
+      {{rating-indicator rating=(readonly attrs.album.averageRating) classNames='pull-right'}}
     </h4>
     <hr/>
   </div>
@@ -16,7 +16,7 @@
     <ol class="song-list">
       {{#each attrs.album.songs as |song|}}
         <li>
-          {{song-tile song=song}}
+          {{song-tile song=(readonly song)}}
         </li>
       {{/each}}
     </ol>

@@ -1,6 +1,6 @@
 <form onsubmit={{action (action 'createComment')}}>
   {{log comment.errors.rating}}
-  {{#form-fieldset isInvalid=errors.rating label='Rating'}}
+  {{#form-fieldset isInvalid=(readonly errors.rating) label='Rating'}}
     <select id="song-rating" onchange={{action (action 'ratingChanged')}} class="c-select form-control {{if errors.rating 'form-control-danger'}}">
       <option disabled selected>- select one -</option>
       {{#each ratingOptions as |option|}}
@@ -9,7 +9,7 @@
     </select>
   {{/form-fieldset}}
 
-  {{#form-fieldset isInvalid=errors.text label='Comment'}}
+  {{#form-fieldset isInvalid=(readonly errors.text) label='Comment'}}
     <textarea id="song-comment" rows="3" onblur={{action (action 'textChanged')}} class="form-control {{if errors.text 'form-control-danger'}}"></textarea>
   {{/form-fieldset}}
 

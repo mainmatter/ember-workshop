@@ -4,6 +4,6 @@
   </div>
   <div class="card-block">
     <p class="card-text">{{attrs.comment.text}}</p>
-    <p class="card-text">{{rating-indicator rating=attrs.comment.rating}}</p>
+    <p class="card-text">{{rating-indicator rating=(readonly attrs.comment.rating)}}</p>
   </div>
 </div>
