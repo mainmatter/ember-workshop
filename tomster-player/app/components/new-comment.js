@@ -13,22 +13,19 @@ export default Ember.Component.extend({
     { value: 5, label: '5 - play it all the time!'}
   ],
 
-  ratingSelected: computed.notEmpty('rating'),
-  textEntered: computed.notEmpty('text'),
-  isSubmittable: computed.and('ratingSelected', 'textEntered'),
-  isNotSubmittable: computed.not('isSubmittable'),
-
   actions: {
     createComment(e) {
       e.preventDefault();
-      const { store, text, rating, album, isSubmittable } = this.getProperties('store', 'text', 'rating', 'album', 'isSubmittable');
+      const { store, text, rating, album } = this.getProperties('store', 'text', 'rating', 'album');
 
-      if (isSubmittable) {
-        const comment = store.createRecord('comment', { text, rating, album });
-        comment.save().then(() => {
-          this.getAttr('on-created')();
-        });
-      }
+      const comment = store.createRecord('comment', { text, rating, album });
+      comment.save().then(() => {
+        this.getAttr('on-created')();
+      }, () => {
+        this.set('errors', comment.get('errors'));
+        album.get('comments').popObject(comment);
+        comment.deleteRecord();
+      });
     },
 
     textChanged(event) {

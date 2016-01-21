@@ -39,12 +39,31 @@ module.exports = function(app) {
 
   commentsRouter.post('/', function(req, res) {
     var data = req.body.data;
-    data.id = uuid.v1();
-    data.attributes['created-at'] = new Date();
 
-    res.status(201).send({
-      data: data
-    });
+    if (data.attributes.text && data.attributes.rating) {
+      data.id = uuid.v1();
+      data.attributes['created-at'] = new Date();
+
+      res.status(201).send({
+        data: data
+      });
+    } else {
+      var errors = [];
+      ['text', 'rating'].forEach(function(attribute) {
+        if (!data.attributes[attribute]) {
+          errors.push({
+            details: '"' + attribute + '" is a required attribute.',
+            source: {
+              pointer: 'data/attributes/' + attribute
+            }
+          });
+        }
+      });
+
+      res.status(422).send({
+        errors: errors
+      });
+    }
   });
 
   commentsRouter.get('/:id', function(req, res) {

@@ -1,4 +1,4 @@
-<fieldset class="form-group {{if isValid 'has-success' 'has-warning'}}">
+<fieldset class="form-group {{if isInvalid 'has-danger'}}">
   <label for="song-rating">{{label}}</label>
   {{yield}}
 </fieldset>
