@@ -6,6 +6,7 @@ moduleForComponent('album-tile', 'Integration | Component | album tile', {
   integration: true,
 
   beforeEach() {
+    this.inject.service('store');
     const album = Ember.Object.create({
       title: 'Whitney Houston',
       coverUrl: 'http://example.com/cover.jpg',

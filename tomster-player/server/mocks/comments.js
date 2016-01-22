@@ -76,6 +76,6 @@ module.exports = function(app) {
     });
   });
 
-  app.use('/api/comments', require('body-parser').json({ type: 'application/*+json' }));
+  app.use('/api/comments', require('body-parser').json({ type: 'application/vnd.api+json' }));
   app.use('/api/comments', commentsRouter);
 };
