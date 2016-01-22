@@ -1,5 +1,4 @@
 <form onsubmit={{action (action 'createComment')}} data-element-type="comment-form">
-  {{log comment.errors.rating}}
   {{#form-fieldset isInvalid=(readonly errors.rating) label='Rating'}}
     <select id="song-rating" onchange={{action (action 'ratingChanged')}} class="c-select form-control {{if errors.rating 'form-control-danger'}}">
       <option disabled selected>- select one -</option>
