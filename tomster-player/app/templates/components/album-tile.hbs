@@ -1,8 +1,8 @@
 <div class="row">
   <div class="col-xs-12">
-    <h4 data-element="album-title">
+    <h4 data-element-type="album-title">
       {{attrs.album.title}}
-      <span data-element="album-rating">
+      <span data-element-type="album-rating">
         {{rating-indicator rating=(readonly attrs.album.averageRating) classNames='pull-right'}}
       </span>
     </h4>
@@ -17,7 +17,7 @@
   <div class="col-xs-9">
     <ol class="song-list">
       {{#each attrs.album.songs as |song|}}
-        <li data-element="album-song">
+        <li data-element-type="album-song">
           {{song-tile song=(readonly song)}}
         </li>
       {{/each}}

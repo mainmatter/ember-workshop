@@ -22,13 +22,13 @@ moduleForComponent('album-tile', 'Integration | Component | album tile', {
 test('renders the album title', function(assert) {
   this.render(hbs`{{album-tile album=album}}`);
 
-  assert.equal(this.$('*[data-element="album-title"]').text().trim(), 'Whitney Houston');
+  assert.equal(this.$('*[data-element-type="album-title"]').text().trim(), 'Whitney Houston');
 });
 
 test("renders the album's songs", function(assert) {
   this.render(hbs`{{album-tile album=album}}`);
 
-  assert.equal(this.$('*[data-element="album-song"]').length, 2);
+  assert.equal(this.$('*[data-element-type="album-song"]').length, 2);
 });
 
 test("renders the album's cover", function(assert) {
@@ -40,7 +40,7 @@ test("renders the album's cover", function(assert) {
 test('renders a rating indicator', function(assert) {
   this.render(hbs`{{album-tile album=album}}`);
 
-  assert.equal(this.$('*[data-element="album-rating"]').length, 1);
+  assert.equal(this.$('*[data-element-type="album-rating"]').length, 1);
 });
 
 test('calls the action assigned to on-select-album with the album when clicked', function(assert) {

@@ -27,7 +27,7 @@ moduleForComponent('comment-list', 'Integration | Component | comment list', {
 test('renders all comments sorted by descending creation date', function(assert) {
   this.render(hbs`{{comment-list comments=comments}}`);
 
-  assert.equal(this.$('*[data-element="comment"]').length, 2);
-  assert.ok(this.$('*[data-element="comment"]:first').text().includes('meh…'));
-  assert.ok(this.$('*[data-element="comment"]:last').text().includes('great song!'));
+  assert.equal(this.$('*[data-element-type="comment"]').length, 2);
+  assert.ok(this.$('*[data-element-type="comment"]:first').text().includes('meh…'));
+  assert.ok(this.$('*[data-element-type="comment"]:last').text().includes('great song!'));
 });
