@@ -33,7 +33,7 @@ test('it creates a comment', function(assert) {
         assert.ok(true);
       });
 
-      this.render(hbs`{{new-comment album=album on-created=(action 'endCommenting') on-cancel=(action 'endCommenting')}}`);
+      this.render(hbs`{{new-comment album=(readonly album) on-created=(action 'endCommenting') on-cancel=(action 'endCommenting')}}`);
       this.$('*[data-element-type="comment-form"] select').val(5);
       this.$('*[data-element-type="comment-form"] textarea').val('great song!');
       this.$('*[data-element-type="comment-form"] button[type="submit"]').click();
@@ -53,7 +53,7 @@ test('it does not create a comment when the server rejects it', function(assert)
         assert.ok(false);
       });
 
-      this.render(hbs`{{new-comment album=album on-created=(action 'endCommenting') on-cancel=(action 'endCommenting')}}`);
+      this.render(hbs`{{new-comment album=(readonly album) on-created=(action 'endCommenting') on-cancel=(action 'endCommenting')}}`);
       this.$('*[data-element-type="comment-form"] button[type="submit"]').click();
     });
   });
