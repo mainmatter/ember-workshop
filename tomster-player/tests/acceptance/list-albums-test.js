@@ -1,6 +1,7 @@
 import { test } from 'qunit';
 import moduleForAcceptance from 'tomster-player/tests/helpers/module-for-acceptance';
 import Pretender from 'pretender';
+import { authenticateSession } from 'tomster-player/tests/helpers/ember-simple-auth';
 
 const ALBUMS = [{
   id: '1',
@@ -26,6 +27,7 @@ moduleForAcceptance('Acceptance | list albums', {
         return [200, { 'Content-Type': 'application/vnd.api+json' }, JSON.stringify({ data: ALBUMS })];
       });
     });
+    authenticateSession(this.application);
   },
 
   afterEach() {

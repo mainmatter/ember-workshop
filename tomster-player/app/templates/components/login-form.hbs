@@ -1,0 +1,15 @@
+{{#if errorMessage}}
+  <p class="alert alert-danger">{{errorMessage}}</p>
+{{/if}}
+
+<form onsubmit={{action (action 'authenticate')}}>
+  <fieldset class="form-group">
+    <label for="username">Username</label>
+    {{input id='username' placeholder='Enter Login' value=username class='form-control'}}
+  </fieldset>
+  <fieldset class="form-group">
+    <label for="password">Password</label>
+    {{input id='password' placeholder='Enter Password' type='password' value=password class='form-control'}}
+  </fieldset>
+  <button type="submit" class="btn btn-primary">Login</button>
+</form>
