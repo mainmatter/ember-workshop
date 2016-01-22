@@ -39,8 +39,8 @@ test('visiting / renders all albums', function(assert) {
   visit('/');
 
   andThen(function() {
-    assert.equal(find('h4').length, 2);
-    assert.equal(find('h4:contains("The Bodyguard")').length, 1);
-    assert.equal(find('h4:contains("Whitney Houston")').length, 1);
+    assert.equal(find('*[data-element="album-title"]').length, 2);
+    assert.equal(find('*[data-element="album-title"]:contains("The Bodyguard")').length, 1);
+    assert.equal(find('*[data-element="album-title"]:contains("Whitney Houston")').length, 1);
   });
 });
