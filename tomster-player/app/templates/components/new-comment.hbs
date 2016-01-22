@@ -1,4 +1,4 @@
-<form onsubmit={{action (action 'createComment')}}>
+<form onsubmit={{action (action 'createComment')}} data-element-type="comment-form">
   {{log comment.errors.rating}}
   {{#form-fieldset isInvalid=(readonly errors.rating) label='Rating'}}
     <select id="song-rating" onchange={{action (action 'ratingChanged')}} class="c-select form-control {{if errors.rating 'form-control-danger'}}">
@@ -14,5 +14,5 @@
   {{/form-fieldset}}
 
   <button type="submit" class="btn btn-primary">Save Comment</button>
-  <button class="btn btn-secondary" onclick={{action attrs.on-cancel}}>Cancel</button>
+  <button type="button" class="btn btn-secondary" onclick={{action attrs.on-cancel}} data-element-type="cancel-button">Cancel</button>
 </form>

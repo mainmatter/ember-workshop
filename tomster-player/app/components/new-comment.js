@@ -24,8 +24,7 @@ export default Ember.Component.extend({
         this.getAttr('on-created')();
       }, () => {
         this.set('errors', comment.get('errors'));
-        album.get('comments').popObject(comment);
-        comment.deleteRecord();
+        store.unloadRecord(comment);
       });
     },
 
