@@ -10,6 +10,7 @@
     "font-awesome": "fontawesome#~4.5.0",
     "howler.js": "v2.0.0-beta7",
     "jquery": "1.11.3",
-    "loader.js": "^3.5.0"
+    "loader.js": "^3.5.0",
+    "pretender": "^0.10.0"
   }
 }

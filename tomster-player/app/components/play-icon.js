@@ -6,9 +6,9 @@ export default Ember.Component.extend({
   tagName: 'span',
   player: service(),
 
-  _songIsCurrentSong: computed('player.song.id', 'song.id', function() {
+  _songIsCurrentSong: computed('player.song.id', 'attrs.song.id', function() {
     const playedSongId = this.get('player.song.id');
-    const songId       = this.get('song.id');
+    const songId       = this.getAttr('song').get('id');
 
     return playedSongId === songId;
   }),
@@ -17,7 +17,8 @@ export default Ember.Component.extend({
 
   actions: {
     play() {
-      const { player, song } = this.getProperties('player', 'song');
+      const song = this.getAttr('song');
+      const player = this.get('player');
 
       player.play(song);
     },

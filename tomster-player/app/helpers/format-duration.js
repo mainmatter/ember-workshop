@@ -6,7 +6,7 @@ function rightJustify(string, length, pad) {
   while (fill.length + string.length < length) {
     fill[fill.length] = pad;
   }
-  return string + fill.join('');
+  return fill.join('') + string;
 }
 
 export function formatDuration(duration) {

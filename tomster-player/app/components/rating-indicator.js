@@ -7,7 +7,7 @@ const MAX_RATING = 5;
 
 export default Ember.Component.extend({
   roundedRating: computed('rating', function() {
-    const rating = this.get('rating');
+    const rating = this.getAttr('rating');
 
     return Math.round(rating);
   }),
