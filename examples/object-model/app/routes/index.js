@@ -46,7 +46,7 @@ const Song = Ember.Object.extend(DebugMixin, {
   },
 
   _isGreatChanged: observer('isGreat', function() {
-    const isGreat = this.get('isGreat');
+    const { isGreat, title } = this.getProperties('isGreat', 'title');
 
     if (isGreat) {
       console.log(`"${title}" is great!`);
