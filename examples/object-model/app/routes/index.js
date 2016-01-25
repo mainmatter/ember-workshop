@@ -32,6 +32,8 @@ const Song = Ember.Object.extend(DebugMixin, {
       this.setProperties({
         artist, title, album
       });
+
+      return value;
     }
   }),
 
