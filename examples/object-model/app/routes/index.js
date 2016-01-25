@@ -1,6 +1,6 @@
 import Ember from 'ember';
 
-const { on, computed } = Ember;
+const { observer, computed } = Ember;
 
 const DebugMixin = Ember.Mixin.create({
   debug() {
@@ -45,9 +45,12 @@ const Song = Ember.Object.extend(DebugMixin, {
     console.log('🎤🎹🎷🎺🎸🎻');
   },
 
-  _reportReadiness: on('init', function() {
-    const title = this.get('title');
-    console.log(`"${title}" is ready to play!`);
+  _isGreatChanged: observer('isGreat', function() {
+    const isGreat = this.get('isGreat');
+
+    if (isGreat) {
+      console.log(`"${title}" is great!`);
+    }
   })
 });
 
