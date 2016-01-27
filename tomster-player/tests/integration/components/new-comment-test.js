@@ -1,5 +1,6 @@
 import Ember from 'ember';
 import { moduleForComponent, test } from 'ember-qunit';
+import wait from 'ember-test-helpers/wait';
 import hbs from 'htmlbars-inline-precompile';
 import Pretender from 'pretender';
 
@@ -37,6 +38,8 @@ test('it creates a comment', function(assert) {
       this.$('*[data-element-type="comment-form"] select').val(5);
       this.$('*[data-element-type="comment-form"] textarea').val('great song!');
       this.$('*[data-element-type="comment-form"] button[type="submit"]').click();
+
+      return wait();
     });
   });
 });
@@ -55,6 +58,8 @@ test('it does not create a comment when the server rejects it', function(assert)
 
       this.render(hbs`{{new-comment album=(readonly album) on-created=(action 'endCommenting') on-cancel=(action 'endCommenting')}}`);
       this.$('*[data-element-type="comment-form"] button[type="submit"]').click();
+
+      return wait();
     });
   });
 });
