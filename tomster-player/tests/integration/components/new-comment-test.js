@@ -13,6 +13,9 @@ moduleForComponent('new-comment', 'Integration | Component | new comment', {
       this.post('/api/albums', function() {
         return [204, {}, ''];
       });
+      this.post('/api/comments', function() {
+        return [204, {}, ''];
+      });
     });
 
     Ember.run(() => {
@@ -24,10 +27,6 @@ moduleForComponent('new-comment', 'Integration | Component | new comment', {
 });
 
 test('it creates a comment', function(assert) {
-  this.server.post('/api/comments', function() {
-    return [204, {}, ''];
-  });
-
   return Ember.run(() => {
     return this.get('album').save().then(() => {
       this.on('endCommenting', () => {
