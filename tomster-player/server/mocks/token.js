@@ -9,6 +9,7 @@ module.exports = function(app) {
       } else {
         res.status(400).send('{ "error": "invalid_grant" }');
       }
+    } else {
       res.status(400).send('{ "error": "unsupported_grant_type" }');
     }
   });
