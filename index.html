@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Ember.js Workshop Jan 25th - 27th 2016
+title: Ember.js Workshop
 ---
 <div class="row title">
   <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12">
@@ -12,8 +12,32 @@ title: Ember.js Workshop Jan 25th - 27th 2016
     <div class="row">
       <div class="col-xs-12">
         <h1><span>Ember.js Workshop</span></h1>
-        <h2>coming again soon</h2>
-        <h4>Learn how to build <strong>ambitious Ember.js 2.x applications</strong> from the simplabs team.</h4>
+        <h2>Learn how to build <strong>ambitious Ember.js 2.x applications</strong> from the simplabs team.</h2>
+        <div class="row">
+          <div class="col-xs-12 col-md-8 col-md-offset-2">
+            <h3>The next workshop will be held in May 2016 in Munich, Germany. Register to stay up to date:</h3>
+            <form class="register-form">
+              <div class="form-group">
+                <div class="input-group">
+                  <input type="email" name="email" class="form-control"/>
+                  <div class="input-group-addon">
+                    <button type="submit">Register</button>
+                  </div>
+                </div>
+              </div>
+              <p class="text-danger invalid-email">
+                Please enter a valid email address!
+              </p>
+              <p class="text-danger general-error">
+                An error occurred, please try again!
+              </p>
+              <p class="text-success success-message">
+                Thanks for signing up, we'll keep you updated!
+              </p>
+            </form>
+            <h3>We also offer the workshop remotely - <a href="mailto:info@simplabs.com?subject=Ember.js Workshop - Remote">contact us for details</a>.</h3>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -114,8 +138,8 @@ title: Ember.js Workshop Jan 25th - 27th 2016
       <div class="col-sm-12">
         <iframe  src="//eventbrite.com/tickets-external?eid=17157731236&ref=etckt" frameborder="0" height="260" width="100%" vspace="0" hspace="0" marginheight="5" marginwidth="5" scrolling="auto" allowtransparency="true"></iframe>
         <h4>
-          <a href="mailto:info@simplabs.com?subject=Ember Workshop Berlin 2016 - Diversity Scholarship" class="text-right">Contact us for a Diversity Scholarship</a>
-          <a href="mailto:info@simplabs.com?subject=Ember Workshop Berlin 2016 - Group Discount" class="text-right">Contact us for Group Discounts</a>
+          <a href="mailto:info@simplabs.com?subject=Ember.js Workshop - Diversity Scholarship" class="text-right">Contact us for a Diversity Scholarship</a>
+          <a href="mailto:info@simplabs.com?subject=Ember.js Workshop - Group Discount" class="text-right">Contact us for Group Discounts</a>
         </h4>
       </div>
     </div>
@@ -138,3 +162,44 @@ title: Ember.js Workshop Jan 25th - 27th 2016
     <a href="https://simplabs.com/contact">Contact</a>
   </div>
 </div>
+<script type="text/javascript">
+  $(document).ready(function() {
+    var endpoint = 'https://formkeep.com/f/13953bbda1b4';
+    var registerForm = $('.register-form');
+    var emailInput = registerForm.find('input[type="email"]');
+    var invalidEmailText = registerForm.find('.invalid-email');
+    var errorText = registerForm.find('.general-error');
+    var successText = registerForm.find('.text-success');
+    var validEmailRegexp = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+
+    function hideAllErrors() {
+      invalidEmailText.hide();
+      errorText.hide();
+      successText.hide();
+    }
+
+    emailInput.focus(hideAllErrors);
+
+    registerForm.submit(function(e) {
+      e.preventDefault();
+      hideAllErrors();
+      var email = emailInput.val() || '';
+
+      if (validEmailRegexp.test(email)) {
+        $.ajax({
+          type: 'POST',
+          url: endpoint,
+          data: registerForm.serialize(),
+          success: function() {
+            successText.show();
+          },
+          error: function(data) {
+            errorText.show();
+          }
+        });
+      } else {
+        invalidEmailText.show();
+      }
+    });
+  });
+</script>

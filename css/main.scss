@@ -32,16 +32,58 @@ p {
   }
 
   h2 {
-    color: #343434;
+    color: #688f85;
     font-weight: 300;
-    line-height: 130%;
+    line-height: 150%;
+    font-size: 24px;
     margin: 80px 0;
   }
 
-  h4 {
-    color: #688f85;
-    line-height: 150%;
-    padding: 0 20%
+  h3 {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 130%;
+    margin: 0;
+
+    a {
+      color: #e04a31;
+    }
+  }
+
+  .register-form {
+    margin: 20px 0;
+
+    .input-group {
+      input.form-control {
+        border-color: #688f85;
+        border-radius: 0;
+      }
+
+      .input-group-addon {
+        background-color: #688f85;
+        border-color: #688f85;
+        border-radius: 0;
+
+        button {
+          color: #fff;
+          font-weight: bold;
+          background-color: #688f85;
+          border: none;
+
+          &:focus {
+            outline:0;
+          }
+        }
+      }
+    }
+
+    .text-success {
+      color: #688f85;
+    }
+
+    .text-danger, .text-success {
+      display: none;
+    }
   }
 }
 
