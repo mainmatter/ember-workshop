@@ -17,24 +17,16 @@ title: Ember.js Workshop
           <div class="col-xs-12 col-md-8 col-md-offset-2">
             <h3>May 30th - June 1st 2016 in Munich, Germany - <a href="#tickets">register now!</a></h3>
             <h4>Sign up to be notified about future dates and locations</h4>
-            <form class="register-form">
+            <form class="register-form" action="//simplabs.us13.list-manage.com/subscribe/post?u=50bd3378ab1da4988aa174d0b&amp;id=fe31a777a8" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
               <div class="form-group">
                 <div class="input-group">
-                  <input type="email" name="email" class="form-control"/>
+                  <input type="email" name="EMAIL" id="mce-EMAIL" class="form-control"/>
+                  
                   <div class="input-group-addon">
-                    <button type="submit">Sign Up</button>
+                    <button type="submit" id="mc-embedded-subscribe">Sign Up</button>
                   </div>
                 </div>
               </div>
-              <p class="text-danger invalid-email">
-                Please enter a valid email address!
-              </p>
-              <p class="text-danger general-error">
-                An error occurred, please try again!
-              </p>
-              <p class="text-success success-message">
-                Thanks for signing up, we'll keep you updated!
-              </p>
             </form>
             <h4>We also <strong>offer the workshop on-site</strong> for you and your team - <a href="mailto:info@simplabs.com?subject=Ember.js Workshop - On-Site">contact us for details</a>.</h4>
           </div>
@@ -171,45 +163,3 @@ title: Ember.js Workshop
     <a href="https://simplabs.com/contact">Contact</a>
   </div>
 </div>
-
-<script type="text/javascript">
-  $(document).ready(function() {
-    var endpoint = 'https://formkeep.com/f/13953bbda1b4';
-    var registerForm = $('.register-form');
-    var emailInput = registerForm.find('input[type="email"]');
-    var invalidEmailText = registerForm.find('.invalid-email');
-    var errorText = registerForm.find('.general-error');
-    var successText = registerForm.find('.text-success');
-    var validEmailRegexp = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
-
-    function hideAllErrors() {
-      invalidEmailText.hide();
-      errorText.hide();
-      successText.hide();
-    }
-
-    emailInput.focus(hideAllErrors);
-
-    registerForm.submit(function(e) {
-      e.preventDefault();
-      hideAllErrors();
-      var email = emailInput.val() || '';
-
-      if (validEmailRegexp.test(email)) {
-        $.ajax({
-          type: 'POST',
-          url: endpoint,
-          data: registerForm.serialize(),
-          success: function() {
-            successText.show();
-          },
-          error: function(data) {
-            errorText.show();
-          }
-        });
-      } else {
-        invalidEmailText.show();
-      }
-    });
-  });
-</script>
