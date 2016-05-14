@@ -3,8 +3,8 @@ import AuthenticatedRouteMixin from 'ember-simple-auth/mixins/authenticated-rout
 
 export default Ember.Route.extend(AuthenticatedRouteMixin, {
   model(params) {
-    const album = this.get('store').peekRecord('album', params.album_id);
-
-    return album.get('comments').then(() => album);
+    return this.get('store').findRecord('album', params.album_id).then((album) => {
+      return album.get('comments').then(() => album);
+    });
   }
 });

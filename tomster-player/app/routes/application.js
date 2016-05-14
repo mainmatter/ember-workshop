@@ -1,18 +1,27 @@
 import Ember from 'ember';
-import _ from 'lodash/lodash';
 import ApplicationRouteMixin from 'ember-simple-auth/mixins/application-route-mixin';
 
-const { RSVP } = Ember;
+const { RSVP, inject: { service } } = Ember;
 
 export default Ember.Route.extend(ApplicationRouteMixin, {
-  model() {
-    return this.get('store').findAll('album').then((albums) => {
-      const relationPromises = _.union(
-        albums.invoke('get', 'songs'),
-        albums.invoke('get', 'comments')
-      );
+  commentUpdates: service(),
+  session: service(),
 
-      return RSVP.all(relationPromises).then(() => albums);
-    });
+  afterModel() {
+    if (this.get('session.isAuthenticated')) {
+      this.get('commentUpdates').connect();
+    }
+  },
+
+  sessionAuthenticated() {
+    this._super(...arguments);
+
+    this.get('commentUpdates').connect();
+  },
+
+  sessionInvalidated() {
+    this.get('commentUpdates').disconnect();
+
+    this._super(...arguments);
   }
 });
