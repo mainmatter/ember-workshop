@@ -43,9 +43,5 @@ module.exports = function(environment) {
 
   }
 
-  ENV.contentSecurityPolicy = {
-    'img-src': "'self' https://upload.wikimedia.org"
-  }
-
   return ENV;
 };
