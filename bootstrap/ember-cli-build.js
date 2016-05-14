@@ -23,6 +23,8 @@ module.exports = function(defaults) {
   app.import('bower_components/howler.js/howler.core.min.js');
   app.import('bower_components/bootstrap/dist/css/bootstrap.css');
 
+  app.import('vendor/socket.io-1.4.5.js');
+
   app.import({
     development: 'bower_components/font-awesome/css/font-awesome.css',
     production:  'bower_components/font-awesome/css/font-awesome.min.css'

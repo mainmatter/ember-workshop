@@ -36,6 +36,11 @@ var COMMENTS = [
 module.exports = function(app) {
   var express = require('express');
   var commentsRouter = express.Router();
+  var server = require('http').Server(app);
+  var io = require('socket.io')(server);
+
+  server.listen(3000);
+  console.log('Websocket server on http://localhost:3000');
 
   commentsRouter.post('/', function(req, res) {
     var data = req.body.data;
@@ -43,10 +48,11 @@ module.exports = function(app) {
     if (data.attributes.text && data.attributes.rating) {
       data.id = uuid.v1();
       data.attributes['created-at'] = new Date();
+      var response = { data: data };
 
-      res.status(201).send({
-        data: data
-      });
+      res.status(201).send(response);
+
+      io.sockets.emit('comments:broadcast', response);
     } else {
       var errors = [];
       ['text', 'rating'].forEach(function(attribute) {
