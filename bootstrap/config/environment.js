@@ -20,6 +20,8 @@ module.exports = function(environment) {
   };
 
   ENV.apiHost = 'https://floating-shelf-13497.herokuapp.com';
+  ENV.phoenixSocket = true;
+  ENV.socketHost = 'wss://floating-shelf-13497.herokuapp.com/socket';
 
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
@@ -28,6 +30,8 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
     ENV.apiHost = '';
+    ENV.phoenixSocket = false;
+    ENV.socketHost = 'ws://localhost:3000';
   }
 
   if (environment === 'test') {
