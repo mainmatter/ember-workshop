@@ -14,7 +14,7 @@ export default Ember.Service.extend(Ember.Evented, {
     this.get('session').authorize('authorizer:oauth2-bearer', (_, token) => {
       if (config.phoenixSocket) {
         socket = new Socket(config.socketHost);
-        socket.connect()
+        socket.connect();
         const channel = socket.channel('comments:broadcast', { token });
         channel.join();
         channel.on('new_comment', (data) => this._pushNewComment(data));
