@@ -1,0 +1,12 @@
+<h2>Chat</h2>
+<ul>
+  {{#each messages as |message|}}
+    <li>{{message.text}}</li>
+  {{/each}}
+</ul>
+
+<h3>Send Message</h3>
+<form onsubmit={{action 'send'}}>
+  <input type="text" value={{text}} onchange={{action 'setText' value='currentTarget.value'}}>
+  <button type="submit">Send</button>
+</form>
