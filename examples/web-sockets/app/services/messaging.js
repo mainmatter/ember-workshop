@@ -11,6 +11,6 @@ export default Ember.Service.extend(Ember.Evented, {
   },
 
   send(text) {
-    this.get('socket').emit('messaging', { text })
+    this.get('socket').emit('messaging', { text });
   }
 });

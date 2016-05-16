@@ -1,4 +1,11 @@
-<h2>Chat</h2>
+<h2>
+  Chat
+  {{#if connected}}
+    <small class="label label-success">connected</small>
+  {{else}}
+    <small class="label label-warning">disconnected</small>
+  {{/if}}
+</h2>
 <ul>
   {{#each messages as |message|}}
     <li>{{message.text}}</li>
