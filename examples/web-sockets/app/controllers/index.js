@@ -1,9 +1,11 @@
 import Ember from 'ember';
 
-const { inject: { service } } = Ember;
+const { computed: { reads }, inject: { service } } = Ember;
 
 export default Ember.Controller.extend({
   messaging: service(),
+
+  connected: reads('messaging.connected'),
 
   init() {
     this._super(...arguments);
