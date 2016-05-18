@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  didRender() {
+  didInsertElement() {
     this.$('.rating').barrating({
       theme: 'css-stars',
       onSelect: (value) => {
