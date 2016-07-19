@@ -66,14 +66,6 @@ $sidebarWidth: 200px;
 .sidebar {
   float: left;
   width: $sidebarWidth;
-
-  .album-cover {
-    width: 100%;
-  }
-
-  .rating, .song-list {
-    display: none;
-  }
 }
 
 .album-outlet {

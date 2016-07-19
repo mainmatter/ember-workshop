@@ -2,25 +2,29 @@
   <div class="col-xs-12">
     <h4 data-element-type="album-title">
       {{attrs.album.title}}
-      <span class="rating" data-element-type="album-rating">
-        {{rating-indicator rating=(readonly attrs.album.averageRating) classNames='pull-right'}}
-      </span>
+      {{#if attrs.show-songs}}
+        <span data-element-type="album-rating">
+          {{rating-indicator rating=(readonly attrs.album.averageRating) classNames='pull-right'}}
+        </span>
+      {{/if}}
     </h4>
     <hr/>
   </div>
 </div>
 
 <div class="row">
-  <div class="col-xs-3 album-cover">
+  <div class="{{if attrs.show-songs 'col-xs-3' 'col-xs-12'}}">
     <img src="{{attrs.album.coverUrl}}" width="100%" class="img-rounded">
   </div>
-  <div class="col-xs-9">
-    <ol class="song-list">
-      {{#each attrs.album.songs as |song|}}
-        <li data-element-type="album-song">
-          {{song-tile song=(readonly song)}}
-        </li>
-      {{/each}}
-    </ol>
-  </div>
+  {{#if attrs.show-songs}}
+    <div class="col-xs-9">
+      <ol class="song-list">
+        {{#each attrs.album.songs as |song|}}
+          <li data-element-type="album-song">
+            {{song-tile song=(readonly song)}}
+          </li>
+        {{/each}}
+      </ol>
+    </div>
+  {{/if}}
 </div>
