@@ -9,10 +9,10 @@ export default Ember.Route.extend(AuthenticatedRouteMixin, {
 
   model() {
     return this.get('store').findAll('album').then((albums) => {
-      const relationPromises = _.union(
-        albums.invoke('get', 'songs'),
-        albums.invoke('get', 'comments')
-      );
+      const relationPromises = _.flatten([
+        albums.getEach('songs'),
+        albums.getEach('comments')
+      ]);
 
       return RSVP.all(relationPromises).then(() => albums);
     });
