@@ -25,9 +25,15 @@ test('renders the album title', function(assert) {
 });
 
 test("renders the album's songs", function(assert) {
-  this.render(hbs`{{album-tile album=album}}`);
+  this.render(hbs`{{album-tile album=album show-songs=true}}`);
 
   assert.equal(this.$('*[data-element-type="album-song"]').length, 2);
+});
+
+test("omits songs if 'show-songs' attribute is false", function(assert) {
+  this.render(hbs`{{album-tile album=album show-songs=false}}`);
+
+  assert.equal(this.$('*[data-element-type="album-song"]').length, 0);
 });
 
 test("renders the album's cover", function(assert) {
@@ -37,7 +43,7 @@ test("renders the album's cover", function(assert) {
 });
 
 test('renders a rating indicator', function(assert) {
-  this.render(hbs`{{album-tile album=album}}`);
+  this.render(hbs`{{album-tile album=album show-songs=true}}`);
 
   assert.equal(this.$('*[data-element-type="album-rating"]').length, 1);
 });
