@@ -6,8 +6,10 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('album', { path: '/albums/:album_id' }, function() {
-    this.route('comment');
+  this.route('albums', function() {
+    this.route('album', { path: ':album_id' }, function() {
+      this.route('comment');
+    });
   });
   this.route('login');
 });
