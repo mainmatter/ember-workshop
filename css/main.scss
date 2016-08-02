@@ -161,9 +161,13 @@ p {
       font-weight: bold;
     }
 
-    ul { 
+    ul {
+      font-size: 12px; 
+      margin-left: 0;
+      padding: 0;
       list-style-position: inside;
-      text-align: left;
+      text-align: center;
+      //list-style-type: none;
     }
 
     .price-reserve {
