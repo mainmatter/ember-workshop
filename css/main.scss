@@ -121,23 +121,34 @@ p {
 }
 
 .beginner {
-  background-color: #e4f7fd;
+  background-color: #e7f2ef;
 
   h3 {
-    color: #1f71b5;
+    color: #e04a31;
   }
 
   .details {
     h5 {
-      color: #1f71b5;
+      color: #e04a31;
     }
 
     a.register {
-      background-color: #1f71b5;
+      background-color: #e04a31;
       color: #fff;
-      padding: 5px;
-      border-radius: 5px;
     }
+  }
+}
+
+.advanced {
+  background-color: #e4f7fd;
+
+  h3, h5 {
+    color: #1f71b5;
+  }
+
+  a.register {
+    background-color: #1f71b5;
+    color: #fff;
   }
 }
 
@@ -188,41 +199,19 @@ p {
       font-size: 18px;
       text-align: center;
       font-weight: bold;
+      padding: 5px;
+      border-radius: 5px;
     }
   }
 }
 
 .quotes {
-  background-color: #e7f2ef;
+  background-color: #e4f7fd;
 
   p {
     text-align: center;
     font-style: italic;
     margin: 0;
-  }
-}
-
-.topics {
-  background-color: #e4f7fd;
-  padding-bottom: 50px;
-
-  h3 {
-    color: #1f71b5;
-
-    &.day-mark {
-      margin-bottom: 20px;
-    }
-  }
-
-  ol {
-    list-style-position: inside;
-    margin-bottom: 30px;
-    padding: 0;
-
-    li {
-      padding: 8px 0;
-      font-size: 16px;
-    }
   }
 }
 
