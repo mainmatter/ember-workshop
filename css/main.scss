@@ -106,79 +106,45 @@ p {
   }
 }
 
-.synopsis {
+.workshops {
   h3 {
+    color: #e04a31;
+  }
+
+  a {
     color: #e04a31;
   }
 
   p {
     font-size: 16px;
   }
+}
 
-  .logo {
-    display: table-cell;
-    vertical-align: middle;
-    float: none;
+.beginner {
+  background-color: #e4f7fd;
 
-    img {
-      margin-top: 20px;
-    }
+  h3 {
+    color: #1f71b5;
   }
 }
 
-.pricing {
-  margin-bottom: 50px;
-  margin-left: 0;
+.workshop {
+  h5 {
+    font-weight: bold;
+    font-style: italic;
+    font-size: 18px;
+  }
 
-  .workshop {
-    background-color: #e4f7fd;
-    text-align: center;
+  ul {
+    margin-left: 0;
     padding: 0;
-    margin-bottom: 20px;
-    //border-style: solid;
-    /**border-color: #e04a31;**/
-    //border-color: lightgrey;
-    //border-width: 2px;
-    border-radius: 5px;
+    list-style-position: inside;
+  }
 
-    h4 {
-      padding: 10px;
-      font-weight: bold;
-      color: #e04a31;
-      border-bottom: 1px solid lightgrey;
-      text-transform: uppercase;
-    }
-
-    h5 {
-      padding: 10px;
-      font-weight: normal;
-      font-style: italic;
-    }
-
-    p {
-      padding-top: 10px;
-      border-top: 1px solid lightgrey;
-      font-weight: bold;
-    }
-
-    ul {
-      font-size: 12px; 
-      margin-left: 0;
-      padding: 0;
-      list-style-position: inside;
-      text-align: center;
-      //list-style-type: none;
-    }
-
-    .price-reserve {
-      //border-left: 20px solid #e4f7fd;
-      margin-bottom: 10px;
-
-      h3 {
-        color: #1f71b5;
-        
-      }
-    }
+  a.register {
+    font-weight: bold;
+    font-style: italic;
+    font-size: 24px
   }
 }
 
