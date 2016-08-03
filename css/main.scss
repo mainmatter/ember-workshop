@@ -102,7 +102,7 @@ p {
   padding: 80px 0;
 
   h3 {
-    margin: 0;
+    margin: 0 0 40px 0;
   }
 }
 
@@ -126,25 +126,59 @@ p {
   h3 {
     color: #1f71b5;
   }
+
+  .details {
+    h5 {
+      color: #1f71b5;
+    }
+
+    a.register {
+      background-color: #1f71b5;
+      color: #fff;
+      padding: 5px;
+      border-radius: 5px;
+    }
+  }
 }
 
 .workshop {
-  h5 {
-    font-weight: bold;
-    font-style: italic;
-    font-size: 18px;
-  }
+  .details {
+    margin-top: 40px;
+    margin-bottom: 20px;
 
-  ul {
-    margin-left: 0;
-    padding: 0;
-    list-style-position: inside;
-  }
+    h5 {
+      font-size: 18px;
+      margin-top: 0;
+    }
 
-  a.register {
-    font-weight: bold;
-    font-style: italic;
-    font-size: 24px
+    ul {
+      color: #656565;
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+
+      &.format {
+        hr {
+          border-top: 1px dotted #656565;
+          width: 50%;
+        }
+      }
+
+      &.topics {
+        li .fa {
+          font-size: 50%;
+          vertical-align: middle;
+          margin: 0 5px 2px 0;
+        }
+      }
+    }
+
+    a.register {
+      display: block;
+      font-size: 18px;
+      text-align: center;
+      font-weight: bold;
+    }
   }
 }
 
