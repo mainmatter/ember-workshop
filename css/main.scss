@@ -146,7 +146,7 @@ p {
     margin-top: 40px;
     margin-bottom: 20px;
 
-    h5 {
+    h5, h6 {
       font-size: 18px;
       margin-top: 0;
     }
@@ -165,6 +165,8 @@ p {
       }
 
       &.topics {
+        margin-bottom: 10px;
+
         li .fa {
           font-size: 50%;
           vertical-align: middle;
