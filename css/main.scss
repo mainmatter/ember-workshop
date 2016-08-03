@@ -175,6 +175,14 @@ p {
       }
     }
 
+    .date {
+      text-align: center;
+
+      p span {
+        display: block;
+      }
+    }
+
     a.register {
       display: block;
       font-size: 18px;
