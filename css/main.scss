@@ -63,6 +63,32 @@ p {
     }
   }
 
+  .upcoming {
+    .date {
+      margin-bottom: 40px;
+      background-color: #688f85;
+      padding: 5px;
+      border-radius: 5px;
+
+      p {
+        color: #fff;
+        font-size: 14px;
+      }
+
+      h5 {
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 1.2;
+
+        a {
+          color: #fff;
+          display: block;
+          height: 3em;
+        }
+      }
+    }
+  }
+
   .register-form {
     margin: 20px 0;
 
