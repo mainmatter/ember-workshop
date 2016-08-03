@@ -203,11 +203,16 @@ p {
 
       &.topics {
         margin-bottom: 10px;
+        margin-left: .8em;
 
-        li .fa {
+        li:before {
+          content: "\f192";
+          font-family: FontAwesome;
+          display: inline-block;
+          margin-left: -1.3em;
+          width: 1.3em;
           font-size: 50%;
           vertical-align: middle;
-          margin: 0 5px 2px 0;
         }
       }
     }
