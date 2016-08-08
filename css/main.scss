@@ -63,6 +63,36 @@ p {
     }
   }
 
+  .upcoming {
+    .date {
+      margin-bottom: 40px;
+      background-color: #688f85;
+      padding: 5px;
+      border-radius: 5px;
+
+      p {
+        color: #fff;
+        font-size: 14px;
+
+        span {
+          display: inline-block;
+        }
+      }
+
+      h5 {
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 1.2;
+
+        a {
+          color: #fff;
+          display: block;
+          height: 3em;
+        }
+      }
+    }
+  }
+
   .register-form {
     margin: 20px 0;
 
@@ -102,61 +132,125 @@ p {
   padding: 80px 0;
 
   h3 {
-    margin: 0;
+    margin: 0 0 40px 0;
   }
 }
 
-.synopsis {
+a.register {
+  display: block;
+  font-size: 18px;
+  text-align: center;
+  font-weight: bold;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.workshops {
   h3 {
+    color: #e04a31;
+  }
+
+  a {
     color: #e04a31;
   }
 
   p {
     font-size: 16px;
   }
+}
 
-  .logo {
-    display: table-cell;
-    vertical-align: middle;
-    float: none;
+.beginner {
+  background-color: #e7f2ef;
 
-    img {
-      margin-top: 20px;
+  h3 {
+    color: #e04a31;
+  }
+
+  .details {
+    h5 {
+      color: #e04a31;
+    }
+
+    a.register {
+      background-color: #e04a31;
+      color: #fff;
+    }
+  }
+}
+
+.advanced {
+  background-color: #e4f7fd;
+
+  &.alternate {
+    background-color: #fff;
+  }
+
+  h3, h5 {
+    color: #1f71b5;
+  }
+
+  a.register {
+    background-color: #1f71b5;
+    color: #fff;
+  }
+}
+
+.workshop {
+  .details {
+    margin-top: 40px;
+    margin-bottom: 20px;
+
+    h5, h6 {
+      font-size: 18px;
+      margin-top: 0;
+    }
+
+    ul {
+      color: #656565;
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+
+      &.format {
+        hr {
+          border-top: 1px dotted #656565;
+          width: 50%;
+        }
+      }
+
+      &.topics {
+        margin-bottom: 10px;
+        margin-left: .8em;
+
+        li:before {
+          content: "\f192";
+          font-family: FontAwesome;
+          display: inline-block;
+          margin-left: -1.3em;
+          width: 1.3em;
+          font-size: 50%;
+          vertical-align: middle;
+        }
+      }
+    }
+
+    .date {
+      text-align: center;
+
+      p span {
+        display: block;
+      }
     }
   }
 }
 
 .quotes {
-  background-color: #e7f2ef;
+  background-color: #e4f7fd;
 
   p {
     text-align: center;
     font-style: italic;
     margin: 0;
-  }
-}
-
-.topics {
-  background-color: #e4f7fd;
-  padding-bottom: 50px;
-
-  h3 {
-    color: #1f71b5;
-
-    &.day-mark {
-      margin-bottom: 20px;
-    }
-  }
-
-  ol {
-    list-style-position: inside;
-    margin-bottom: 30px;
-    padding: 0;
-
-    li {
-      padding: 8px 0;
-      font-size: 16px;
-    }
   }
 }
 
@@ -201,20 +295,9 @@ p {
 .tickets {
   padding-bottom: 50px;
 
-  h3 {
-    color: #688e85;
-    margin-bottom: 60px;
-  }
-
-  h4 {
-    text-align: center;
-    color: #688f85;
-    line-height: 150%;
-    padding: 0 20%
-  }
-
-  p {
-    margin: 0;
+  a.register {
+    background-color: #e04a31;
+    color: #fff;
   }
 }
 
