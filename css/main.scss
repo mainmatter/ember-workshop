@@ -136,6 +136,15 @@ p {
   }
 }
 
+a.register {
+  display: block;
+  font-size: 18px;
+  text-align: center;
+  font-weight: bold;
+  padding: 5px;
+  border-radius: 5px;
+}
+
 .workshops {
   h3 {
     color: #e04a31;
@@ -232,15 +241,6 @@ p {
         display: block;
       }
     }
-
-    a.register {
-      display: block;
-      font-size: 18px;
-      text-align: center;
-      font-weight: bold;
-      padding: 5px;
-      border-radius: 5px;
-    }
   }
 }
 
@@ -295,20 +295,9 @@ p {
 .tickets {
   padding-bottom: 50px;
 
-  h3 {
-    color: #688e85;
-    margin-bottom: 60px;
-  }
-
-  h4 {
-    text-align: center;
-    color: #688f85;
-    line-height: 150%;
-    padding: 0 20%
-  }
-
-  p {
-    margin: 0;
+  a.register {
+    background-color: #e04a31;
+    color: #fff;
   }
 }
 
