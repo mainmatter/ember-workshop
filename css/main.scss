@@ -172,6 +172,10 @@ p {
 .advanced {
   background-color: #e4f7fd;
 
+  &.alternate {
+    background-color: #fff;
+  }
+
   h3, h5 {
     color: #1f71b5;
   }
