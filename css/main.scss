@@ -73,6 +73,7 @@ p {
       p {
         color: #fff;
         font-size: 14px;
+        text-align: center;
 
         span {
           display: inline-block;
@@ -210,6 +211,7 @@ a.register {
       margin: 0;
       padding: 0;
       list-style-type: none;
+      text-align: justify;
 
       &.format {
         hr {
