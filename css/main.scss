@@ -86,7 +86,7 @@ p {
         a {
           color: #fff;
           display: block;
-          height: 3em;
+          @media (min-width: 768px) { height: 3em;}
         }
       }
     }
@@ -361,3 +361,4 @@ i:hover {
     }
   }
 }
+
