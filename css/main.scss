@@ -333,8 +333,10 @@ i:hover {
     }
   }
 
-  .col-sm-2 {
-    @media (max-width: 768px) { text-align: center;}
+  .links {
+    a {
+      margin-left: 10px;
+    }
   }
 
   #footer-logo {
