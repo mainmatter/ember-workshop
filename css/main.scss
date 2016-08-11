@@ -333,6 +333,10 @@ i:hover {
     }
   }
 
+  .col-sm-2 {
+    @media (max-width: 768px) { text-align: center;}
+  }
+
   #footer-logo {
     margin-top: 0;
     border: none;
