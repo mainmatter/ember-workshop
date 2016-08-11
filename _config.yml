@@ -5,3 +5,16 @@ sass:
 
 gems:
   - jekyll-sitemap
+  - jekyll-seo-tag
+
+title: simplabs
+author: simplabs GmbH
+description: Ember.js Workshops by simplabs
+
+url: http://simplabs.com
+logo: /images/logo@2x.png
+
+twitter:
+  username: simplabs
+facebook:
+  publisher: https://www.facebook.com/simplabs/
