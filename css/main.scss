@@ -362,3 +362,10 @@ i:hover {
   }
 }
 
+
+html, body {
+  /** Disable horizontal scroll on smaller devices **/
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
