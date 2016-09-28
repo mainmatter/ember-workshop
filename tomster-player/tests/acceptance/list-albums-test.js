@@ -23,7 +23,7 @@ const ALBUMS = [{
 moduleForAcceptance('Acceptance | list albums', {
   beforeEach() {
     this.server = new Pretender(function() {
-      this.get('/api/albums', function() {
+      this.get('/albums', function() {
         return [200, { 'Content-Type': 'application/vnd.api+json' }, JSON.stringify({ data: ALBUMS })];
       });
     });

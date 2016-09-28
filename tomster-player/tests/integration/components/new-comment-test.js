@@ -10,10 +10,10 @@ moduleForComponent('new-comment', 'Integration | Component | new comment', {
   beforeEach() {
     this.inject.service('store');
     this.server = new Pretender(function() {
-      this.post('/api/albums', function() {
+      this.post('/albums', function() {
         return [204, {}, ''];
       });
-      this.post('/api/comments', function() {
+      this.post('/comments', function() {
         return [204, {}, ''];
       });
     });
@@ -45,7 +45,7 @@ test('it creates a comment', function(assert) {
 
 test('it does not create a comment when the server rejects it', function(assert) {
   assert.expect(0);
-  this.server.post('/api/comments', function() {
+  this.server.post('/comments', function() {
     return [422, {}, ''];
   });
 

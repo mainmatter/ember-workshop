@@ -1,0 +1,46 @@
+{
+  "album": {
+    "title": {
+      "type": "string"
+    },
+    "coverUrl": {
+      "type": "string"
+    },
+    "songs": {
+      "isArray": true,
+      "link": "song"
+    },
+    "comments": {
+      "isArray": true,
+      "link": "comment"
+    }
+  },
+  "comment": {
+    "rating": {
+      "type": "number"
+    },
+    "text": {
+      "type": "string"
+    },
+    "createdAt": {
+      "type": "date"
+    },
+    "album": {
+      "link": "album"
+    }
+  },
+  "song": {
+    "title": {
+      "type": "string"
+    },
+    "duration": {
+      "type": "number"
+    },
+    "mp3Url": {
+      "type": "string"
+    },
+    "album": {
+      "link": "album"
+    }
+  }
+}

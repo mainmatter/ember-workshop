@@ -4,14 +4,7 @@ import ApplicationRouteMixin from 'ember-simple-auth/mixins/application-route-mi
 const { inject: { service } } = Ember;
 
 export default Ember.Route.extend(ApplicationRouteMixin, {
-  commentUpdates: service(),
   session: service(),
-
-  afterModel() {
-    if (this.get('session.isAuthenticated')) {
-      this.get('commentUpdates').connect();
-    }
-  },
 
   sessionAuthenticated() {
     this._super(...arguments);
