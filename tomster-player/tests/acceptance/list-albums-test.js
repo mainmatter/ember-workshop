@@ -1,17 +1,20 @@
 import { test } from 'qunit';
 import moduleForAcceptance from 'tomster-player/tests/helpers/module-for-acceptance';
 import { authenticateSession } from 'tomster-player/tests/helpers/ember-simple-auth';
-
-const { FIXTURES, loadFixtures, unloadFixtures } = window;
+import { loadFixtures, unloadFixtures, fixtures } from 'tomster-player/tests/helpers/ember-cli-fortune';
 
 moduleForAcceptance('Acceptance | list albums', {
-  beforeEach() {
+  beforeEach(assert) {
+    const done = assert.async();
     authenticateSession(this.application);
-    return loadFixtures(FIXTURES);
+    loadFixtures(fixtures)
+    .then(done);
   },
 
-  afterEach() {
-    return unloadFixtures();
+  afterEach(assert) {
+    const done = assert.async();
+    unloadFixtures()
+    .then(done);
   }
 });
 
