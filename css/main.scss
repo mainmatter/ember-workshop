@@ -347,6 +347,31 @@ i:hover {
   }
 }
 
+.header {
+  background-color: #fff;
+  padding: 10px 0;
+  font-size: 12px;
+  text-align: right;
+
+  a {
+    color: #656565;
+    filter: gray;
+    -webkit-filter: grayscale(1);
+    transition: filter ease-in-out .15s, -webkit-filter ease-in-out .15s;
+
+    i {
+      filter: none;
+      -webkit-filter: none;
+    }
+
+    &:hover {
+      text-decoration: none;
+      filter: none;
+      -webkit-filter: none;
+    }
+  }
+}
+
 @media (max-width: 768px) {
   .section {
     h3 {
