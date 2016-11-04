@@ -348,10 +348,18 @@ i:hover {
 }
 
 .header {
-  background-color: #e4f7fd;
+  background-color: #fff;
   padding: 10px 0;
   font-size: 12px;
-  text-align: center;
+  text-align: right;
+
+  a {
+    color: #656565;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
 }
 
 @media (max-width: 768px) {
