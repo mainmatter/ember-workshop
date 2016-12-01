@@ -34,7 +34,12 @@ test('calculates its average rating based on the assigned comments', function(as
   const store = this.store();
   const album = this.subject();
   this.server.post('/comments', function() {
-    return [204, {}, ''];
+    return [201, {}, JSON.stringify({
+      data: {
+        id: '1',
+        type: 'comments'
+      }
+    })];
   });
 
   return Ember.run(() => {

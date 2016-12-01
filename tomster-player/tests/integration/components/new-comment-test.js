@@ -11,10 +11,20 @@ moduleForComponent('new-comment', 'Integration | Component | new comment', {
     this.inject.service('store');
     this.server = new Pretender(function() {
       this.post('/api/albums', function() {
-        return [204, {}, ''];
+        return [201, {}, JSON.stringify({
+          data: {
+            id: '1',
+            type: 'albums'
+          }
+        })];
       });
       this.post('/api/comments', function() {
-        return [204, {}, ''];
+        return [201, {}, JSON.stringify({
+          data: {
+            id: '1',
+            type: 'comments'
+          }
+        })];
       });
     });
 
