@@ -12,4 +12,4 @@ This repository contains the sample Ember.js projects for
   contains a project that participants use to bootstrap their own
   implementation of the Tomster music player
 
-Copyright &copy; 2015-2016 simplabs GmbH (http://simplabs.com)
+Copyright &copy; 2015-2017 simplabs GmbH (http://simplabs.com)
