@@ -50,6 +50,13 @@ p {
     color: #e04a31;
     margin: 0 0 80px 0;
     font-weight: 900;
+
+    .register-now {
+      display: block;
+      font-size: 18px;
+      margin: 8px;
+      text-decoration: underline;
+    }
   }
 
   h4 {
@@ -97,7 +104,7 @@ p {
   }
 
   .register-form {
-    margin: 20px 0;
+    margin: 10px 0 0 0;
 
     .input-group {
       input.form-control {
@@ -299,9 +306,10 @@ a.register {
 .tickets {
   padding-bottom: 50px;
 
-  a.register {
-    background-color: #e04a31;
-    color: #fff;
+  .on-site-option {
+    p {
+      text-align: center;
+    }
   }
 }
 
