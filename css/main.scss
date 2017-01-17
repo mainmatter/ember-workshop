@@ -155,7 +155,8 @@ a.register {
   border-radius: 5px;
 }
 
-.workshops {
+.description {
+  background-color: #e4f7fd;
   h3 {
     color: #e04a31;
   }
@@ -169,99 +170,88 @@ a.register {
   }
 }
 
-.beginner {
-  background-color: #e7f2ef;
+.schedule {
+  background-color: #fff;
 
-  h3 {
-    color: #e04a31;
+  h3, h4, h5, p {
+    color: #656565;
+  }
+
+  h4 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+
+  h6 {
+    font-weight: 500;
+  }
+
+  a {
+    color: #656565;
+    text-decoration: underline;
+  }
+
+  .topic {
+    p {
+      margin-bottom: 20px;
+    }
   }
 
   .details {
-    h5 {
-      color: #e04a31;
-    }
-
-    a.register {
-      background-color: #e04a31;
-      color: #fff;
-    }
-  }
-}
-
-.advanced {
-  background-color: #e4f7fd;
-
-  &.alternate {
-    background-color: #fff;
-  }
-
-  h3, h5 {
-    color: #1f71b5;
-  }
-
-  a.register {
-    background-color: #1f71b5;
-    color: #fff;
-  }
-}
-
-.workshop {
-  .details {
-    margin-top: 40px;
     margin-bottom: 20px;
 
-    h5, h6 {
+    p, ul {
+      font-size: 14px;
+    }
+
+    h6 {
       font-size: 18px;
       margin-top: 0;
+      color: #656565;
     }
 
     ul {
-      color: #656565;
-      margin: 0;
-      padding: 0;
       list-style-type: none;
       text-align: justify;
+      color: #656565;
+      margin: 0 0 10px 0;
+      padding: 0;
 
-      &.format {
-        hr {
-          border-top: 1px dotted #656565;
-          width: 50%;
-        }
-      }
-
-      &.topics {
-        margin-bottom: 10px;
-        margin-left: .8em;
-
-        li:before {
-          content: "\f192";
-          font-family: FontAwesome;
-          display: inline-block;
-          margin-left: -1.3em;
-          width: 1.3em;
-          font-size: 50%;
-          vertical-align: middle;
-        }
+      li:before {
+        content: "\f192";
+        font-family: FontAwesome;
+        display: inline-block;
+        width: 1.5em;
+        font-size: 50%;
+        vertical-align: middle;
       }
     }
 
-    .date {
-      text-align: center;
+    p.time:before {
+      font-family: FontAwesome;
+      display: inline-block;
+      width: 1em;
+      vertical-align: middle;
+    }
 
-      p span {
-        display: block;
+    &.lecture {
+      p.time:before {
+        content: "\f130";
       }
     }
-  }
-}
 
-.quotes {
-  background-color: #e4f7fd;
+    &.exercise {
+      p.time:before {
+        content: "\f040";
+      }
+    }
 
-  p {
-    text-align: center;
-    font-style: italic;
-    margin: 0;
+    &.lunch {
+      p.time:before {
+        content: "\f0f5";
+      }
+    }
   }
 }
 
