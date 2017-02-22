@@ -203,6 +203,28 @@ a.anchor {
     p {
       margin-bottom: 20px;
     }
+    margin-bottom: 20px;
+  }
+
+  .agenda-button {
+    display: inline-block;
+    border-width: 2px;
+    border-style: solid;
+    padding: 5px 50px 5px 50px;
+    transition: color ease-in-out .15s, background-color ease-in-out .15s;
+    font-size: 14px;
+    text-decoration: none;
+    text-transform: uppercase;
+    
+    &:hover {
+      background-color: #e7f2ef;
+    }
+  }
+
+  .lecture-items {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
   }
 
   .details {
@@ -378,6 +400,7 @@ i:hover {
     }
   }
 }
+
 
 @media (max-width: 768px) {
   .section {
