@@ -336,9 +336,18 @@ a.anchor {
   }
 }
 
+.location {
+  background-color: #e4f7fd;
+
+  h3 {
+    color: #e04a31;
+    margin-bottom: 60px;
+  }
+}
+
 .tickets {
   padding-bottom: 50px;
-
+  
   .on-site-option {
     p {
       text-align: center;
@@ -435,6 +444,16 @@ i:hover {
   .instructors {
     a {
       margin-bottom: 20px;
+    }
+  }
+
+  .location {
+    h4 {
+      margin-top: 20px;
+    }
+
+    p:first-of-type {
+      margin-top: 20px;
     }
   }
 }
