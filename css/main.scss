@@ -223,6 +223,9 @@ a.anchor {
     cursor: pointer;
     background-color: #688f85;
     color: #fff;
+    font-weight: bold;
+    border-radius: 5px;
+    border-color: #688f85;
     
     &:hover {
       background-color: #e4f7fd;
