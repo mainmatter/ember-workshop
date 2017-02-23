@@ -343,6 +343,17 @@ a.anchor {
     color: #e04a31;
     margin-bottom: 60px;
   }
+
+  .address > span {
+    display: block;
+    clear: both;
+    font-weight: bold;
+  }
+
+  #map-canvas {
+    height: 300px;
+    margin: 20px 0 10px;
+  }
 }
 
 .tickets {
@@ -454,6 +465,10 @@ i:hover {
 
     p:first-of-type {
       margin-top: 20px;
+    }
+
+    #map-canvas {
+      margin: 20px 0 0;
     }
   }
 }
