@@ -164,6 +164,7 @@ a.anchor {
 
 .description {
   background-color: #e4f7fd;
+
   h3 {
     color: #e04a31;
   }
@@ -199,6 +200,10 @@ a.anchor {
     text-decoration: underline;
   }
 
+  .day {
+    margin-top: 80px;
+  }
+  
   .topic {
     p {
       margin-bottom: 20px;
@@ -212,12 +217,16 @@ a.anchor {
     border-style: solid;
     padding: 5px 50px 5px 50px;
     transition: color ease-in-out .15s, background-color ease-in-out .15s;
-    font-size: 14px;
+    font-size: 13px;
     text-decoration: none;
     text-transform: uppercase;
+    cursor: pointer;
+    background-color: #688f85;
+    color: #fff;
     
     &:hover {
-      background-color: #e7f2ef;
+      background-color: #e4f7fd;
+      color: #000;
     }
   }
 
