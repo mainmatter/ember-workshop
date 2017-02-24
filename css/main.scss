@@ -164,6 +164,7 @@ a.anchor {
 
 .description {
   background-color: #e4f7fd;
+
   h3 {
     color: #e04a31;
   }
@@ -199,10 +200,45 @@ a.anchor {
     text-decoration: underline;
   }
 
+  .day {
+    margin-top: 80px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  
   .topic {
     p {
       margin-bottom: 20px;
     }
+    margin-bottom: 20px;
+  }
+
+  .agenda-button {
+    display: inline-block;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    padding: 7px 50px;
+    transition: color ease-out .15s, background-color ease-out .15s;
+    font-size: 13px;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    background-color: #688f85;
+    color: #fff;
+    font-weight: bold;
+    
+    &:hover, &:active {
+      background-color: #e4f7fd;
+      color: #000;
+    }
+  }
+
+  .lecture-items {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
   }
 
   .details {
