@@ -202,6 +202,10 @@ a.anchor {
 
   .day {
     margin-top: 80px;
+
+    &:first-child {
+      margin-top: 0;
+    }
   }
   
   .topic {
@@ -213,10 +217,10 @@ a.anchor {
 
   .agenda-button {
     display: inline-block;
-    border-width: 2px;
-    border-style: solid;
-    padding: 5px 50px 5px 50px;
-    transition: color ease-in-out .15s, background-color ease-in-out .15s;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    padding: 7px 50px;
+    transition: color ease-out .15s, background-color ease-out .15s;
     font-size: 13px;
     text-decoration: none;
     text-transform: uppercase;
@@ -224,10 +228,8 @@ a.anchor {
     background-color: #688f85;
     color: #fff;
     font-weight: bold;
-    border-radius: 5px;
-    border-color: #688f85;
     
-    &:hover {
+    &:hover, &:active {
       background-color: #e4f7fd;
       color: #000;
     }
@@ -412,7 +414,6 @@ i:hover {
     }
   }
 }
-
 
 @media (max-width: 768px) {
   .section {
