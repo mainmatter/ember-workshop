@@ -435,6 +435,37 @@ i:hover {
   }
 }
 
+.cookie-banner {
+  width: 100%;
+  padding: 20px 0;
+  position: fixed;
+  bottom: 0;
+  z-index: 9999;
+  background-color: #e7f2ef;
+
+  p {
+    margin: 0;
+  }
+
+  a {
+    color: #688f85;
+  }
+}
+
+.cookie-button {
+  display: inline-block;
+  border-width: 2px;
+  border-style: solid;
+  padding: 5px 50px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #688f85;
+    color: #e7f2ef;
+    text-decoration: none;
+  }
+}
+
 @media (max-width: 768px) {
   .section {
     h3 {
