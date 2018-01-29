@@ -200,6 +200,15 @@ a.anchor {
     text-decoration: underline;
   }
 
+  a[name="button"] {
+    color: #fff;
+    text-decoration: none;
+
+    &:hover {
+      color: #000;
+    }
+  }
+
   .day {
     margin-top: 80px;
 
@@ -213,26 +222,6 @@ a.anchor {
       margin-bottom: 20px;
     }
     margin-bottom: 20px;
-  }
-
-  .agenda-button {
-    display: inline-block;
-    border: 2px solid #fff;
-    border-radius: 5px;
-    padding: 7px 50px;
-    transition: color ease-out .15s, background-color ease-out .15s;
-    font-size: 13px;
-    text-decoration: none;
-    text-transform: uppercase;
-    cursor: pointer;
-    background-color: #688f85;
-    color: #fff;
-    font-weight: bold;
-    
-    &:hover, &:active {
-      background-color: #e4f7fd;
-      color: #000;
-    }
   }
 
   .lecture-items {
@@ -295,6 +284,26 @@ a.anchor {
         content: "\f0f5";
       }
     }
+  }
+}
+
+.agenda-button {
+  display: inline-block;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  padding: 7px 50px;
+  transition: color ease-out .15s, background-color ease-out .15s;
+  font-size: 13px;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  background-color: #688f85;
+  color: #fff;
+  font-weight: bold;
+  
+  &:hover, &:active {
+    background-color: #e4f7fd;
+    color: #000;
   }
 }
 
@@ -441,7 +450,7 @@ i:hover {
   position: fixed;
   bottom: 0;
   z-index: 9999;
-  background-color: #e7f2ef;
+  background-color: #e4f7fd;
 
   p {
     margin: 0;
@@ -450,19 +459,16 @@ i:hover {
   a {
     color: #688f85;
   }
-}
 
-.cookie-button {
-  display: inline-block;
-  border-width: 2px;
-  border-style: solid;
-  padding: 5px 50px;
-  cursor: pointer;
-
-  &:hover {
-    background-color: #688f85;
-    color: #e7f2ef;
+  a[name="button"] {
+    color: #fff;
     text-decoration: none;
+    border: 2px solid #e4f7fd;
+
+    &:hover {
+      color: #000;
+      background-color: #fff;
+    }
   }
 }
 
