@@ -60,13 +60,22 @@ p {
   }
 
   h4 {
+    margin: 0 0 20px 0;
+    font-weight: 900;
+
+    a {
+      color: #e04a31;
+    }
+  }
+
+  h5 {
     font-weight: normal;
     font-size: 14px;
     line-height: 130%;
-    margin: 0;
+    margin: 40px 0 0 0;
   }
 
-  h3, h4 {
+  h3, h5 {
     a {
       color: #e04a31;
     }
