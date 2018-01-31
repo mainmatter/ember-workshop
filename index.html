@@ -150,3 +150,30 @@ title: Ember.js Workshops
     <a href="https://simplabs.com/contact">Contact</a>
   </div>
 </div>
+
+<div class="cookie-banner" id="cookie-banner">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7 col-md-offset-1 col-xs-6">
+        <p>This website uses cookies. <a href="https://simplabs.com/privacy/">Learn more</a></p>
+      </div>
+      <div class="col-md-3 col-xs-6">
+        <a class="agenda-button pull-right" name="button" id="cookie-button">Ok</a>
+        <script>
+          Zepto(function($) {
+            var banner = $('#cookie-banner');
+            if (document.cookie.includes('cookiesAccepted=true')) {
+              banner.remove();
+            }
+
+            var button = $('#cookie-button');
+            button.on('click', function() {
+              document.cookie = "cookiesAccepted=true;path=/;expires=Mon, 24 Mar 2319 09:52:10 GMT";
+              banner.remove();
+            });
+          });
+        </script>
+      </div>
+    </div>
+  </div>
+</div>

@@ -209,6 +209,15 @@ a.anchor {
     text-decoration: underline;
   }
 
+  a[name="button"] {
+    color: #fff;
+    text-decoration: none;
+
+    &:hover {
+      color: #000;
+    }
+  }
+
   .day {
     margin-top: 80px;
 
@@ -222,26 +231,6 @@ a.anchor {
       margin-bottom: 20px;
     }
     margin-bottom: 20px;
-  }
-
-  .agenda-button {
-    display: inline-block;
-    border: 2px solid #fff;
-    border-radius: 5px;
-    padding: 7px 50px;
-    transition: color ease-out .15s, background-color ease-out .15s;
-    font-size: 13px;
-    text-decoration: none;
-    text-transform: uppercase;
-    cursor: pointer;
-    background-color: #688f85;
-    color: #fff;
-    font-weight: bold;
-    
-    &:hover, &:active {
-      background-color: #e4f7fd;
-      color: #000;
-    }
   }
 
   .lecture-items {
@@ -304,6 +293,26 @@ a.anchor {
         content: "\f0f5";
       }
     }
+  }
+}
+
+.agenda-button {
+  display: inline-block;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  padding: 7px 50px;
+  transition: color ease-out .15s, background-color ease-out .15s;
+  font-size: 13px;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  background-color: #688f85;
+  color: #fff;
+  font-weight: bold;
+  
+  &:hover, &:active {
+    background-color: #e4f7fd;
+    color: #000;
   }
 }
 
@@ -440,6 +449,34 @@ i:hover {
       text-decoration: none;
       filter: none;
       -webkit-filter: none;
+    }
+  }
+}
+
+.cookie-banner {
+  width: 100%;
+  padding: 20px 0;
+  position: fixed;
+  bottom: 0;
+  z-index: 9999;
+  background-color: #e4f7fd;
+
+  p {
+    margin: 0;
+  }
+
+  a {
+    color: #688f85;
+  }
+
+  a[name="button"] {
+    color: #fff;
+    text-decoration: none;
+    border: 2px solid #e4f7fd;
+
+    &:hover {
+      color: #000;
+      background-color: #fff;
     }
   }
 }
