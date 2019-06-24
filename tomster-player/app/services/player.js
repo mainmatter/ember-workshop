@@ -5,9 +5,11 @@ import { computed } from '@ember/object';
 
 export const CURRENT_SONG_KEY_NAME = '_tomsterPlayerCurrentSong';
 
+let callbacks = ['_onPause', '_onPlay', '_onEnd'];
+
 export default Service.extend({
   store: service(),
-  callbacks: ['_onPause', '_onPlay', '_onEnd'],
+  callbacks,
 
   init() {
     this._super();

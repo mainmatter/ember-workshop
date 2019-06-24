@@ -11,7 +11,7 @@ export default Model.extend({
   songs: hasMany(),
   comments: hasMany(),
 
-  averageRating: computed('comments.@each.rating', 'comments.@each.isNew', function() {
+  averageRating: computed('comments.@each.{rating,isNew}', function() {
     const savedComments = this.comments.rejectBy('isNew');
     const commentCount = savedComments.get('length');
     const ratings = savedComments.mapBy('rating');
