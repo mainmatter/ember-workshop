@@ -1,9 +1,9 @@
-/*jshint node:true*/
-/* global require, module */
-var EmberApp = require('ember-cli/lib/broccoli/ember-app');
+'use strict';
+
+const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
-  var app = new EmberApp(defaults, {
+  let app = new EmberApp(defaults, {
     // Add options here
   });
 
@@ -20,27 +20,8 @@ module.exports = function(defaults) {
   // please specify an object with the list of modules as keys
   // along with the exports of each module as its value.
 
-  app.import('bower_components/howler.js/howler.core.min.js');
-  app.import('bower_components/bootstrap/dist/css/bootstrap.css');
-
-  app.import('vendor/socket.io-1.4.5.js');
-
-  app.import({
-    development: 'bower_components/font-awesome/css/font-awesome.css',
-    production:  'bower_components/font-awesome/css/font-awesome.min.css'
-  });
-
-  [
-    'FontAwesome.otf',
-    'fontawesome-webfont.svg',
-    'fontawesome-webfont.woff',
-    'fontawesome-webfont.eot',
-    'fontawesome-webfont.ttf',
-    'fontawesome-webfont.woff2'
-  ].forEach(function(font) {
-    var file = 'bower_components/font-awesome/fonts/' + font;
-    app.import(file, { destDir: 'fonts' });
-  });
+  app.import('node_modules/howler/dist/howler.core.min.js');
+  app.import('node_modules/socket.io-client/dist/socket.io.js');
 
   return app.toTree();
 };
