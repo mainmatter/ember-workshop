@@ -1,6 +1,6 @@
 <div class="list-group">
   <div class="list-group-item">
-    {{album-tile album=(readonly model) show-songs=true}}
+    <AlbumTile @album={{readonly model}} @show-songs={{true}} />
   </div>
   <div class="list-group-item">
     <div class="card">

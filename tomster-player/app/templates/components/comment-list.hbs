@@ -2,7 +2,7 @@
   <div class="col-xs-12">
     {{#each sortedComments as |comment|}}
       <div data-element-type="comment">
-        {{comment-tile comment=(readonly comment)}}
+        <CommentTile @comment={{readonly comment}} />
       </div>
     {{/each}}
   </div>

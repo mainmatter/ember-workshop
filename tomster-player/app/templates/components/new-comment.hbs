@@ -1,17 +1,17 @@
-<form onsubmit={{action (action 'createComment')}} data-element-type="comment-form">
-  {{#form-fieldset isInvalid=(readonly errors.rating) label='Rating'}}
-    <select id="song-rating" onchange={{action (action 'ratingChanged')}} class="c-select form-control {{if errors.rating 'form-control-danger'}}">
+<form onsubmit={{action (action "createComment")}} data-element-type="comment-form">
+  {{#form-fieldset isInvalid=(readonly errors.rating) label="Rating"}}
+    <select id="song-rating" onchange={{action (action "ratingChanged")}} class="c-select form-control {{if errors.rating "form-control-danger"}}">
       <option disabled selected>- select one -</option>
       {{#each ratingOptions as |o|}}
-        <option value="{{o.value}}">{{o.label}}</option>
+        <option value={{o.value}}>{{o.label}}</option>
       {{/each}}
     </select>
   {{/form-fieldset}}
 
-  {{#form-fieldset isInvalid=(readonly errors.text) label='Comment'}}
-    <textarea id="song-comment" rows="3" onblur={{action (action 'textChanged')}} class="form-control {{if errors.text 'form-control-danger'}}"></textarea>
+  {{#form-fieldset isInvalid=(readonly errors.text) label="Comment"}}
+    <textarea id="song-comment" rows="3" onblur={{action (action "textChanged")}} class="form-control {{if errors.text "form-control-danger"}}"></textarea>
   {{/form-fieldset}}
 
   <button type="submit" class="btn btn-primary">Save Comment</button>
-  <button type="button" class="btn btn-secondary" onclick={{action attrs.on-cancel}} data-element-type="cancel-button">Cancel</button>
+  <button type="button" class="btn btn-secondary" onclick={{action @on-cancel}} data-element-type="cancel-button">Cancel</button>
 </form>

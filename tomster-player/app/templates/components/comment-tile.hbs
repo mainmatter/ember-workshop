@@ -1,9 +1,9 @@
 <div class="card">
   <div class="card-header">
-    {{format-datetime attrs.comment.createdAt}}
+    {{format-datetime @comment.createdAt}}
   </div>
   <div class="card-block">
-    <p class="card-text">{{attrs.comment.text}}</p>
-    <p class="card-text">{{rating-indicator rating=(readonly attrs.comment.rating)}}</p>
+    <p class="card-text">{{@comment.text}}</p>
+    <p class="card-text">{{rating-indicator rating=(readonly @comment.rating)}}</p>
   </div>
 </div>

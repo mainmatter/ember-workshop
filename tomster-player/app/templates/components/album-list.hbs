@@ -1,7 +1,7 @@
 <div class="list-group sidebar">
-  {{#each attrs.albums as |album|}}
+  {{#each @albums as |album|}}
     <div class="list-group-item">
-      {{album-tile album=(readonly album) on-select-album=attrs.on-select-album class='selectable-album' show-songs=false}}
+      <AlbumTile @album={{readonly album}} @on-select-album={{@on-select-album}} class="selectable-album" @show-songs={{false}} />
     </div>
   {{/each}}
 </div>

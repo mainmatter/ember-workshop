@@ -1,18 +1,18 @@
 <nav class="navbar bg-faded">
   <h1 class="navbar-brand">
-    <img class="img-responsive pull-left logo" src="/assets/images/tomster.png">
+    <img class="img-responsive pull-left logo" src="/assets/images/tomster.png" alt="Tomster Mascot">
     Tomster Player
   </h1>
   <ul class="nav navbar-nav pull-right">
     <li class="nav-item">
       {{#if session.isAuthenticated}}
-        <a onclick={{action (action 'invalidateSession')}} class="nav-link">Logout</a>
+        <a onclick={{action (action "invalidateSession")}} class="nav-link">Logout</a>
       {{else}}
-        {{#link-to 'login' class='nav-link'}}Login{{/link-to}}
+        {{#link-to "login" class="nav-link"}}Login{{/link-to}}
       {{/if}}
     </li>
     <li class="nav-item">
-      {{link-to "Tomster's Music Library" 'index' class='nav-link'}}
+      {{link-to "Tomster's Music Library" "index" class="nav-link"}}
     </li>
   </ul>
 </nav>

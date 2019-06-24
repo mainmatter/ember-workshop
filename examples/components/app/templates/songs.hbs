@@ -3,7 +3,7 @@
 <div class="list-group">
   {{#each orderedSongs as |song|}}
     <div class="list-group-item">
-      {{song-tile song=(readonly song) on-rating-change=(action 'setSongRating' song)}}
+      <SongTile @song={{readonly song}} @on-rating-change={{action 'setSongRating' song}} />
     </div>
   {{/each}}
 </div>
