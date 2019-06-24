@@ -1,6 +1,6 @@
 /* global io */
 import Ember from 'ember';
-import { Socket } from 'phoenix';
+import { Socket } from 'ember-phoenix';
 import config from '../config/environment';
 
 const { inject: { service } } = Ember;

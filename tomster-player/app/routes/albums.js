@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import _ from 'lodash/lodash';
+import _ from 'lodash';
 import AuthenticatedRouteMixin from 'ember-simple-auth/mixins/authenticated-route-mixin';
 
 const { RSVP, inject: { service } } = Ember;
