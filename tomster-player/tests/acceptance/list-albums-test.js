@@ -1,8 +1,8 @@
-import { findAll, visit } from '@ember/test-helpers';
+import { visit } from '@ember/test-helpers';
 import { module, test } from 'qunit';
 import { setupApplicationTest } from 'ember-qunit';
 import Pretender from 'pretender';
-import { authenticateSession } from 'tomster-player/tests/helpers/ember-simple-auth';
+import { authenticateSession } from 'ember-simple-auth/test-support';
 
 const ALBUMS = [{
   id: '1',
@@ -24,10 +24,14 @@ const ALBUMS = [{
 module('Acceptance | list albums', function(hooks) {
   setupApplicationTest(hooks);
 
-  hooks.beforeEach(function() {
+  hooks.beforeEach(async function() {
     this.server = new Pretender(function() {
       this.get('/api/albums', function() {
         return [200, { 'Content-Type': 'application/vnd.api+json' }, JSON.stringify({ data: ALBUMS })];
+      });
+
+      this.get('/api/songs/:id', function(req) {
+        return [200, { 'Content-Type': 'application/vnd.api+json' }, JSON.stringify({ data: { id: req.params.id, type: 'songs' } })];
       });
     });
     authenticateSession(this.application);
@@ -41,7 +45,7 @@ module('Acceptance | list albums', function(hooks) {
     await visit('/');
 
     assert.dom('*[data-element-type="album-title"]').exists({ count: 2 });
-    assert.equal(findAll('*[data-element-type="album-title"]:contains("The Bodyguard")').length, 1);
-    assert.equal(findAll('*[data-element-type="album-title"]:contains("Whitney Houston")').length, 1);
+    assert.dom('*[data-album-title="The Bodyguard"]').containsText('The Bodyguard');
+    assert.dom('*[data-album-title="Whitney Houston"]').containsText('Whitney Houston');
   });
 });

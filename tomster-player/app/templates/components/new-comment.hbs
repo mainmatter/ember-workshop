@@ -2,8 +2,8 @@
   {{#form-fieldset isInvalid=(readonly errors.rating) label='Rating'}}
     <select id="song-rating" onchange={{action (action 'ratingChanged')}} class="c-select form-control {{if errors.rating 'form-control-danger'}}">
       <option disabled selected>- select one -</option>
-      {{#each ratingOptions as |option|}}
-        <option value="{{option.value}}">{{option.label}}</option>
+      {{#each ratingOptions as |o|}}
+        <option value="{{o.value}}">{{o.label}}</option>
       {{/each}}
     </select>
   {{/form-fieldset}}

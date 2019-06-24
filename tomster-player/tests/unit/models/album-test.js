@@ -5,11 +5,17 @@ import { module, test } from 'qunit';
 import { setupTest } from 'ember-qunit';
 import Pretender from 'pretender';
 
+let num = 1;
+
 module('Unit | Model | album', function(hooks) {
   setupTest(hooks);
 
   hooks.beforeEach(function() {
-    this.server = new Pretender();
+    this.server = new Pretender(function() {
+      this.post('/api/comments', function() {
+        return [200, { 'Content-Type': 'application/vnd.api+json' }, JSON.stringify({ data: { id: num++, type: 'comments'} })];
+      });
+    });
   });
 
   hooks.afterEach(function() {
