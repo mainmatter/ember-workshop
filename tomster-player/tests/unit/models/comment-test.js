@@ -1,15 +1,14 @@
-import Ember from 'ember';
-import { moduleForModel, test } from 'ember-qunit';
+import { get } from '@ember/object';
+import { module, test } from 'qunit';
+import { setupTest } from 'ember-qunit';
 
-const { get } = Ember;
+module('Unit | Model | comment', function(hooks) {
+  setupTest(hooks);
 
-moduleForModel('comment', 'Unit | Model | comment', {
-  needs: ['model:album']
-});
+  test('belongs to an album', function(assert) {
+    const Comment = this.owner.lookup('service:store').modelFor('comment');
+    const relationship = get(Comment, 'relationshipsByName').get('album');
 
-test('belongs to an album', function(assert) {
-  const Comment = this.store().modelFor('comment');
-  const relationship = get(Comment, 'relationshipsByName').get('album');
-
-  assert.equal(relationship.kind, 'belongsTo');
+    assert.equal(relationship.kind, 'belongsTo');
+  });
 });

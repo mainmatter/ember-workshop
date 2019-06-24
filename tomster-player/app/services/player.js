@@ -1,11 +1,11 @@
 /* global Howl, localStorage */
-import Ember from 'ember';
+import Service, { inject as service } from '@ember/service';
+
+import { computed } from '@ember/object';
 
 export const CURRENT_SONG_KEY_NAME = '_tomsterPlayerCurrentSong';
 
-const { inject: { service }, computed } = Ember;
-
-export default Ember.Service.extend({
+export default Service.extend({
   store: service(),
   callbacks: ['_onPause', '_onPlay', '_onEnd'],
 

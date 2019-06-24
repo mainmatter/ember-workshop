@@ -1,11 +1,10 @@
-import Ember from 'ember';
+import Component from '@ember/component';
+import { computed } from '@ember/object';
 import _ from 'lodash';
-
-const { computed } = Ember;
 
 const MAX_RATING = 5;
 
-export default Ember.Component.extend({
+export default Component.extend({
   roundedRating: computed('rating', function() {
     const rating = this.getAttr('rating');
 
@@ -13,13 +12,13 @@ export default Ember.Component.extend({
   }),
 
   activeStars: computed('roundedRating', function() {
-    const roundedRating = this.get('roundedRating');
+    const roundedRating = this.roundedRating;
 
     return _.range(0, roundedRating);
   }),
 
   inactiveStars: computed('roundedRating', function() {
-    const roundedRating = this.get('roundedRating');
+    const roundedRating = this.roundedRating;
 
     return _.range(roundedRating, MAX_RATING);
   })

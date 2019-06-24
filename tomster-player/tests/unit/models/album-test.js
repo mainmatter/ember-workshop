@@ -1,56 +1,57 @@
-import Ember from 'ember';
-import { moduleForModel, test } from 'ember-qunit';
+import { run } from '@ember/runloop';
+import { get } from '@ember/object';
+import RSVP from 'rsvp';
+import { module, test } from 'qunit';
+import { setupTest } from 'ember-qunit';
 import Pretender from 'pretender';
 
-const { RSVP } = Ember;
+module('Unit | Model | album', function(hooks) {
+  setupTest(hooks);
 
-moduleForModel('album', 'Unit | Model | album', {
-  needs: ['model:song', 'model:comment'],
-
-  beforeEach() {
+  hooks.beforeEach(function() {
     this.server = new Pretender();
-  },
-
-  afterEach() {
-    this.server.shutdown();
-  }
-});
-
-test('has many songs', function(assert) {
-  const Album = this.store().modelFor('album');
-  const relationship = Ember.get(Album, 'relationshipsByName').get('songs');
-
-  assert.equal(relationship.kind, 'hasMany');
-});
-
-test('has many comments', function(assert) {
-  const Album = this.store().modelFor('album');
-  const relationship = Ember.get(Album, 'relationshipsByName').get('comments');
-
-  assert.equal(relationship.kind, 'hasMany');
-});
-
-test('calculates its average rating based on the assigned comments', function(assert) {
-  const store = this.store();
-  const album = this.subject();
-  this.server.post('/comments', function() {
-    return [201, {}, JSON.stringify({
-      data: {
-        id: '1',
-        type: 'comments'
-      }
-    })];
   });
 
-  return Ember.run(() => {
-    const comment1 = store.createRecord('comment', { album, rating: 1 });
-    const comment2 = store.createRecord('comment', { album, rating: 5 });
-    store.createRecord('comment', { album, rating: 5 });
+  hooks.afterEach(function() {
+    this.server.shutdown();
+  });
 
-    return RSVP.all([comment1.save(), comment2.save()]).then(() => {
-      const averageRating = album.get('averageRating');
+  test('has many songs', function(assert) {
+    const Album = this.owner.lookup('service:store').modelFor('album');
+    const relationship = get(Album, 'relationshipsByName').get('songs');
 
-      assert.equal(averageRating, 3);
+    assert.equal(relationship.kind, 'hasMany');
+  });
+
+  test('has many comments', function(assert) {
+    const Album = this.owner.lookup('service:store').modelFor('album');
+    const relationship = get(Album, 'relationshipsByName').get('comments');
+
+    assert.equal(relationship.kind, 'hasMany');
+  });
+
+  test('calculates its average rating based on the assigned comments', function(assert) {
+    const store = this.owner.lookup('service:store');
+    const album = run(() => this.owner.lookup('service:store').createRecord('album'));
+    this.server.post('/comments', function() {
+      return [201, {}, JSON.stringify({
+        data: {
+          id: '1',
+          type: 'comments'
+        }
+      })];
+    });
+
+    return run(() => {
+      const comment1 = store.createRecord('comment', { album, rating: 1 });
+      const comment2 = store.createRecord('comment', { album, rating: 5 });
+      store.createRecord('comment', { album, rating: 5 });
+
+      return RSVP.all([comment1.save(), comment2.save()]).then(() => {
+        const averageRating = album.get('averageRating');
+
+        assert.equal(averageRating, 3);
+      });
     });
   });
 });

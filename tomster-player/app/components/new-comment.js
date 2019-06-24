@@ -1,8 +1,7 @@
-import Ember from 'ember';
+import Component from '@ember/component';
+import { inject as service } from '@ember/service';
 
-const { inject: { service } } = Ember;
-
-export default Ember.Component.extend({
+export default Component.extend({
   store: service(),
 
   ratingOptions: [
@@ -17,7 +16,7 @@ export default Ember.Component.extend({
     createComment(e) {
       e.preventDefault();
       const album = this.getAttr('album');
-      const { store, text, rating } = this.getProperties('store', 'text', 'rating');
+      const { store, text, rating } = this;
 
       const comment = store.createRecord('comment', { text, rating, album });
       comment.save().then(() => {

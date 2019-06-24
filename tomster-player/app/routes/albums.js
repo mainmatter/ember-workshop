@@ -1,14 +1,14 @@
-import Ember from 'ember';
+import Route from '@ember/routing/route';
+import RSVP from 'rsvp';
+import { inject as service } from '@ember/service';
 import _ from 'lodash';
 import AuthenticatedRouteMixin from 'ember-simple-auth/mixins/authenticated-route-mixin';
 
-const { RSVP, inject: { service } } = Ember;
-
-export default Ember.Route.extend(AuthenticatedRouteMixin, {
+export default Route.extend(AuthenticatedRouteMixin, {
   commentUpdates: service(),
 
   model() {
-    return this.get('store').findAll('album').then((albums) => {
+    return this.store.findAll('album').then((albums) => {
       const relationPromises = _.flatten([
         albums.getEach('songs'),
         albums.getEach('comments')
@@ -19,6 +19,6 @@ export default Ember.Route.extend(AuthenticatedRouteMixin, {
   },
 
   afterModel() {
-    this.get('commentUpdates').connect();
+    this.commentUpdates.connect();
   }
 });

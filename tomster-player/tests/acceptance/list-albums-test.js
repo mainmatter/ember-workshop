@@ -1,5 +1,6 @@
-import { test } from 'qunit';
-import moduleForAcceptance from 'tomster-player/tests/helpers/module-for-acceptance';
+import { findAll, visit } from '@ember/test-helpers';
+import { module, test } from 'qunit';
+import { setupApplicationTest } from 'ember-qunit';
 import Pretender from 'pretender';
 import { authenticateSession } from 'tomster-player/tests/helpers/ember-simple-auth';
 
@@ -20,27 +21,27 @@ const ALBUMS = [{
   }
 }];
 
-moduleForAcceptance('Acceptance | list albums', {
-  beforeEach() {
+module('Acceptance | list albums', function(hooks) {
+  setupApplicationTest(hooks);
+
+  hooks.beforeEach(function() {
     this.server = new Pretender(function() {
       this.get('/api/albums', function() {
         return [200, { 'Content-Type': 'application/vnd.api+json' }, JSON.stringify({ data: ALBUMS })];
       });
     });
     authenticateSession(this.application);
-  },
+  });
 
-  afterEach() {
+  hooks.afterEach(function() {
     this.server.shutdown();
-  }
-});
+  });
 
-test('visiting / renders all albums', function(assert) {
-  visit('/');
+  test('visiting / renders all albums', async function(assert) {
+    await visit('/');
 
-  andThen(function() {
-    assert.equal(find('*[data-element-type="album-title"]').length, 2);
-    assert.equal(find('*[data-element-type="album-title"]:contains("The Bodyguard")').length, 1);
-    assert.equal(find('*[data-element-type="album-title"]:contains("Whitney Houston")').length, 1);
+    assert.dom('*[data-element-type="album-title"]').exists({ count: 2 });
+    assert.equal(findAll('*[data-element-type="album-title"]:contains("The Bodyguard")').length, 1);
+    assert.equal(findAll('*[data-element-type="album-title"]:contains("Whitney Houston")').length, 1);
   });
 });

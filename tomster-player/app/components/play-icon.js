@@ -1,8 +1,9 @@
-import Ember from 'ember';
+import { and } from '@ember/object/computed';
+import Component from '@ember/component';
+import { inject as service } from '@ember/service';
+import { computed } from '@ember/object';
 
-const { inject: { service }, computed } = Ember;
-
-export default Ember.Component.extend({
+export default Component.extend({
   tagName: 'span',
   player: service(),
 
@@ -13,18 +14,18 @@ export default Ember.Component.extend({
     return playedSongId === songId;
   }),
 
-  currentlyPlaying: computed.and('player.playing', '_songIsCurrentSong'),
+  currentlyPlaying: and('player.playing', '_songIsCurrentSong'),
 
   actions: {
     play() {
       const song = this.getAttr('song');
-      const player = this.get('player');
+      const player = this.player;
 
       player.play(song);
     },
 
     pause() {
-      const player = this.get('player');
+      const player = this.player;
 
       player.pause();
     }

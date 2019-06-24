@@ -1,10 +1,8 @@
-import Ember from 'ember';
+import Component from '@ember/component';
+import { inject as service } from '@ember/service';
+import { readOnly } from '@ember/object/computed';
 
-const {inject, computed} = Ember;
-const {readOnly}         = computed;
-const {service}          = inject;
-
-export default Ember.Component.extend({
+export default Component.extend({
   player: service(),
 
   playing: readOnly('player.playing'),

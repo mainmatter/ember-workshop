@@ -1,69 +1,76 @@
-import Ember from 'ember';
-import { moduleForComponent, test } from 'ember-qunit';
+import EmberObject from '@ember/object';
+import { module, test } from 'qunit';
+import { setupRenderingTest } from 'ember-qunit';
+import { render, click, findAll, find } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 
-moduleForComponent('album-tile', 'Integration | Component | album tile', {
-  integration: true,
+module('Integration | Component | album tile', function(hooks) {
+  setupRenderingTest(hooks);
 
-  beforeEach() {
-    const album = Ember.Object.create({
+  hooks.beforeEach(function() {
+    this.actions = {};
+    this.send = (actionName, ...args) => this.actions[actionName].apply(this, args);
+  });
+
+  hooks.beforeEach(function() {
+    const album = EmberObject.create({
       title: 'Whitney Houston',
       coverUrl: 'http://example.com/cover.jpg',
       songs: [
-        Ember.Object.create({ id: 1 }),
-        Ember.Object.create({ id: 2 })
+        EmberObject.create({ id: 1 }),
+        EmberObject.create({ id: 2 })
       ]
     });
     this.set('album', album);
-  }
-});
-
-test('renders the album title', function(assert) {
-  this.render(hbs`{{album-tile album=album}}`);
-
-  assert.equal(this.$('*[data-element-type="album-title"]').text().trim(), 'Whitney Houston');
-});
-
-test("renders the album's songs", function(assert) {
-  this.render(hbs`{{album-tile album=album show-songs=true}}`);
-
-  assert.equal(this.$('*[data-element-type="album-song"]').length, 2);
-});
-
-test("omits songs if 'show-songs' attribute is false", function(assert) {
-  this.render(hbs`{{album-tile album=album show-songs=false}}`);
-
-  assert.equal(this.$('*[data-element-type="album-song"]').length, 0);
-});
-
-test("renders the album's cover", function(assert) {
-  this.render(hbs`{{album-tile album=album}}`);
-
-  assert.equal(this.$('img[src="http://example.com/cover.jpg"]').length, 1);
-});
-
-test('renders a rating indicator', function(assert) {
-  this.render(hbs`{{album-tile album=album show-songs=true}}`);
-
-  assert.equal(this.$('*[data-element-type="album-rating"]').length, 1);
-});
-
-test('calls the action assigned to on-select-album with the album when clicked', function(assert) {
-  this.on('selectAlbum', (value) => {
-    const album = this.get('album');
-
-    assert.deepEqual(value, album);
   });
 
-  this.render(hbs`{{album-tile album=album on-select-album=(action 'selectAlbum') id='the-component'}}`);
+  test('renders the album title', async function(assert) {
+    await render(hbs`{{album-tile album=album}}`);
 
-  this.$('#the-component').click();
-});
+    assert.dom('*[data-element-type="album-title"]').hasText('Whitney Houston');
+  });
 
-test('does not require an action to be assigned to the on-select-album event', function(assert) {
-  assert.expect(0);
+  test("renders the album's songs", async function(assert) {
+    await render(hbs`{{album-tile album=album show-songs=true}}`);
 
-  this.render(hbs`{{album-tile album=album id='the-component'}}`);
+    assert.dom('*[data-element-type="album-song"]').exists({ count: 2 });
+  });
 
-  this.$('#the-component').click();
+  test("omits songs if 'show-songs' attribute is false", async function(assert) {
+    await render(hbs`{{album-tile album=album show-songs=false}}`);
+
+    assert.dom('*[data-element-type="album-song"]').doesNotExist();
+  });
+
+  test("renders the album's cover", async function(assert) {
+    await render(hbs`{{album-tile album=album}}`);
+
+    assert.dom('img[src="http://example.com/cover.jpg"]').exists({ count: 1 });
+  });
+
+  test('renders a rating indicator', async function(assert) {
+    await render(hbs`{{album-tile album=album show-songs=true}}`);
+
+    assert.dom('*[data-element-type="album-rating"]').exists({ count: 1 });
+  });
+
+  test('calls the action assigned to on-select-album with the album when clicked', async function(assert) {
+    this.actions.selectAlbum = (value) => {
+      const album = this.get('album');
+
+      assert.deepEqual(value, album);
+    };
+
+    await render(hbs`{{album-tile album=album on-select-album=(action 'selectAlbum') id='the-component'}}`);
+
+    await click('#the-component');
+  });
+
+  test('does not require an action to be assigned to the on-select-album event', async function(assert) {
+    assert.expect(0);
+
+    await render(hbs`{{album-tile album=album id='the-component'}}`);
+
+    await click('#the-component');
+  });
 });

@@ -1,26 +1,25 @@
-import Ember from 'ember';
+import Route from '@ember/routing/route';
+import { inject as service } from '@ember/service';
 import ApplicationRouteMixin from 'ember-simple-auth/mixins/application-route-mixin';
 
-const { inject: { service } } = Ember;
-
-export default Ember.Route.extend(ApplicationRouteMixin, {
+export default Route.extend(ApplicationRouteMixin, {
   commentUpdates: service(),
   session: service(),
 
   afterModel() {
     if (this.get('session.isAuthenticated')) {
-      this.get('commentUpdates').connect();
+      this.commentUpdates.connect();
     }
   },
 
   sessionAuthenticated() {
     this._super(...arguments);
 
-    this.get('commentUpdates').connect();
+    this.commentUpdates.connect();
   },
 
   sessionInvalidated() {
-    this.get('commentUpdates').disconnect();
+    this.commentUpdates.disconnect();
 
     this._super(...arguments);
   }

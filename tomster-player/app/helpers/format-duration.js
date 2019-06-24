@@ -1,4 +1,4 @@
-import Ember from 'ember';
+import { helper as buildHelper } from '@ember/component/helper';
 
 function rightJustify(string, length, pad) {
   string = string.toString();
@@ -17,4 +17,4 @@ export function formatDuration(duration) {
   return `${rightJustify(minutes, 2, '0')}:${rightJustify(seconds, 2, '0')}`;
 }
 
-export default Ember.Helper.helper(formatDuration);
+export default buildHelper(formatDuration);

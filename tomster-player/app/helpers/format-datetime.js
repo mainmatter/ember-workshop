@@ -1,4 +1,4 @@
-import Ember from 'ember';
+import { helper as buildHelper } from '@ember/component/helper';
 
 export function formatDatetime(datetime) {
   if (datetime) {
@@ -6,4 +6,4 @@ export function formatDatetime(datetime) {
   }
 }
 
-export default Ember.Helper.helper(formatDatetime);
+export default buildHelper(formatDatetime);

@@ -1,11 +1,10 @@
-import Ember from 'ember';
+import Route from '@ember/routing/route';
+import RSVP from 'rsvp';
 import AuthenticatedRouteMixin from 'ember-simple-auth/mixins/authenticated-route-mixin';
 
-const { RSVP } = Ember;
-
-export default Ember.Route.extend(AuthenticatedRouteMixin, {
+export default Route.extend(AuthenticatedRouteMixin, {
   model(params) {
-    return this.get('store').findRecord('album', params.album_id).then((album) => {
+    return this.store.findRecord('album', params.album_id).then((album) => {
       return RSVP.all([
         album.get('comments'),
         album.get('songs')

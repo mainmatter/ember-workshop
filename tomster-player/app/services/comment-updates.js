@@ -1,17 +1,17 @@
 /* global io */
-import Ember from 'ember';
+import Evented from '@ember/object/evented';
+
+import Service, { inject as service } from '@ember/service';
 import { Socket } from 'ember-phoenix';
 import config from '../config/environment';
 
-const { inject: { service } } = Ember;
-
-export default Ember.Service.extend(Ember.Evented, {
+export default Service.extend(Evented, {
   store: service(),
   session: service(),
 
   connect() {
     let socket;
-    this.get('session').authorize('authorizer:oauth2-bearer', (_, token) => {
+    this.session.authorize('authorizer:oauth2-bearer', (_, token) => {
       if (config.phoenixSocket) {
         socket = new Socket(config.socketHost);
         socket.connect();
@@ -27,10 +27,10 @@ export default Ember.Service.extend(Ember.Evented, {
   },
 
   disconnect() {
-    this.get('socket').disconnect();
+    this.socket.disconnect();
   },
 
   _pushNewComment(data) {
-    this.get('store').pushPayload('comment', data);
+    this.store.pushPayload('comment', data);
   }
 });

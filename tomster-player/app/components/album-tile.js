@@ -1,6 +1,6 @@
-import Ember from 'ember';
+import Component from '@ember/component';
 
-export default Ember.Component.extend({
+export default Component.extend({
   click() {
     const album = this.getAttr('album');
     const onSelectAlbum = this.getAttr('on-select-album');

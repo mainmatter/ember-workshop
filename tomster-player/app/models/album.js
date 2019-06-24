@@ -1,10 +1,8 @@
-import Ember from 'ember';
+import { computed } from '@ember/object';
 import Model from 'ember-data/model';
 import attr from 'ember-data/attr';
 import { hasMany } from 'ember-data/relationships';
 import _ from 'lodash';
-
-const { computed } = Ember;
 
 export default Model.extend({
   title:    attr('string'),
@@ -14,7 +12,7 @@ export default Model.extend({
   comments: hasMany(),
 
   averageRating: computed('comments.@each.rating', 'comments.@each.isNew', function() {
-    const savedComments = this.get('comments').rejectBy('isNew');
+    const savedComments = this.comments.rejectBy('isNew');
     const commentCount = savedComments.get('length');
     const ratings = savedComments.mapBy('rating');
     const totalRating = _.sum(ratings);
