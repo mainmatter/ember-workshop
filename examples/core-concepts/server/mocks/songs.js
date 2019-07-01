@@ -1,7 +1,8 @@
-/*jshint node:true*/
+'use strict';
+
 module.exports = function(app) {
-  var express = require('express');
-  var songsRouter = express.Router();
+  const express = require('express');
+  let songsRouter = express.Router();
 
   songsRouter.get('/', function(req, res) {
     res.send({
