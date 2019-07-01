@@ -1,13 +1,17 @@
-import Ember from 'ember';
+import Controller from '@ember/controller';
 
-export default Ember.Controller.extend({
+export default Controller.extend({
   favoriteWhitneySong: 'The Greatest Love of All',
 
-  whiteneySongs: [
-    'The Greatest Love of All',
-    'I Will Always Love You',
-    'My Love Is Your Love'
-  ],
+  init() {
+    this._super(...arguments);
+
+    this.whiteneySongs = [
+      'The Greatest Love of All',
+      'I Will Always Love You',
+      'My Love Is Your Love'
+    ];
+  },
 
   actions: {
     handleAction() {
@@ -16,6 +20,7 @@ export default Ember.Controller.extend({
 
     submitForm(e) {
       e.preventDefault();
+
       alert('Form submitted!');
     },
 
