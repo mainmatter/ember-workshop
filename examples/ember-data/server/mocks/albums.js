@@ -1,7 +1,7 @@
-/*jshint node:true*/
-var respondWithDelay = require('../utils/respond-with-delay');
+'use strict';
+const delayedResponse = require('../utils/delayed-response');
 
-var ALBUMS = [
+const ALBUMS = [
   {
     id: '1',
     type: 'album',
@@ -92,21 +92,19 @@ var ALBUMS = [
 ];
 
 module.exports = function(app) {
-  var express = require('express');
-  var albumsRouter = express.Router();
+  const express = require('express');
+  let albumsRouter = express.Router();
 
   albumsRouter.get('/', function(req, res) {
-    respondWithDelay(res, {
+    res.send({
       data: ALBUMS
     });
   });
 
   albumsRouter.get('/:id', function(req, res) {
-    var album = ALBUMS.filter(function(album) {
-      return album.id === req.params.id
-    })[0];
+    let album = ALBUMS.find((album) => album.id === req.params.id);
 
-    respondWithDelay(res, {
+    res.send({
       data: album
     });
   });

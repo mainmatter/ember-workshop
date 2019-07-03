@@ -1,13 +1,10 @@
-import Ember from 'ember';
+import Route from '@ember/routing/route';
+import { inject } from '@ember/service';
 
-const { inject: { service } } = Ember;
-
-export default Ember.Route.extend({
-  store: service(),
+export default Route.extend({
+  store: inject(),
 
   beforeModel() {
-    const store = this.get('store');
-
-    window.store = store;
+    window.store = this.store;
   }
 });
