@@ -1,21 +1,19 @@
-import Ember from 'ember';
+import Controller from '@ember/controller';
+import { computed } from '@ember/object';
+import { equal } from '@ember/object/computed';
 
-const { computed } = Ember;
-
-export default Ember.Controller.extend({
+export default Controller.extend({
   queryParams: ['filter'],
   filter: 'albums',
 
-  showAlbums: computed.equal('filter', 'albums'),
-  showMovies: computed.equal('filter', 'movies'),
+  showAlbums: equal('filter', 'albums'),
+  showMovies: equal('filter', 'movies'),
 
   media: computed('showAlbums', 'showMovies', function() {
-    const { showAlbums, showMovies, model } = this.getProperties('showAlbums', 'showMovies', 'model');
-
-    if (showAlbums) {
-      return model.albums;
-    } else if (showMovies) {
-      return model.movies;
+    if (this.showAlbums) {
+      return this.model.albums;
+    } else if (this.showMovies) {
+      return this.model.movies;
     } else {
       return [];
     }

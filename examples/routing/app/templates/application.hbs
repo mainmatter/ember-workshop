@@ -1,24 +1,18 @@
-<nav class="navbar bg-faded">
-  <ul class="nav navbar-nav">
-    <li class="nav-item">
-      {{link-to 'Home' 'index' class='nav-link'}}
+<nav>
+  <ul>
+    <li>
+      {{link-to "Home" "index"}}
     </li>
-    <li class="nav-item">
-      {{link-to 'Media' 'media' class='nav-link'}}
+    <li>
+      {{link-to "Media" "media"}}
     </li>
-    <li class="nav-item">
-      {{link-to 'Error' 'fail' class='nav-link'}}
+    <li>
+      {{link-to "Error" "fail"}}
     </li>
-    <li class="nav-item">
-      <a href="/unknown-page" class="nav-link">Unknown Page</a>
+    <li>
+      <a href="/unknown-page">Unknown Page</a>
     </li>
   </ul>
 </nav>
 
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-xs-12">
-      {{outlet}}
-    </div>
-  </div>
-</div>
+{{outlet}}

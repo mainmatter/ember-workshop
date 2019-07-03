@@ -1,10 +1,10 @@
-import Ember from 'ember';
-import delayedPromise from '../../utils/delayed-promise';
+import Route from '@ember/routing/route';
+import delayedResponse from '../../utils/delayed-response';
 
-export default Ember.Route.extend({
+export default Route.extend({
   model(params) {
-    const title = `The individual medium for ID ${params.mediumId}`;
+    const title = `The individual medium for ID ${params.medium_id}`;
 
-    return delayedPromise({ title });
+    return delayedResponse({ title });
   }
 });
