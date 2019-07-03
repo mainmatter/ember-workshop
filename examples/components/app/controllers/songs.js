@@ -1,17 +1,17 @@
-import Ember from 'ember';
+import Controller from '@ember/controller';
+import { computed } from '@ember/object';
+import { reads } from '@ember/object/computed';
 
-const { computed, computed: { alias } } = Ember;
-
-export default Ember.Controller.extend({
-  songCount: alias('model.length'),
+export default Controller.extend({
+  songCount: reads('model.length'),
 
   orderedSongs: computed('model.@each.rating', function() {
-    return this.get('model').sortBy('rating').reverse();
+    return this.model.sortBy('rating').reverse();
   }),
 
   actions: {
     setSongRating(song, rating) {
-      song.set('rating', rating);
+      song.set('rating', Number(rating));
     }
   }
 });

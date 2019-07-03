@@ -1,16 +1,9 @@
-import Ember from 'ember';
+import Component from '@ember/component';
 
-export default Ember.Component.extend({
-  didInsertElement() {
-    this.$('.rating').barrating({
-      theme: 'css-stars',
-      onSelect: (value) => {
-        this.getAttr('on-rating-change')(value);
-      }
-    });
-  },
+export default Component.extend({
+  init() {
+    this._super(...arguments);
 
-  willDestroyElement() {
-    this.$('.rating').barrating('destroy');
+    this.ratingOptions = ['1', '2', '3', '4', '5'];
   }
 });
