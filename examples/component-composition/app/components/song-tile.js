@@ -1,7 +1,7 @@
-import Ember from 'ember';
+import Component from '@ember/component';
 
-export default Ember.Component.extend({
+export default Component.extend({
   doubleClick() {
-    this.getAttr('on-select-song')(this.get('song'));
+    this.onSelectSong(this.song);
   }
 });

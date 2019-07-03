@@ -1,7 +1,13 @@
-<div class="list-group">
-  {{#each _items as |item|}}
-    <div class="list-group-item {{if item.isSelected 'active'}}">
-      {{yield (hash delete-button=(component 'danger-button' on-click=(action 'removeItem' item.item)) selectItem=(action 'selectItem')) item.item}}
+<style>
+  .active-item {
+    background-color: blue;
+  }
+</style>
+
+<div>
+  {{#each displayItems as |item|}}
+    <div class={{if item.isSelected "active-item"}}>
+      {{yield (hash delete-button=(component "danger-button" onClick=(action "removeItem" item.item)) selectItem=(action "selectItem")) item.item}}
     </div>
   {{/each}}
 </div>
