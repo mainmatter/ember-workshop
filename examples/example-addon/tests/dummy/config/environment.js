@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   let ENV = {
-    modulePrefix: 'dependencies',
+    modulePrefix: 'dummy',
     environment,
     rootURL: '/',
     locationType: 'auto',
