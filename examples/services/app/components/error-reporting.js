@@ -1,13 +1,9 @@
-// app/components/error-reporter.js
-import Ember from 'ember';
+import Component from '@ember/component';
+import { inject } from '@ember/service';
+import { reads } from '@ember/object/computed';
 
-const {
-  inject: { service },
-  computed: { reads }
-} = Ember;
-
-export default Ember.Component.extend({
-  errorReporting: service(),
+export default Component.extend({
+  errorReporting: inject(),
 
   errorCount: reads('errorReporting.errorCount'),
   errors: reads('errorReporting.errors'),
@@ -20,8 +16,7 @@ export default Ember.Component.extend({
     reportError(e) {
       e.preventDefault();
   
-      const error = this.get('errorText');
-      this.get('errorReporting').reportError(error);
+      this.errorReporting.reportError(this.errorText);
       this.set('errorText', null);
     }
   }

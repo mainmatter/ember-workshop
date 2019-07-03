@@ -1,17 +1,16 @@
-// app/services/error-reporting.js
-import Ember from 'ember';
+import Service from '@ember/service';
+import { reads } from '@ember/object/computed';
 
-const { computed: { reads } } = Ember;
-
-export default Ember.Service.extend({
+export default Service.extend({
   errorCount: reads('errors.length'),
 
   init() {
-    this._super();
+    this._super(...arguments);
+
     this.set('errors', []);
   },
 
   reportError(error) {
-    this.get('errors').pushObject(error);
+    this.errors.pushObject(error);
   }
 });
