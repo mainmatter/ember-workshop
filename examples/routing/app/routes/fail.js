@@ -1,15 +1,14 @@
-import Ember from 'ember';
+import Route from '@ember/routing/route';
 
-const { RSVP } = Ember;
-
-export default Ember.Route.extend({
+export default Route.extend({
   model() {
-    return RSVP.reject('an error occured!');
+    return Promise.reject('an error occured!');
   },
 
   actions: {
     error(e) {
-      Ember.Logger.error('Routing error:', e);
+      //eslint-disable-next-line no-console
+      console.error('Routing error:', e);
     }
   }
 });

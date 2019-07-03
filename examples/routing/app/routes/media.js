@@ -1,7 +1,6 @@
-import Ember from 'ember';
-import delayedPromise from '../utils/delayed-promise';
-
-const { RSVP } = Ember;
+import Route from '@ember/routing/route';
+import { hash } from 'rsvp';
+import delayedResponse from '../utils/delayed-response';
 
 const ALBUMS = [
   { title: 'The Bodyguard' },
@@ -19,11 +18,11 @@ const MOVIES = [
   { title: "Creed – Rocky’s Legacy" }
 ];
 
-export default Ember.Route.extend({
+export default Route.extend({
   model() {
-    return RSVP.hash({
-      albums: delayedPromise(ALBUMS),
-      movies: delayedPromise(MOVIES)
+    return hash({
+      albums: delayedResponse(ALBUMS),
+      movies: delayedResponse(MOVIES)
     });
   }
 });
