@@ -1,11 +1,5 @@
-<h4>{{attrs.song.name}}</h4>
+<h4>{{song.name}}</h4>
 
-<select class="rating">
-  <option value="1">1</option>
-  <option value="2">2</option>
-  <option value="3">3</option>
-  <option value="4">4</option>
-  <option value="5">5</option>
-</select>
+<SelectBox @options={{ratingOptions}} @value={{song.rating}} @onChange={{onRatingChange}} />
 
-<img src="{{attrs.song.coverUrl}}">
+<img src={{song.coverUrl}} alt="Album cover of {{song.name}}">
