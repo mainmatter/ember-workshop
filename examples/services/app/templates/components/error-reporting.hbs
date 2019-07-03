@@ -8,9 +8,9 @@
 
 <h2>Report Error</h2>
 
-<form onsubmit={{action (action 'reportError')}}>
-  <fieldset class="form-group">
-    <textarea onblur={{action (action 'textEntered' value='currentTarget.value')}} class="form-control">{{errorText}}</textarea>
-    <button type="submit" class="btn btn-primary">Report Error</button>
+<form onsubmit={{action "reportError"}}>
+  <fieldset>
+    <textarea onblur={{action "textEntered" value="currentTarget.value"}}>{{errorText}}</textarea>
+    <button type="submit">Report Error</button>
   </fieldset>
 </form>
