@@ -1,8 +1,8 @@
 <h1>{{songCount}} songs</h1>
 
-{{#list-view items=(readonly model) on-remove-item=(action 'deleteSong') as |list item|}}
-  {{song-tile song=(readonly item) on-select-song=list.selectItem}}
+<ListView @items={{model}} @onRemoveItem={{action "deleteSong"}} as |list item|>
+  <SongTile @song={{item}} @onSelectSong={{list.selectItem}} />
   {{#list.delete-button}}
     Delete
   {{/list.delete-button}}
-{{/list-view}}
+</ListView>

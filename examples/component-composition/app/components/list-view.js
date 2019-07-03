@@ -1,18 +1,14 @@
-import Ember from 'ember';
+import Component from '@ember/component';
+import { computed } from '@ember/object';
 
-const { computed } = Ember;
-
-export default Ember.Component.extend({
-  _items: computed('items.[]', 'selectedItem', function() {
-    const items = [];
-    const selectedItem = this.get('selectedItem');
-    this.get('items').forEach((item) => {
-      items.push({
+export default Component.extend({
+  displayItems: computed('items.[]', 'selectedItem', function() {
+    return this.items.map((item) => {
+      return {
         item,
-        isSelected: item === selectedItem
-      });
+        isSelected: item === this.selectedItem
+      };
     });
-    return items;
   }),
 
   actions: {
@@ -21,7 +17,7 @@ export default Ember.Component.extend({
     },
 
     removeItem(item) {
-      this.getAttr('on-remove-item')(item);
+      this.onRemoveItem(item);
     }
   }
 });
