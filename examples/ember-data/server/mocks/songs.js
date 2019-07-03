@@ -1,4 +1,5 @@
-/*jshint node:true*/
+'use strict';
+const delayedResponse = require('../utils/delayed-response');
 
 var SONGS = [
   {
@@ -480,8 +481,8 @@ var SONGS = [
 ];
 
 module.exports = function(app) {
-  var express = require('express');
-  var songsRouter = express.Router();
+  const express = require('express');
+  let songsRouter = express.Router();
 
   songsRouter.get('/', function(req, res) {
     res.send({
@@ -490,11 +491,9 @@ module.exports = function(app) {
   });
 
   songsRouter.get('/:id', function(req, res) {
-    var song = SONGS.filter(function(song) {
-      return song.id === req.params.id
-    })[0];
+    let song = SONGS.find((song) => song.id === req.params.id);
 
-    res.send({
+    respondWithDelay(res, {
       data: song
     });
   });
