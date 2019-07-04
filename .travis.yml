@@ -1,30 +1,44 @@
 ---
 language: node_js
 node_js:
-  - "0.12"
+  - "8"
 
 sudo: false
+dist: trusty
+
+addons:
+  chrome: stable
 
 cache:
-  directories:
-    - tomster-player/node_modules
+  yarn: true
 
 before_install:
-  - export PATH=/usr/local/phantomjs-2.0.0/bin:$PATH
-  - "npm config set spin false"
-  - "npm install -g npm@^2"
+  - curl -o- -L https://yarnpkg.com/install.sh | bash
+  - export PATH=$HOME/.yarn/bin:$PATH
+
+env:
+  global:
+    - JOBS=1
+  matrix:
+    - APP=examples/auth
+    - APP=examples/component-composition
+    - APP=examples/components
+    - APP=examples/core-concepts
+    - APP=examples/dependencies
+    - APP=examples/authember-data
+    - APP=examples/example-addon
+    - APP=examples/object-model
+    - APP=examples/routing
+    - APP=examples/services
+    - APP=examples/templates
+    - APP=examples/web-sockets
 
 install:
-  - cd tomster-player
-  - npm install -g bower
-  - npm install
-  - bower install
+  - cd $APP
+  - yarn install --pure-lockfile
 
 script:
-  - npm test
-
-notifications:
-  email: false
-  slack:
-    rooms:
-      secure: OOKD4ZksqzEBW/A3WRuOToODIxnDITqx+Esu7tdmmYPuQlMYgx4SUHv8j9OM9/ScFJiseeVGSkl45vJrHLLIITX9XSjO1RgiGZgw2heVujmGpF6CZNqvT6GsQuKIvMzmwF7IxuHdfV45Csr9Ou/Fg74TszR/4S2h4SOI4zhLg7A=
+  - cd $APP
+  - yarn run lint:hbs
+  - yarn run lint:js
+  - yarn test
