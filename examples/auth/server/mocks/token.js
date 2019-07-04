@@ -1,8 +1,10 @@
-module.exports = function(app) {
-  var express     = require('express');
-  var tokenRouter = express.Router();
+'use strict';
 
-  tokenRouter.post('/token', function(req, res) {
+module.exports = function(app) {
+  const express = require('express');
+  let tokenRouter = express.Router();
+
+  tokenRouter.post('/', function(req, res) {
     if (req.body.grant_type === 'password') {
       if (req.body.username === 'letme' && req.body.password === 'in') {
         res.status(200).send('{ "access_token": "secret token!", "account_id": 1 }');
@@ -14,5 +16,6 @@ module.exports = function(app) {
     }
   });
 
-  app.use('/', tokenRouter);
+  app.use(require('body-parser').urlencoded({ extended: true }));
+  app.use('/token', tokenRouter);
 };
