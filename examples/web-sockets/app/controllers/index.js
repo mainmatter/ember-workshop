@@ -1,9 +1,9 @@
-import Ember from 'ember';
+import Controller from '@ember/controller';
+import { inject } from '@ember/service';
+import { reads } from '@ember/object/computed';
 
-const { computed: { reads }, inject: { service } } = Ember;
-
-export default Ember.Controller.extend({
-  messaging: service(),
+export default Controller.extend({
+  messaging: inject(),
 
   connected: reads('messaging.connected'),
 
@@ -11,19 +11,14 @@ export default Ember.Controller.extend({
     this._super(...arguments);
     this.set('messages', []);
 
-    this.get('messaging').on('received', (data) => this.get('messages').pushObject(data));
+    this.messaging.on('received', (data) => this.messages.pushObject(data));
   },
 
   actions: {
-    setText(text) {
-      this.set('text', text);
-    },
-
     send(e) {
       e.preventDefault();
 
-      let text = this.get('text');
-      this.get('messaging').send(text);
+      this.messaging.send(this.text);
       this.set('text', null);
     }
   }
