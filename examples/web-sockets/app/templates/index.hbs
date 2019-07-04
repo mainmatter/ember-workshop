@@ -1,9 +1,9 @@
 <h2>
   Chat
   {{#if connected}}
-    <small class="label label-success">connected</small>
+    <small>✅ connected</small>
   {{else}}
-    <small class="label label-warning">disconnected</small>
+    <small>🚫 disconnected</small>
   {{/if}}
 </h2>
 <ul>
@@ -13,7 +13,7 @@
 </ul>
 
 <h3>Send Message</h3>
-<form onsubmit={{action 'send'}}>
-  <input type="text" value={{text}} onchange={{action 'setText' value='currentTarget.value'}}>
+<form onsubmit={{action "send"}}>
+  <input type="text" value={{text}} onchange={{action (mut text) value="currentTarget.value"}}>
   <button type="submit">Send</button>
 </form>
