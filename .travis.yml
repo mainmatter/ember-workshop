@@ -38,3 +38,7 @@ install:
 
 script:
   - for dir in ./examples/* ; do (cd "$dir"; yarn run lint:hbs; yarn run lint:js; yarn test); done
+  - cd bootstrap
+  - yarn run lint:hbs
+  - yarn run lint:js
+  - yarn test
