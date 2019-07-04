@@ -34,11 +34,7 @@ env:
     - APP=examples/web-sockets
 
 install:
-  - cd $APP
   - yarn install --pure-lockfile
 
 script:
-  - cd $APP
-  - yarn run lint:hbs
-  - yarn run lint:js
-  - yarn test
+  - for dir in ./examples/* ; do (cd "$dir"; yarn run lint:hbs; yarn run lint:js; yarn test); done
