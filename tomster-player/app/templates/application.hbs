@@ -1,32 +1,5 @@
-<nav class="navbar bg-faded">
-  <h1 class="navbar-brand">
-    <img class="img-responsive pull-left logo" src="/assets/images/tomster.png">
-    Tomster Player
-  </h1>
-  <ul class="nav navbar-nav pull-right">
-    <li class="nav-item">
-      {{#if session.isAuthenticated}}
-        <a onclick={{action (action 'invalidateSession')}} class="nav-link">Logout</a>
-      {{else}}
-        {{#link-to 'login' class='nav-link'}}Login{{/link-to}}
-      {{/if}}
-    </li>
-    <li class="nav-item">
-      {{link-to "Tomster's Music Library" 'index' class='nav-link'}}
-    </li>
-  </ul>
-</nav>
+{{!-- The following component displays Ember's default welcome message. --}}
+<WelcomePage />
+{{!-- Feel free to remove this! --}}
 
-<div class="container-fluid main-content">
-  <div class="row">
-    <div class="col-xs-12">
-      {{outlet}}
-    </div>
-  </div>
-</div>
-
-<nav class="navbar navbar-fixed-bottom bg-faded">
-  <div class="container-fluid">
-    {{player-tile}}
-  </div>
-</nav>
+{{outlet}}

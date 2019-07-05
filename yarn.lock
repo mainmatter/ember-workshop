@@ -2322,7 +2322,7 @@ bower-endpoint-parser@0.2.2:
   resolved "https://registry.yarnpkg.com/bower-endpoint-parser/-/bower-endpoint-parser-0.2.2.tgz#00b565adbfab6f2d35addde977e97962acbcb3f6"
   integrity sha1-ALVlrb+rby01rd3pd+l5Yqy8s/Y=
 
-brace-expansion@^1.1.7:
+brace-expansion@^1.0.0, brace-expansion@^1.1.7:
   version "1.1.11"
   resolved "https://registry.yarnpkg.com/brace-expansion/-/brace-expansion-1.1.11.tgz#3c7fcbf529d87226f3d2f52b966ff5271eb441dd"
   integrity sha512-iCuPHDFgrHX7H2vEI/5xpz07zSHB00TpugqhmYtVmMO6518mCuRMoOYFldEBl0g187ufozdaHgWKcYFb61qGiA==
@@ -2795,6 +2795,23 @@ broccoli-templater@^2.0.1:
     lodash.template "^4.4.0"
     rimraf "^2.6.2"
     walk-sync "^0.3.3"
+
+broccoli-uglify-sourcemap@^2.1.1:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/broccoli-uglify-sourcemap/-/broccoli-uglify-sourcemap-2.2.0.tgz#2ff49389bdf342a550c3596750ba2dde95a8f7d4"
+  integrity sha1-L/STib3zQqVQw1lnULot3pWo99Q=
+  dependencies:
+    async-promise-queue "^1.0.4"
+    broccoli-plugin "^1.2.1"
+    debug "^3.1.0"
+    lodash.defaultsdeep "^4.6.0"
+    matcher-collection "^1.0.5"
+    mkdirp "^0.5.0"
+    source-map-url "^0.4.0"
+    symlink-or-copy "^1.0.1"
+    terser "^3.7.5"
+    walk-sync "^0.3.2"
+    workerpool "^2.3.0"
 
 broccoli-uglify-sourcemap@^3.1.0:
   version "3.1.1"
@@ -4116,6 +4133,14 @@ ember-cli-htmlbars@^3.0.1, ember-cli-htmlbars@^3.1.0:
     json-stable-stringify "^1.0.1"
     strip-bom "^3.0.0"
 
+ember-cli-inject-live-reload@^1.8.2:
+  version "1.10.2"
+  resolved "https://registry.yarnpkg.com/ember-cli-inject-live-reload/-/ember-cli-inject-live-reload-1.10.2.tgz#43c59f7f1d1e717772da32e5e81d948fb9fe7c94"
+  integrity sha512-yFvZE4WFyWjzMJ6MTYIyjCXpcJNFMTaZP61JXITMkXhSkhuDkzMD/XfwR5+fr004TYcwrbNWpg1oGX5DbOgcaQ==
+  dependencies:
+    clean-base-url "^1.0.0"
+    ember-cli-version-checker "^2.1.2"
+
 ember-cli-inject-live-reload@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/ember-cli-inject-live-reload/-/ember-cli-inject-live-reload-2.0.1.tgz#1bf3a6ea1747bceddc9f62f7ca8575de6b53ddaf"
@@ -4216,6 +4241,14 @@ ember-cli-typescript@^2.0.0:
     semver "^6.0.0"
     stagehand "^1.0.0"
     walk-sync "^1.0.0"
+
+ember-cli-uglify@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/ember-cli-uglify/-/ember-cli-uglify-2.1.0.tgz#4a0641fe4768d7ab7d4807aca9924cc77c544184"
+  integrity sha512-lDzdAUfhGx5AMBsgyR54ibENVp/LRQuHNWNaP2SDjkAXDyuYFgW0iXIAfGbxF6+nYaesJ9Tr9AKOfTPlwxZDSg==
+  dependencies:
+    broccoli-uglify-sourcemap "^2.1.1"
+    lodash.defaultsdeep "^4.6.0"
 
 ember-cli-uglify@^3.0.0:
   version "3.0.0"
@@ -4531,6 +4564,26 @@ ember-source-channel-url@^2.0.1:
   integrity sha512-YlLUHW9gNvxEaohIj5exykoTZb4xj9ZRTcR4J3svv9S8rjAHJUnHmqC5Fd9onCs+NGxHo7KwR/fDwsfadbDu5Q==
   dependencies:
     got "^8.0.1"
+
+ember-source@~3.10.0:
+  version "3.10.2"
+  resolved "https://registry.yarnpkg.com/ember-source/-/ember-source-3.10.2.tgz#17a0405f1e470698f601622b3383cce7f80e2d31"
+  integrity sha512-7WRBikgS5riwO0DiBtKQDQhk80mqppMbghSAHXvfJAYpkGFxuH//MxjO1eRXP9xjzmdMhfDmixrMnNBtc5D6mA==
+  dependencies:
+    broccoli-funnel "^2.0.2"
+    broccoli-merge-trees "^3.0.2"
+    chalk "^2.4.2"
+    ember-cli-babel "^7.7.0"
+    ember-cli-get-component-path-option "^1.0.0"
+    ember-cli-is-package-missing "^1.0.0"
+    ember-cli-normalize-entity-name "^1.0.0"
+    ember-cli-path-utils "^1.0.0"
+    ember-cli-string-utils "^1.1.0"
+    ember-cli-version-checker "^3.1.3"
+    ember-router-generator "^1.2.3"
+    inflection "^1.12.0"
+    jquery "^3.3.1"
+    resolve "^1.10.0"
 
 ember-source@~3.11.1:
   version "3.11.1"
@@ -5582,6 +5635,16 @@ glob-to-regexp@^0.3.0:
   resolved "https://registry.yarnpkg.com/glob-to-regexp/-/glob-to-regexp-0.3.0.tgz#8c5a1494d2066c570cc3bfe4496175acc4d502ab"
   integrity sha1-jFoUlNIGbFcMw7/kSWF1rMTVAqs=
 
+glob@^4.0.5:
+  version "4.5.3"
+  resolved "https://registry.yarnpkg.com/glob/-/glob-4.5.3.tgz#c6cb73d3226c1efef04de3c56d012f03377ee15f"
+  integrity sha1-xstz0yJsHv7wTePFbQEvAzd+4V8=
+  dependencies:
+    inflight "^1.0.4"
+    inherits "2"
+    minimatch "^2.0.1"
+    once "^1.3.0"
+
 glob@^5.0.10:
   version "5.0.15"
   resolved "https://registry.yarnpkg.com/glob/-/glob-5.0.15.tgz#1bc936b9e02f4a603fcc222ecf7633d30b8b93b1"
@@ -6438,7 +6501,7 @@ jquery-deferred@^0.3.0:
   resolved "https://registry.yarnpkg.com/jquery-deferred/-/jquery-deferred-0.3.1.tgz#596eca1caaff54f61b110962b23cafea74c35355"
   integrity sha1-WW7KHKr/VPYbEQlisjyv6nTDU1U=
 
-jquery@^3.4.1:
+jquery@^3.3.1, jquery@^3.4.1:
   version "3.4.1"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.4.1.tgz#714f1f8d9dde4bdfa55764ba37ef214630d80ef2"
   integrity sha512-36+AdBzCL+y6qjw5Tx7HgzeGCzC81MDDgaUP8ld2zhx58HdqXGoBd+tHdrBMiyjGQs0Hxs/MLZTu/eHNJJuWPw==
@@ -7212,7 +7275,7 @@ markdown-it@^8.3.1, markdown-it@^8.4.2:
     mdurl "^1.0.1"
     uc.micro "^1.0.5"
 
-matcher-collection@^1.0.0, matcher-collection@^1.1.1:
+matcher-collection@^1.0.0, matcher-collection@^1.0.5, matcher-collection@^1.1.1:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/matcher-collection/-/matcher-collection-1.1.2.tgz#1076f506f10ca85897b53d14ef54f90a5c426838"
   integrity sha512-YQ/teqaOIIfUHedRam08PB3NK7Mjct6BvzRnJmpGDm8uFXpNr1sbY4yuflI5JcEs6COpYA0FpRQhSDBf1tT95g==
@@ -7378,6 +7441,13 @@ minimalistic-crypto-utils@^1.0.0, minimalistic-crypto-utils@^1.0.1:
   integrity sha512-yJHVQEhyqPLUTgt9B83PXu6W3rx4MvvHvSUvToogpwoGDOUQ+yDrR0HRot+yOCdCO7u4hX3pWft6kWBBcqh0UA==
   dependencies:
     brace-expansion "^1.1.7"
+
+minimatch@^2.0.1:
+  version "2.0.10"
+  resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-2.0.10.tgz#8d087c39c6b38c001b97fca7ce6d0e1e80afbac7"
+  integrity sha1-jQh8OcazjAAbl/ynzm0OHoCvusc=
+  dependencies:
+    brace-expansion "^1.0.0"
 
 minimist@0.0.8:
   version "0.0.8"
@@ -8355,6 +8425,14 @@ quick-temp@^0.1.2, quick-temp@^0.1.3, quick-temp@^0.1.5, quick-temp@^0.1.8:
     mktemp "~0.4.0"
     rimraf "^2.5.4"
     underscore.string "~3.3.4"
+
+qunit-dom@^0.8.4:
+  version "0.8.5"
+  resolved "https://registry.yarnpkg.com/qunit-dom/-/qunit-dom-0.8.5.tgz#34b7cffb338e631c39955b21bdbe4d774090124e"
+  integrity sha512-I4GSy22ESUkoZYDSYsqFJoMvqhpmgd2iCYlrN7aWLEOdmumUkao3qz24/qVNZd1PAnoOQA78FefzNPRHePFx1A==
+  dependencies:
+    broccoli-funnel "^2.0.2"
+    broccoli-merge-trees "^3.0.1"
 
 qunit-dom@^0.9.0:
   version "0.9.0"
@@ -9550,7 +9628,7 @@ terser-webpack-plugin@^1.1.0:
     webpack-sources "^1.3.0"
     worker-farm "^1.7.0"
 
-terser@^3.17.0:
+terser@^3.17.0, terser@^3.7.5:
   version "3.17.0"
   resolved "https://registry.yarnpkg.com/terser/-/terser-3.17.0.tgz#f88ffbeda0deb5637f9d24b0da66f4e15ab10cb2"
   integrity sha512-/FQzzPJmCpjAH9Xvk2paiWrFq+5M6aVOf+2KRbwhByISDX/EujxsK+BAvrhb6H+2rtrLCHK9N01wO014vrIwVQ==

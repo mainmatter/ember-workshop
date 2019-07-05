@@ -1,11 +1,13 @@
+'use strict';
+
 module.exports = function(app) {
-  var express     = require('express');
-  var tokenRouter = express.Router();
+  const express = require('express');
+  let tokenRouter = express.Router();
 
   tokenRouter.post('/', function(req, res) {
     if (req.body.grant_type === 'password') {
       if (req.body.username === 'letme' && req.body.password === 'in') {
-        res.status(200).send('{ "access_token": "secret token!" }');
+        res.status(200).send('{ "access_token": "secret token!", "account_id": 1 }');
       } else {
         res.status(400).send('{ "error": "invalid_grant" }');
       }
@@ -14,6 +16,6 @@ module.exports = function(app) {
     }
   });
 
-  app.use('/token', require('body-parser').urlencoded({ extended: true }));
+  app.use(require('body-parser').urlencoded({ extended: true }));
   app.use('/token', tokenRouter);
 };

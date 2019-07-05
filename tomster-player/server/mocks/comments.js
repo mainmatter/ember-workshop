@@ -1,8 +1,9 @@
-/*jshint node:true*/
-var uuid = require('node-uuid');
-var respondWithDelay = require('../utils/respond-with-delay');
+'use strict';
+const uuid = require('uuid');
 
-var COMMENTS = [
+const delayedResponse = require('../utils/delayed-response');
+
+const COMMENTS = [
   {
     id: '1',
     type: 'comment',
@@ -34,33 +35,34 @@ var COMMENTS = [
 ];
 
 module.exports = function(app) {
-  var express = require('express');
-  var commentsRouter = express.Router();
-  var server = require('http').Server(app);
-  var io = require('socket.io')(server);
+  const express = require('express');
+  let commentsRouter = express.Router();
+  let server = require('http').Server(app);
+  let io = require('socket.io')(server);
 
   server.listen(3000);
+  // eslint-disable-next-line no-console
   console.log('Websocket server on http://localhost:3000');
 
   commentsRouter.post('/', function(req, res) {
-    var data = req.body.data;
+    let { data } = req.body;
 
     if (data.attributes.text && data.attributes.rating) {
       data.id = uuid.v1();
       data.attributes['created-at'] = new Date();
-      var response = { data: data };
+      var response = { data };
 
       res.status(201).send(response);
 
       io.sockets.emit('comments:broadcast', response);
     } else {
-      var errors = [];
+      let errors = [];
       ['text', 'rating'].forEach(function(attribute) {
         if (!data.attributes[attribute]) {
           errors.push({
-            details: '"' + attribute + '" is a required attribute.',
+            details: `attribute" is a required attribute.`,
             source: {
-              pointer: 'data/attributes/' + attribute
+              pointer: `data/attributes/${attribute}`
             }
           });
         }
@@ -73,11 +75,9 @@ module.exports = function(app) {
   });
 
   commentsRouter.get('/:id', function(req, res) {
-    var comment = COMMENTS.filter(function(comment) {
-      return comment.id === req.params.id
-    })[0];
+    let comment = COMMENTS.find((comment) => comment.id === req.params.id);
 
-    respondWithDelay(res, {
+    delayedResponse(res, {
       data: comment
     });
   });
