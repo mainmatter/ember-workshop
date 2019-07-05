@@ -33,6 +33,7 @@ env:
     - APP=examples/templates
     - APP=examples/web-sockets
     - APP=bootstrap
+    - APP=tomster-player
 
 install:
   - yarn install --pure-lockfile

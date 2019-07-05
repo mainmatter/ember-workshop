@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   let ENV = {
-    modulePrefix: 'tomster-player',
+    modulePrefix: 'bootstrap-app',
     environment,
     rootURL: '/',
     locationType: 'auto',
