@@ -25,7 +25,7 @@ env:
     - APP=examples/components
     - APP=examples/core-concepts
     - APP=examples/dependencies
-    - APP=examples/authember-data
+    - APP=examples/ember-data
     - APP=examples/example-addon
     - APP=examples/object-model
     - APP=examples/routing
