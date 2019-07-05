@@ -32,7 +32,7 @@ env:
     - APP=examples/services
     - APP=examples/templates
     - APP=examples/web-sockets
-    - APP=examples/bootstrap
+    - APP=bootstrap
 
 install:
   - yarn install --pure-lockfile
