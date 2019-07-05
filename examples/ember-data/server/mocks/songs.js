@@ -485,7 +485,7 @@ module.exports = function(app) {
   let songsRouter = express.Router();
 
   songsRouter.get('/', function(req, res) {
-    res.send({
+    delayedResponse(res, {
       data: SONGS
     });
   });
@@ -493,7 +493,7 @@ module.exports = function(app) {
   songsRouter.get('/:id', function(req, res) {
     let song = SONGS.find((song) => song.id === req.params.id);
 
-    respondWithDelay(res, {
+    delayedResponse(res, {
       data: song
     });
   });

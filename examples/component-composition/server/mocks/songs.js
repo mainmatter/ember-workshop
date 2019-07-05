@@ -33,7 +33,7 @@ module.exports = function(app) {
   let songsRouter = express.Router();
 
   songsRouter.get('/', function(req, res) {
-    res.send({
+    delayedResponse(res, {
       data: SONGS
     });
   });
