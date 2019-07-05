@@ -1,4 +1,10 @@
 {
   "private": true,
-  "workspaces": ["examples/*", "bootstrap"]
+  "workspaces": [
+    "examples/*",
+    "bootstrap"
+  ],
+  "resolutions": {
+    "@babel/plugin-transform-typescript": "7.4.5"
+  }
 }
