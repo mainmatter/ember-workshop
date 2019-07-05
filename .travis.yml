@@ -19,13 +19,26 @@ before_install:
 env:
   global:
     - JOBS=1
+  matrix:
+    - APP=examples/auth
+    - APP=examples/component-composition
+    - APP=examples/components
+    - APP=examples/core-concepts
+    - APP=examples/dependencies
+    - APP=examples/authember-data
+    - APP=examples/example-addon
+    - APP=examples/object-model
+    - APP=examples/routing
+    - APP=examples/services
+    - APP=examples/templates
+    - APP=examples/web-sockets
+    - APP=examples/bootstrap
 
 install:
   - yarn install --pure-lockfile
 
 script:
-  - for dir in ./examples/* ; do (cd "$dir"; yarn run lint:hbs; yarn run lint:js; yarn test); done
-  - cd bootstrap
+  - cd $APP
   - yarn run lint:hbs
   - yarn run lint:js
   - yarn test
