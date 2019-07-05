@@ -96,7 +96,7 @@ module.exports = function(app) {
   let albumsRouter = express.Router();
 
   albumsRouter.get('/', function(req, res) {
-    res.send({
+    delayedResponse(res, {
       data: ALBUMS
     });
   });
@@ -104,7 +104,7 @@ module.exports = function(app) {
   albumsRouter.get('/:id', function(req, res) {
     let album = ALBUMS.find((album) => album.id === req.params.id);
 
-    res.send({
+    delayedResponse(res, {
       data: album
     });
   });

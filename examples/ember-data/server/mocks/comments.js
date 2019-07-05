@@ -67,7 +67,7 @@ module.exports = function(app) {
   commentsRouter.get('/:id', function(req, res) {
     let comment = COMMENTS.find((comment) => comment.id === req.params.id);
 
-    respondWithDelay(res, {
+    delayedResponse(res, {
       data: comment
     });
   });
