@@ -1,1 +1,29 @@
-{{outlet}}
+<div class="list-group">
+  {{#each this.model as |album|}}
+    <div class="list-group-item">
+      <div class="row">
+        <div class="col">
+          <h4 {{on "click" (fn this.selectAlbum album)}} role="button">
+            {{album.title}}
+          </h4>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-3">
+          <img src={{album.coverUrl}} width="100%" class="rounded" alt="Album cover of {{album.title}}">
+        </div>
+        <div class="col-xs-9">
+          <ol class="song-list">
+            {{#each album.songs as |song|}}
+              <li {{on "click" (fn this.selectSong song)}} role="button">
+                <span>{{format-duration song.duration}}</span>
+                <span>{{song.title}}</span>
+              </li>
+            {{/each}}
+          </ol>
+        </div>
+      </div>
+    </div>
+  {{/each}}
+</div>
