@@ -45,7 +45,7 @@
     "eslint-plugin-ember": "^6.2.0",
     "eslint-plugin-node": "^9.0.1",
     "express": "^4.17.1",
-    "glob": "^4.5.3",
+    "glob": "^7.1.4",
     "http": "^0.0.0",
     "loader.js": "^4.7.0",
     "morgan": "^1.9.1",
