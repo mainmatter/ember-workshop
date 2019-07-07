@@ -1,0 +1,23 @@
+<div class="row">
+  <div class="col-12">
+    <h4>
+      {{this.model.title}}
+    </h4>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-3">
+    <img src={{this.model.coverUrl}} width="100%" class="rounded" alt="Album cover of {{this.model.title}}">
+  </div>
+  <div class="col-9">
+    <ol>
+      {{#each this.model.songs as |song|}}
+        <li>
+          <span>{{format-duration song.duration}}</span>
+          <span>{{song.title}}</span>
+        </li>
+      {{/each}}
+    </ol>
+  </div>
+</div>
