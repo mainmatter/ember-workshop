@@ -5,11 +5,9 @@ import { setupApplicationTest } from 'ember-qunit';
 module('Acceptance | index', function (hooks) {
   setupApplicationTest(hooks);
 
-  test('visiting / renders the index page', async function (assert) {
+  test('visiting / redirects to library', async function (assert) {
     await visit('/');
 
-    assert.strictEqual(currentURL(), '/');
-    assert.dom('h4').exists({ count: 2 });
-    assert.dom('ol > li').exists({ count: 20 });
+    assert.strictEqual(currentURL(), '/library');
   });
 });
