@@ -41,7 +41,7 @@
     "ember-qunit": "^4.4.1",
     "ember-resolver": "^5.0.1",
     "ember-simple-auth": "^1.8.2",
-    "ember-source": "~3.10.0",
+    "ember-source": "~3.11.1",
     "ember-welcome-page": "^4.0.0",
     "eslint-plugin-ember": "^6.2.0",
     "eslint-plugin-node": "^9.0.1",
