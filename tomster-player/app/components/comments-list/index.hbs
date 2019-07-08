@@ -1,0 +1,13 @@
+<div class="row comments">
+  <div class="col-12">
+    {{#each this.sortedComments as |comment|}}
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title"><RatingIndicator @rating={{comment.rating}} /></h5>
+          <h6 class="card-subtitle mb-2 text-muted">{{format-datetime comment.createdAt}}</h6>
+          <p class="card-text">{{comment.text}}</p>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</div>
