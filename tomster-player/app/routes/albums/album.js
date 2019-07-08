@@ -1,10 +1,10 @@
 import Route from '@ember/routing/route';
+import { service } from '@ember/service';
 
 export default class AlbumRoute extends Route {
-  model(params) {
-    let albums = this.modelFor('albums');
-    let album = albums.find((album) => album.id === params.album_id);
+  @service store;
 
-    return album;
+  model(params) {
+    return this.store.peekRecord('album', params.album_id);
   }
 }
