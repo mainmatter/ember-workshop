@@ -1,0 +1,16 @@
+<form onsubmit={{action "createComment"}}>
+  <div class="form-group">
+    <label for="rating-select">Rating</label>
+    <select class="form-control" id="rating-select" onchange={{action "ratingChanged"}}>
+      <option></option>
+      {{#each ratingOptions as |rating|}}
+        <option value={{rating.value}} selected={{rating.selected}}>{{rating.label}}</option>
+      {{/each}}
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="text-input">Text</label>
+    <input type="text" class="form-control" id="text-input" rows="3" onkeyup={{action "textChanged"}} value={{text}}>
+  </div>
+  <button type="submit" class="btn btn-primary" disabled={{submitDisabled}}>Save</button>
+</form>

@@ -1,23 +1,12 @@
-<div class="row">
-  <div class="col-12">
-    <h4>
-      {{model.title}}
-    </h4>
-  </div>
-</div>
+<AlbumTile @album={{model}} />
 
-<div class="row">
-  <div class="col-3">
-    <img src={{model.coverUrl}} width="100%" class="rounded" alt="Album cover of {{model.title}}">
-  </div>
-  <div class="col-9">
-    <ol>
-      {{#each model.songs as |song|}}
-        <li>
-          <span>{{format-duration song.duration}}</span>
-          <span>{{song.title}}</span>
-        </li>
-      {{/each}}
-    </ol>
+<CommentsList @comments={{model.comments}} />
+
+<div class="mt-2">
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Comment on {{model.title}}</h5>
+      <NewComment @album={{model}} />
+    </div>
   </div>
 </div>

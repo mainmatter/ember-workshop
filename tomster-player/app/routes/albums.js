@@ -4,9 +4,10 @@ import RSVP from 'rsvp';
 export default Route.extend({
   async model() {
     let albums = await this.store.findAll('album');
-    await RSVP.Promise.all(
-      albums.map(async album => album.get('songs'))
-    );
+    await RSVP.Promise.all([
+      ...albums.map(async album => album.get('songs')),
+      ...albums.map(async album => album.get('comments'))
+    ]);
 
     return albums;
   }
