@@ -5,4 +5,5 @@ export default class Album extends Model {
   @attr coverUrl;
 
   @hasMany songs;
+  @hasMany comments;
 }

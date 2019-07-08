@@ -1,0 +1,24 @@
+<div class="row">
+  <div class="col-12">
+    <h4>
+      {{@album.title}}
+      <RatingIndicator @rating={{this.rating}} />
+    </h4>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-3">
+    <img src={{@album.coverUrl}} width="100%" class="rounded" alt="Album cover of {{@album.title}}">
+  </div>
+  <div class="col-9">
+    <ol>
+      {{#each @album.songs as |song|}}
+        <li>
+          <span>{{format-duration song.duration}}</span>
+          <span>{{song.title}}</span>
+        </li>
+      {{/each}}
+    </ol>
+  </div>
+</div>
