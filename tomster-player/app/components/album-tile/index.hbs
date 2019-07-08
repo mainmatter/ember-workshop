@@ -15,6 +15,7 @@
     <ol>
       {{#each @album.songs as |song|}}
         <li>
+          <PlayButton @song={{song}} />
           <span>{{format-duration song.duration}}</span>
           <span>{{song.title}}</span>
         </li>
