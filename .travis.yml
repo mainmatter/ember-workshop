@@ -32,7 +32,6 @@ env:
     - APP=examples/services
     - APP=examples/templates
     - APP=examples/web-sockets
-    - APP=bootstrap
     - APP=tomster-player
 
 install:
