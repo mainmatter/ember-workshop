@@ -1,0 +1,5 @@
+{{#if this.isPlaying}}
+  <span {{on "click" this.stop}} role="button">⏹</span>
+{{else}}
+  <span {{on "click" this.play}} role="button">▶️</span>
+{{/if}}

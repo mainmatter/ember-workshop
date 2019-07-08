@@ -1,0 +1,12 @@
+{{! template-lint-disable no-inline-styles }}
+{{#if this.song}}
+  <span class="navbar-brand"><PlayButton @song={{this.song}} /></span>
+  <span class="navbar-text">
+    <img src={{this.song.album.coverUrl}} class="rounded" style="height: 1.5rem;" alt="Album cover of {{this.song.album.title}}">
+    <strong>{{this.song.title}}</strong> – {{this.song.album.title}}
+  </span>
+{{else}}
+  <span class="navbar-text">
+    Select a song
+  </span>
+{{/if}}
