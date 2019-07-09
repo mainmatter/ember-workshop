@@ -1,0 +1,15 @@
+{{#if this.errorMessage}}
+  <p class="alert alert-danger" data-test-login-error>{{this.errorMessage}}</p>
+{{/if}}
+
+<form {{on "submit" this.login}}>
+  <div class="form-group">
+    <label for="username">Username</label>
+    <input type="text" class="form-control" id="username" {{on "keyup" this.usernameChanged}} value={{this.username}} data-test-login-username-input>
+  </div>
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input type="password" class="form-control" id="password" {{on "keyup" this.passwordChanged}} value={{this.password}} data-test-login-password-input>
+  </div>
+  <button type="submit" class="btn btn-primary" data-test-login-submit>Login</button>
+</form> 

@@ -2,6 +2,10 @@ import { module, test } from 'qunit';
 import { visit, currentURL } from '@ember/test-helpers';
 import { setupApplicationTest } from 'ember-qunit';
 import Pretender from 'pretender';
+import {
+  authenticateSession,
+  invalidateSession,
+} from 'ember-simple-auth/test-support';
 
 module('Acceptance | albums', function (hooks) {
   setupApplicationTest(hooks);
@@ -53,16 +57,34 @@ module('Acceptance | albums', function (hooks) {
     this.server.shutdown();
   });
 
-  test('visiting /library renders albums', async function (assert) {
-    await visit('/library');
+  module('when the session is authenticated', function (hooks) {
+    hooks.beforeEach(function () {
+      authenticateSession();
+    });
 
-    assert.strictEqual(currentURL(), '/library');
-    assert.dom('[data-test-album]').exists({ count: 2 });
+    test('visiting /library renders albums', async function (assert) {
+      await visit('/library');
+
+      assert.strictEqual(currentURL(), '/library');
+      assert.dom('[data-test-album]').exists({ count: 2 });
+    });
+
+    test('visiting /library shows a message to select an album', async function (assert) {
+      await visit('/library');
+
+      assert.dom(this.element).includesText('Please select an album');
+    });
   });
 
-  test('visiting /library shows a message to select an album', async function (assert) {
-    await visit('/library');
+  module('when the session is not authenticated', function (hooks) {
+    hooks.beforeEach(function () {
+      invalidateSession();
+    });
 
-    assert.dom(this.element).containsText('Please select an album');
+    test('visiting /library redirects to /login', async function (assert) {
+      await visit('/library');
+
+      assert.strictEqual(currentURL(), '/login');
+    });
   });
 });

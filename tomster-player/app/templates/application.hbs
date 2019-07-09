@@ -7,6 +7,13 @@
     <li class="nav-item">
       <LinkTo @route="index" class="nav-link">Tomster's Music Library</LinkTo>
     </li>
+    <li class="nav-item">
+      {{#if this.session.isAuthenticated}}
+        <button class="btn btn-sm btn-outline-secondary" data-test-logout-button type="button" {{on "click" this.invalidateSession}}>Logout</button>
+      {{else}}
+        <LinkTo @route="login" class="nav-link">Login</LinkTo>
+      {{/if}}
+    </li>
   </ul>
 </nav>
 

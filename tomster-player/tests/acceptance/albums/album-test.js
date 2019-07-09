@@ -8,6 +8,10 @@ import {
 } from '@ember/test-helpers';
 import { setupApplicationTest } from 'ember-qunit';
 import Pretender from 'pretender';
+import {
+  authenticateSession,
+  invalidateSession,
+} from 'ember-simple-auth/test-support';
 
 module('Acceptance | albums/album', function (hooks) {
   setupApplicationTest(hooks);
@@ -141,26 +145,44 @@ module('Acceptance | albums/album', function (hooks) {
     this.server.shutdown();
   });
 
-  test('visiting /library/1 renders an album', async function (assert) {
-    await visit('/library/1');
+  module('when the session is authenticated', function (hooks) {
+    hooks.beforeEach(function () {
+      authenticateSession();
+    });
 
-    assert.strictEqual(currentURL(), '/library/1');
-    assert.dom('[data-test-album-title]').includesText('The Bodyguard');
-    assert.dom('[data-test-song]').exists({ count: 2 });
-    assert.dom('[data-test-comment]').exists();
+    test('visiting /library/1 renders an album', async function (assert) {
+      await visit('/library/1');
+
+      assert.strictEqual(currentURL(), '/library/1');
+      assert.dom('[data-test-album-title]').includesText('The Bodyguard');
+      assert.dom('[data-test-song]').exists({ count: 2 });
+      assert.dom('[data-test-comment]').exists();
+    });
+
+    test('visiting /library/1 allows commmenting on the album', async function (assert) {
+      await visit('/library/1');
+
+      assert.strictEqual(currentURL(), '/library/1');
+      assert.dom('[data-test-comment]').exists({ count: 1 });
+
+      await fillIn('[data-test-new-comment-rating-input]', 5);
+      await fillIn('[data-test-new-comment-text-input]', 'I love this!');
+      await triggerKeyEvent('[data-test-new-comment-text-input]', 'keyup', '!');
+      await click('[data-test-new-comment-submit]');
+
+      assert.dom('[data-test-comment]').exists({ count: 2 });
+    });
   });
 
-  test('visiting /library/1 allows commmenting on the album', async function (assert) {
-    await visit('/library/1');
+  module('when the session is not authenticated', function (hooks) {
+    hooks.beforeEach(function () {
+      invalidateSession();
+    });
 
-    assert.strictEqual(currentURL(), '/library/1');
-    assert.dom('[data-test-comment]').exists({ count: 1 });
+    test('visiting /library/1 redirects to /login', async function (assert) {
+      await visit('/library/1');
 
-    await fillIn('[data-test-new-comment-rating-input]', 5);
-    await fillIn('[data-test-new-comment-text-input]', 'I love this!');
-    await triggerKeyEvent('[data-test-new-comment-text-input]', 'keyup', '!');
-    await click('[data-test-new-comment-submit]');
-
-    assert.dom('[data-test-comment]').exists({ count: 2 });
+      assert.strictEqual(currentURL(), '/login');
+    });
   });
 });
