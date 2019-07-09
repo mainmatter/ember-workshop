@@ -7,6 +7,13 @@
     <li class="nav-item">
       {{link-to "Tomster's Music Library" "index" class="nav-link"}}
     </li>
+    <li class="nav-item">
+      {{#if session.isAuthenticated}}
+        <a onclick={{action "invalidateSession"}} class="nav-link" role="button" data-test-logout-button>Logout</a>
+      {{else}}
+        {{#link-to "login" class="nav-link"}}Login{{/link-to}}
+      {{/if}}
+    </li>
   </ul>
 </nav>
 

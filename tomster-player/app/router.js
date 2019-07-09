@@ -7,6 +7,7 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
+  this.route('login');
   this.route('albums', { path: 'library' }, function() {
     this.route('album', { path: ':album_id'});
   });
