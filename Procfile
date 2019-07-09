@@ -1,1 +1,1 @@
-web: node tomster-player/server/app.js
+web: yarn run mock-server
