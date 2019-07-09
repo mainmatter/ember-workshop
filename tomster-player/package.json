@@ -61,6 +61,7 @@
     "pretender": "^3.4.3",
     "qunit-dom": "^1.5.0",
     "socket.io": "^2.2.0",
+    "socket.io-client": "^2.2.0",
     "uuid": "^3.3.2"
   },
   "engines": {
