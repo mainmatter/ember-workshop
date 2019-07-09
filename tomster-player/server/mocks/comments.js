@@ -42,7 +42,7 @@ module.exports = function(app) {
 
   server.listen(3000);
   // eslint-disable-next-line no-console
-  console.log('Websocket server on http://localhost:3000');
+  console.log('Websocket server on port 3000');
 
   commentsRouter.post('/', function(req, res) {
     let { data } = req.body;
