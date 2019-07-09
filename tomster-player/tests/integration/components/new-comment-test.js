@@ -41,35 +41,35 @@ module('Integration | Component | new-comment', function (hooks) {
   test('it renders a comment form', async function (assert) {
     await render(hbs`<NewComment />`);
 
-    assert.dom(this.element).exists('form');
-    assert.dom(this.element).exists('select');
-    assert.dom(this.element).exists('input[type="text"]');
-    assert.dom(this.element).exists('button[type="submit"]');
+    assert.dom('form').exists();
+    assert.dom('[data-test-new-comment-rating-input]').exists();
+    assert.dom('[data-test-new-comment-text-input]').exists();
+    assert.dom('[data-test-new-comment-submit]').exists();
   });
 
   test('it disables the submit button when nothing has been entered', async function (assert) {
     await render(hbs`<NewComment />`);
 
-    assert.dom('button[type="submit"]').isDisabled();
+    assert.dom('[data-test-new-comment-submit]').isDisabled();
   });
 
   test('it enables the submit button when nothing has been entered', async function (assert) {
     await render(hbs`<NewComment />`);
-    await fillIn('select', 3);
-    await fillIn('input[type="text"]', 'yeah, ok…');
-    await triggerKeyEvent('#text-input', 'keyup', '…');
+    await fillIn('[data-test-new-comment-rating-input]', 3);
+    await fillIn('[data-test-new-comment-text-input]', 'yeah, ok…');
+    await triggerKeyEvent('[data-test-new-comment-text-input]', 'keyup', '…');
 
-    assert.notOk(this.element.querySelector('button[type="submit"]').disabled);
+    assert.dom('[data-test-new-comment-submit]').isNotDisabled();
   });
 
   test('it resets fields once the comment has been saved', async function (assert) {
     await render(hbs`<NewComment />`);
-    await fillIn('select', 3);
-    await fillIn('input[type="text"]', 'yeah, ok…');
-    await triggerKeyEvent('#text-input', 'keyup', '…');
-    await click('button[type="submit"]');
+    await fillIn('[data-test-new-comment-rating-input]', 3);
+    await fillIn('[data-test-new-comment-text-input]', 'yeah, ok…');
+    await triggerKeyEvent('[data-test-new-comment-text-input]', 'keyup', '…');
+    await click('[data-test-new-comment-submit]');
 
-    assert.dom('select').hasValue('');
-    assert.dom('input[type="text"]').hasValue('');
+    assert.dom('[data-test-new-comment-rating-input]').hasValue('');
+    assert.dom('[data-test-new-comment-text-input]').hasValue('');
   });
 });

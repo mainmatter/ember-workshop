@@ -24,10 +24,10 @@ module('Integration | Component | comments-list', function (hooks) {
   test('it renders all comments', async function (assert) {
     await render(hbs`<CommentsList @comments={{this.comments}} />`);
 
-    assert.dom('.card').exists({ count: 2 });
-    assert.dom(this.element).containsText('Not actually my favorite…');
+    assert.dom('[data-test-comment]').exists({ count: 2 });
+    assert.dom(this.element).includesText('Not actually my favorite…');
     assert
       .dom(this.element)
-      .containsText('Such a great album - a total christmas classic for me!');
+      .includesText('Such a great album - a total christmas classic for me!');
   });
 });

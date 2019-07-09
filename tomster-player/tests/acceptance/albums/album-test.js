@@ -145,25 +145,22 @@ module('Acceptance | albums/album', function (hooks) {
     await visit('/library/1');
 
     assert.strictEqual(currentURL(), '/library/1');
-    assert.dom('h4').containsText('The Bodyguard');
-    assert.dom('ol li').exists({ count: 2 });
-    assert.dom('.comments .card').exists();
+    assert.dom('[data-test-album-title]').includesText('The Bodyguard');
+    assert.dom('[data-test-song]').exists({ count: 2 });
+    assert.dom('[data-test-comment]').exists();
   });
 
   test('visiting /library/1 allows commmenting on the album', async function (assert) {
     await visit('/library/1');
 
     assert.strictEqual(currentURL(), '/library/1');
-    assert.strictEqual(
-      this.element.querySelectorAll('.comments .card').length,
-      1
-    ); // 1 comment
+    assert.dom('[data-test-comment]').exists({ count: 1 });
 
-    await fillIn('#rating-select', 5);
-    await fillIn('#text-input', 'I love this!');
-    await triggerKeyEvent('#text-input', 'keyup', '!');
-    await click('button[type="submit"]');
+    await fillIn('[data-test-new-comment-rating-input]', 5);
+    await fillIn('[data-test-new-comment-text-input]', 'I love this!');
+    await triggerKeyEvent('[data-test-new-comment-text-input]', 'keyup', '!');
+    await click('[data-test-new-comment-submit]');
 
-    assert.dom('.comments .card').exists({ count: 2 }); // 2 comments
+    assert.dom('[data-test-comment]').exists({ count: 2 });
   });
 });

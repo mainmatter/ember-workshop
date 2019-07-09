@@ -2,7 +2,7 @@
   <div class="col-3">
     <div class="list-group">
       {{#each this.model as |album|}}
-        <LinkTo @route="albums.album" @model={{album.id}} class="list-group-item list-group-item-action">
+        <LinkTo @route="albums.album" @model={{album.id}} class="list-group-item list-group-item-action" data-test-album>
           {{album.title}}
         </LinkTo>
       {{/each}}

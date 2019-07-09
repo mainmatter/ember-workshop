@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-12">
-    <h4>
+    <h4 data-test-album-title>
       {{@album.title}}
       <RatingIndicator @rating={{this.rating}} />
     </h4>
@@ -14,7 +14,7 @@
   <div class="col-9">
     <ol>
       {{#each @album.songs as |song|}}
-        <li>
+        <li data-test-song>
           <PlayButton @song={{song}} />
           <span>{{format-duration song.duration}}</span>
           <span>{{song.title}}</span>

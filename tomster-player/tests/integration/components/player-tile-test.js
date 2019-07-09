@@ -10,7 +10,7 @@ module('Integration | Component | player-tile', function (hooks) {
   test('it shows a message to select a song when none has been selected', async function (assert) {
     await render(hbs`<PlayerTile />`);
 
-    assert.dom(this.element).containsText('Select a song');
+    assert.dom(this.element).includesText('Select a song');
   });
 
   test('it shows the current song if one is selected', async function (assert) {
@@ -31,7 +31,7 @@ module('Integration | Component | player-tile', function (hooks) {
     );
     await render(hbs`<PlayerTile />`);
 
-    assert.dom(this.element).containsText('Hold Me');
+    assert.dom(this.element).includesText('Hold Me');
     assert.dom('img[src="https://cover.url/of-the-album.png"]').exists();
   });
 });

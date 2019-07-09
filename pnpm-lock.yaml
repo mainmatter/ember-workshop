@@ -904,6 +904,7 @@ importers:
       ember-resolver: ^8.0.3
       ember-source: ~4.9.1
       ember-template-lint: ^5.2.0
+      ember-test-selectors: ^6.0.0
       ember-welcome-page: ^6.2.0
       eslint: ^7.32.0
       eslint-config-prettier: ^8.5.0
@@ -951,6 +952,7 @@ importers:
       ember-resolver: 8.0.3
       ember-source: 4.9.3_klhxxmjkcvtuhwro2kkspsfzna
       ember-template-lint: 5.3.1_ember-cli-htmlbars@6.1.1
+      ember-test-selectors: 6.0.0
       ember-welcome-page: 6.2.0
       eslint: 7.32.0
       eslint-config-prettier: 8.6.0_eslint@7.32.0
@@ -6924,6 +6926,17 @@ packages:
       slash: 3.0.0
       tmp: 0.2.1
       workerpool: 6.3.1
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
+  /ember-test-selectors/6.0.0:
+    resolution: {integrity: sha512-PgYcI9PeNvtKaF0QncxfbS68olMYM1idwuI8v/WxsjOGqUx5bmsu6V17vy/d9hX4mwmjgsBhEghrVasGSuaIgw==}
+    engines: {node: 12.* || 14.* || >= 16.*}
+    dependencies:
+      calculate-cache-key-for-tree: 2.0.0
+      ember-cli-babel: 7.26.11
+      ember-cli-version-checker: 5.1.2
     transitivePeerDependencies:
       - supports-color
     dev: true

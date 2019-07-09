@@ -44,7 +44,7 @@ module('Integration | Component | album-tile', function (hooks) {
   test('it renders the average rating', async function (assert) {
     await render(hbs`<AlbumTile @album={{this.album}} />`);
 
-    assert.strictEqual(this.element.textContent.match(/⭐️/g).length, 3);
+    assert.dom(this.element).hasText(/⭐️\s*⭐️\s*⭐️/g);
   });
 
   test('it renders the album cover', async function (assert) {
@@ -56,7 +56,7 @@ module('Integration | Component | album-tile', function (hooks) {
   test('it renders all songs', async function (assert) {
     await render(hbs`<AlbumTile @album={{this.album}} />`);
 
-    assert.dom('ol li').exists({ count: 2 });
+    assert.dom('[data-test-song]').exists({ count: 2 });
     assert.dom(this.element).containsText('I Will Always Love You');
     assert.dom(this.element).containsText('00:35');
     assert.dom(this.element).containsText('Even If My Heart Would Break');

@@ -19,7 +19,7 @@ module('Integration | Component | play-button', function (hooks) {
   test('it renders a play button when not playing', async function (assert) {
     await render(hbs`<PlayButton @song={{this.song}} />`);
 
-    assert.dom('[role="button"]').hasText('▶️');
+    assert.dom('[data-test-button]').hasText('▶️');
   });
 
   test('it renders a stop button when playing the current song', async function (assert) {
@@ -37,7 +37,7 @@ module('Integration | Component | play-button', function (hooks) {
     );
     await render(hbs`<PlayButton @song={{this.song}} />`);
 
-    assert.dom('[role="button"]').hasText('⏹');
+    assert.dom('[data-test-button]').hasText('⏹');
   });
 
   test('clicking the stop button stops the song', async function (assert) {
@@ -60,7 +60,7 @@ module('Integration | Component | play-button', function (hooks) {
       }
     );
     await render(hbs`<PlayButton @song={{this.song}} />`);
-    await click('[role="button"]');
+    await click('[data-test-button]');
   });
 
   test('it renders a play button when playing a different song', async function (assert) {
@@ -82,7 +82,7 @@ module('Integration | Component | play-button', function (hooks) {
     );
     await render(hbs`<PlayButton @song={{this.song}} />`);
 
-    assert.dom('[role="button"]').hasText('▶️');
+    assert.dom('[data-test-button]').hasText('▶️');
   });
 
   test('clicking the play button playes the song', async function (assert) {
@@ -101,7 +101,8 @@ module('Integration | Component | play-button', function (hooks) {
         }
       }
     );
+
     await render(hbs`<PlayButton @song={{this.song}} />`);
-    await click('[role="button"]');
+    await click('[data-test-button]');
   });
 });

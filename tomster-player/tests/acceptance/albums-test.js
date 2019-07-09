@@ -57,7 +57,7 @@ module('Acceptance | albums', function (hooks) {
     await visit('/library');
 
     assert.strictEqual(currentURL(), '/library');
-    assert.dom('.list-group-item').exists({ count: 2 });
+    assert.dom('[data-test-album]').exists({ count: 2 });
   });
 
   test('visiting /library shows a message to select an album', async function (assert) {
