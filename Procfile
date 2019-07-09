@@ -1,1 +1,1 @@
-web: yarn run mock-server
+web: cd mock-server && yarn start

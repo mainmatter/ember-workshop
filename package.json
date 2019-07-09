@@ -7,8 +7,5 @@
   ],
   "resolutions": {
     "@babel/plugin-transform-typescript": "7.4.5"
-  },
-  "scripts": {
-    "mock-server": "node tomster-player/server/app.js"
   }
 }
