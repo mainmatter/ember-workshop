@@ -24,8 +24,8 @@ module('Integration | Component | comments-list', function(hooks) {
   test('it renders all comments', async function(assert) {
     await render(hbs`<CommentsList @comments={{comments}} />`);
 
-    assert.equal(this.element.querySelectorAll('.card').length, 2);
-    assert.ok(this.element.textContent.includes('Not actually my favorite…'));
-    assert.ok(this.element.textContent.includes('Such a great album - a total christmas classic for me!'));
+    assert.dom('[data-test-comment]').exists({ count: 2 });
+    assert.dom(this.element).includesText('Not actually my favorite…');
+    assert.dom(this.element).includesText('Such a great album - a total christmas classic for me!');
   });
 });

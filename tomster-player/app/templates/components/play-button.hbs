@@ -1,5 +1,5 @@
 {{#if isPlaying}}
-  <span onclick={{action "stop"}} role="button">⏹</span>
+  <span onclick={{action "stop"}} role="button" data-test-button>⏹</span>
 {{else}}
-  <span onclick={{action "play"}} role="button">▶️</span>
+  <span onclick={{action "play"}} role="button" data-test-button>▶️</span>
 {{/if}}

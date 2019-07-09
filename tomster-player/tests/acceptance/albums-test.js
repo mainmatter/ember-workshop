@@ -51,12 +51,12 @@ module('Acceptance | albums', function(hooks) {
     await visit('/library');
 
     assert.equal(currentURL(), '/library');
-    assert.equal(this.element.querySelectorAll('.list-group-item').length, 2);
+    assert.dom('[data-test-album]').exists({ count: 2 });
   });
 
   test('visiting /library shows a message to select an album', async function(assert) {
     await visit('/library');
 
-    assert.ok(this.element.textContent.includes('Please select an album'));
+    assert.dom(this.element).includesText('Please select an album');
   });
 });

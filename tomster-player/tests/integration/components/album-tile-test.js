@@ -38,28 +38,28 @@ module('Integration | Component | album-tile', function(hooks) {
   test('it renders the album title', async function(assert) {
     await render(hbs`<AlbumTile @album={{album}} />`);
 
-    assert.ok(this.element.textContent.includes, 'The Bodyguard');
+    assert.dom(this.element).includesText('The Bodyguard');
   });
 
   test('it renders the average rating', async function(assert) {
     await render(hbs`<AlbumTile @album={{album}} />`);
 
-    assert.equal(this.element.textContent.match(/⭐️/g).length, 3);
+    assert.dom(this.element).hasText(/⭐️\s*⭐️\s*⭐️/g);
   });
 
   test('it renders the album cover', async function(assert) {
     await render(hbs`<AlbumTile @album={{album}} />`);
 
-    assert.equal(this.element.querySelectorAll('img[src="https://cover.url/of-the-album.png"]').length, 1);
+    assert.dom('img[src="https://cover.url/of-the-album.png"]').exists();
   });
 
   test('it renders all songs', async function(assert) {
     await render(hbs`<AlbumTile @album={{album}} />`);
 
-    assert.equal(this.element.querySelectorAll('ol li').length, 2);
-    assert.ok(this.element.textContent.includes('I Will Always Love You'));
-    assert.ok(this.element.textContent.includes('00:35'));
-    assert.ok(this.element.textContent.includes('Even If My Heart Would Break'));
-    assert.ok(this.element.textContent.includes('20:50'));
+    assert.dom('[data-test-song]').exists({ count: 2 });
+    assert.dom(this.element).includesText('I Will Always Love You');
+    assert.dom(this.element).includesText('00:35');
+    assert.dom(this.element).includesText('Even If My Heart Would Break');
+    assert.dom(this.element).includesText('20:50');
   });
 });
