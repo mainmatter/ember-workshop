@@ -4,6 +4,7 @@ import ENV from 'tomster-player/config/environment';
 
 export default class ApplicationAdapter extends JSONAPIAdapter {
   @service session;
+  @service socket;
 
   host = ENV.apiHost;
   namespace = ENV.apiNamespace;
@@ -15,6 +16,7 @@ export default class ApplicationAdapter extends JSONAPIAdapter {
       headers[
         'Authorization'
       ] = `Bearer ${this.session.data.authenticated.access_token}`;
+      headers['X-Socket-Id'] = this.socket.id;
     }
 
     return headers;
