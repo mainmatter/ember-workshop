@@ -1,7 +1,7 @@
 <form {{on "submit" this.createComment}}>
   <div class="form-group">
     <label for="rating-select">Rating</label>
-    <select class="form-control" id="rating-select" {{on "change" this.ratingChanged}}>
+    <select class="form-control" id="rating-select" {{on "change" this.ratingChanged}} data-test-new-comment-rating-input>
       <option></option>
       {{#each this.ratingOptions as |rating|}}
         <option value={{rating.value}} selected={{rating.selected}}>{{rating.label}}</option>
@@ -10,7 +10,7 @@
   </div>
   <div class="form-group">
     <label for="text-input">Text</label>
-    <input type="text" class="form-control" id="text-input" rows="3" {{on "keyup" this.textChanged}} value={{this.text}}>
+    <input type="text" class="form-control" id="text-input" rows="3" {{on "keyup" this.textChanged}} value={{this.text}} data-test-new-comment-text-input>
   </div>
-  <button type="submit" class="btn btn-primary" disabled={{this.submitDisabled}}>Save</button>
+  <button type="submit" class="btn btn-primary" disabled={{this.submitDisabled}} data-test-new-comment-submit>Save</button>
 </form>
