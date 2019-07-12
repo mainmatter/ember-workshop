@@ -20,6 +20,14 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+    },
+
+    api: {
+      namespace: 'api'
+    },
+
+    sockets: {
+      host: 'http://localhost:3000'
     }
   };
 
@@ -44,6 +52,8 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
+    ENV.api.host = 'https://ember-workshop-server.herokuapp.com';
+    ENV.sockets.host = 'https://ember-workshop-server.herokuapp.com';
     // here you can enable a production-specific feature
   }
 

@@ -2,7 +2,7 @@
   "private": true,
   "workspaces": [
     "examples/*",
-    "bootstrap",
+    "mock-server",
     "tomster-player"
   ],
   "resolutions": {

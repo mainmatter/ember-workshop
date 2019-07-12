@@ -37,12 +37,6 @@ const COMMENTS = [
 module.exports = function(app) {
   const express = require('express');
   let commentsRouter = express.Router();
-  let server = require('http').Server(app);
-  let io = require('socket.io')(server);
-
-  server.listen(3000);
-  // eslint-disable-next-line no-console
-  console.log('Websocket server on http://localhost:3000');
 
   commentsRouter.post('/', function(req, res) {
     let { data } = req.body;
@@ -54,7 +48,7 @@ module.exports = function(app) {
 
       res.status(201).send(response);
 
-      io.sockets.emit('comments:broadcast', response);
+      app.get('io').sockets.emit('comments:broadcast', response);
     } else {
       let errors = [];
       ['text', 'rating'].forEach(function(attribute) {

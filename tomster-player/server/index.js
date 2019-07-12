@@ -20,4 +20,12 @@ module.exports = function(app) {
 
   mocks.forEach(route => route(app));
   proxies.forEach(route => route(app));
+
+  let server = require('http').Server(app);
+  let io = require('socket.io')(server);
+  app.set('io', io);
+
+  server.listen(3000);
+  // eslint-disable-next-line no-console
+  console.log('Websocket server on port 3000');
 };

@@ -1,0 +1,17 @@
+{
+  "name": "mock-server",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "cors": "^2.8.1",
+    "glob": "^7.1.1",
+    "morgan": "^1.8.1",
+    "express": "^4.15.2",
+    "socket.io": "^2.2.0",
+    "uuid": "^3.3.2"
+  }
+}
