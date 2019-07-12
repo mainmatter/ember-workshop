@@ -28,6 +28,10 @@ module.exports = function(environment) {
 
     sockets: {
       host: 'http://localhost:3000'
+    },
+
+    oauth2: {
+      tokenEndpoint: '/token'
     }
   };
 
@@ -54,6 +58,7 @@ module.exports = function(environment) {
   if (environment === 'production') {
     ENV.api.host = 'https://ember-workshop-server.herokuapp.com';
     ENV.sockets.host = 'https://ember-workshop-server.herokuapp.com';
+    ENV.oauth2.tokenEndpoint = 'https://ember-workshop-server.herokuapp.com/token';
     // here you can enable a production-specific feature
   }
 
