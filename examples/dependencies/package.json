@@ -45,7 +45,7 @@
     "ember-resolver": "^5.2.1",
     "ember-source": "~3.12.0",
     "ember-welcome-page": "^4.0.0",
-    "eslint-plugin-ember": "^6.8.2",
+    "eslint-plugin-ember": "^6.9.0",
     "eslint-plugin-node": "^9.0.1",
     "example-addon": "*",
     "highcharts": "^7.1.2",
