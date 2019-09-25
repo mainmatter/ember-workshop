@@ -3,6 +3,7 @@ import EmberObject, { computed, observer } from '@ember/object';
 import Mixin from '@ember/object/mixin';
 import { A } from '@ember/array';
 
+// eslint-disable-next-line ember/no-new-mixins
 const DebugMixin = Mixin.create({
   debug() {
     //eslint-disable-next-line no-console
