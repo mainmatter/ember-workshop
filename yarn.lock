@@ -776,15 +776,15 @@
     jquery "^3.4.1"
     resolve "^1.11.1"
 
-"@ember/optional-features@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@ember/optional-features/-/optional-features-1.0.0.tgz#8e54ff37f4d9642212b45387f182cf7322aaaab9"
-  integrity sha512-nPWqiyjkbSLaNd1kA1Y0BYAx+0IzuxdBfOkQyEwNaaB6xvgGpQMiQF/Au5UBlV/S3GEpuL2kFRQj48XMiTBY+w==
+"@ember/optional-features@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@ember/optional-features/-/optional-features-1.1.0.tgz#0ff27ba6e9fc1f1e936e024f6a7cc33a96abffba"
+  integrity sha512-ST3+gIRH2WtgGcOtf42uM9WaXBY4dj4//zoTYV6GPe8cp0XdJEU63oMo9SbE6+0Efp8lvk96LsX+DVDDZy9Rmw==
   dependencies:
     chalk "^2.4.2"
     co "^4.6.0"
     ember-cli-version-checker "^3.1.3"
-    glob "^7.1.4"
+    glob "^7.1.5"
     inquirer "^6.5.1"
     mkdirp "^0.5.1"
     silent-error "^1.1.1"
