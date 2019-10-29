@@ -49,7 +49,7 @@
     "glob": "^7.1.5",
     "loader.js": "^4.7.0",
     "morgan": "^1.9.1",
-    "qunit-dom": "^0.9.0"
+    "qunit-dom": "^0.9.1"
   },
   "engines": {
     "node": "8.* || >= 10.*"
