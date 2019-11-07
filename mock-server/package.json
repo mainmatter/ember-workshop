@@ -8,7 +8,7 @@
   "dependencies": {
     "body-parser": "^1.17.2",
     "cors": "^2.8.1",
-    "glob": "^7.1.5",
+    "glob": "^7.1.6",
     "morgan": "^1.8.1",
     "express": "^4.15.2",
     "socket.io": "^2.3.0",
