@@ -2,7 +2,7 @@ import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
 import { render, fillIn, triggerKeyEvent, click } from '@ember/test-helpers';
 import Pretender from 'pretender';
-import hbs from 'htmlbars-inline-precompile';
+import { hbs } from 'ember-cli-htmlbars';
 
 module('Integration | Component | new-comment', function(hooks) {
   setupRenderingTest(hooks);
