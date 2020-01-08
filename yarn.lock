@@ -4477,10 +4477,10 @@ ember-auto-import@^1.4.1, ember-auto-import@^1.5.3:
     walk-sync "^0.3.3"
     webpack "~4.28"
 
-ember-bootstrap@^3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/ember-bootstrap/-/ember-bootstrap-3.1.0.tgz#6152b029640f7eb9543049e0be6d1ba77e841a82"
-  integrity sha512-v9mUpdCdcFMJiKq0YdmI9IKyLmgM08ttQF5QXEFqHs6Dk4maEyZurhr/0zsWbrikzLft1d+Cky9EP0t/8X77Hg==
+ember-bootstrap@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/ember-bootstrap/-/ember-bootstrap-3.1.1.tgz#b069395b06f66790d835d278877d27fe9c00b5dd"
+  integrity sha512-tCLmwq9yKy51+sVeiW8dTiSkmHU936+v9JM9t7taCLjyVATcKb5wZLpK3Y35OYjkkclMDJp1jcaeuUt3S+qipA==
   dependencies:
     broccoli-debug "^0.6.3"
     broccoli-funnel "^2.0.0"
@@ -4488,9 +4488,9 @@ ember-bootstrap@^3.1.0:
     broccoli-stew "^2.0.0"
     chalk "^2.1.0"
     ember-angle-bracket-invocation-polyfill "^2.0.1"
-    ember-cli-babel "^7.7.3"
+    ember-cli-babel "^7.11.1"
     ember-cli-build-config-editor "0.5.0"
-    ember-cli-htmlbars "^3.0.1"
+    ember-cli-htmlbars "^4.0.5"
     ember-cli-version-checker "^3.0.0"
     ember-concurrency "^1.0.0"
     ember-decorators "^6.1.0"
@@ -4620,7 +4620,7 @@ ember-cli-htmlbars@^3.0.0, ember-cli-htmlbars@^3.0.1:
     json-stable-stringify "^1.0.1"
     strip-bom "^3.0.0"
 
-ember-cli-htmlbars@^4.2.0:
+ember-cli-htmlbars@^4.0.5, ember-cli-htmlbars@^4.2.0:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/ember-cli-htmlbars/-/ember-cli-htmlbars-4.2.0.tgz#a3694ab31f6d571c45786a3041b9c76e4eb30989"
   integrity sha512-YymJLg/rRiclK5jxbTFpaRNlbS+f3SY6SplnMExjcrcbSjMRsBuams50+mppENEu7iKfd6PBqH3FHVbYsukHSQ==
