@@ -11,6 +11,18 @@ const Validations = buildValidations({
 export default Component.extend(Validations, {
   store: inject(),
 
+  forceErrors: false,
+  showRatingErrors: false,
+  showTextErrors: false,
+
+  hasVisibleRatingErrors: computed('forceErrors', 'showRatingErrors', 'validations.attrs.rating.isValid', function() {
+    return this.forceErrors || (this.showRatingErrors && !this.validations.attrs.rating.isValid);
+  }),
+
+  hasVisibleTextErrors: computed('forceErrors', 'showTextErrors', 'validations.attrs.text.isValid', function() {
+    return this.forceErrors || (this.showTextErrors && !this.validations.attrs.text.isValid);
+  }),
+
   ratingOptions: computed('rating', function() {
     return [
       { value: 1, label: '⭐️' },
@@ -27,8 +39,16 @@ export default Component.extend(Validations, {
   }),
 
   actions: {
+    ratingFieldTouched() {
+      this.set('showRatingErrors', true);
+    },
+
     ratingChanged(event) {
       this.set('rating', Number(event.target.value));
+    },
+
+    textFieldTouched() {
+      this.set('showTextErrors', true);
     },
 
     textChanged(event) {
@@ -37,6 +57,7 @@ export default Component.extend(Validations, {
 
     async createComment(event) {
       event.preventDefault();
+      this.set('forceErrors', true);
 
       if (this.validations.isValid) {
         let comment = this.store.createRecord('comment', {

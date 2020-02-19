@@ -1,6 +1,6 @@
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
-import { render, fillIn, triggerKeyEvent, click } from '@ember/test-helpers';
+import { render, fillIn, triggerKeyEvent, triggerEvent, click } from '@ember/test-helpers';
 import Pretender from 'pretender';
 import { hbs } from 'ember-cli-htmlbars';
 
@@ -45,8 +45,22 @@ module('Integration | Component | new-comment', function(hooks) {
     assert.dom('[data-test-new-comment-submit]').exists();
   });
 
-  test('it shows the rating field as invalid when nothing has been entered', async function(assert) {
+  test('it does not show the rating field as invalid initially', async function(assert) {
     await render(hbs`<NewComment />`);
+
+    assert.dom('[data-test-new-comment-rating-input]').doesNotHaveClass('is-invalid');
+  });
+
+  test('it shows the rating field as invalid on blur when nothing has been entered', async function(assert) {
+    await render(hbs`<NewComment />`);
+    await triggerEvent('[data-test-new-comment-rating-input]', 'blur');
+
+    assert.dom('[data-test-new-comment-rating-input]').hasClass('is-invalid');
+  });
+
+  test('it shows the rating field as invalid on form submission when nothing has been entered', async function(assert) {
+    await render(hbs`<NewComment />`);
+    await click('[data-test-new-comment-submit]');
 
     assert.dom('[data-test-new-comment-rating-input]').hasClass('is-invalid');
   });
@@ -58,8 +72,22 @@ module('Integration | Component | new-comment', function(hooks) {
     assert.dom('[data-test-new-comment-rating-input]').doesNotHaveClass('is-invalid');
   });
 
-  test('it shows the text field as invalid when nothing has been entered', async function(assert) {
+  test('it does not show the text field as invalid initially', async function(assert) {
     await render(hbs`<NewComment />`);
+
+    assert.dom('[data-test-new-comment-text-input]').doesNotHaveClass('is-invalid');
+  });
+
+  test('it shows the text field as invalid on blur when nothing has been entered', async function(assert) {
+    await render(hbs`<NewComment />`);
+    await triggerEvent('[data-test-new-comment-text-input]', 'blur');
+
+    assert.dom('[data-test-new-comment-text-input]').hasClass('is-invalid');
+  });
+
+  test('it shows the text field as invalid on form submission when nothing has been entered', async function(assert) {
+    await render(hbs`<NewComment />`);
+    await click('[data-test-new-comment-submit]');
 
     assert.dom('[data-test-new-comment-text-input]').hasClass('is-invalid');
   });
