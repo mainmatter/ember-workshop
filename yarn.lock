@@ -6627,10 +6627,10 @@ heimdalljs@^0.3.0:
   dependencies:
     rsvp "~3.2.1"
 
-highcharts@^8.0.0:
-  version "8.0.0"
-  resolved "https://registry.yarnpkg.com/highcharts/-/highcharts-8.0.0.tgz#fcf77a511d6ea477b9d8447afd9dedbfc85e2727"
-  integrity sha512-jRKLiP0i29zKSEgMDASyrfpivrM3e8V8yTv8YUZtRzB2mXR+hsBNHWZw2hNRZVxqq1QCVmW/9Z/BLFvYlJELqA==
+highcharts@^8.0.1:
+  version "8.0.1"
+  resolved "https://registry.yarnpkg.com/highcharts/-/highcharts-8.0.1.tgz#b34b8b8df50ae2864fa699559259f3d5c65f6d9c"
+  integrity sha512-qxEJQIk/G8tPt8crGsuXRjE0apJG4LBZxDmzTklpUvoQU12VG9fRnOlPOqGfuVl0Pz+GibVLWrJRAU3HpB2wuw==
 
 hmac-drbg@^1.0.0:
   version "1.0.1"
