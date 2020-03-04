@@ -47,7 +47,7 @@
     "eslint-plugin-ember": "^7.7.2",
     "eslint-plugin-node": "^11.0.0",
     "example-addon": "*",
-    "highcharts": "^8.0.1",
+    "highcharts": "^8.0.2",
     "loader.js": "^4.7.0",
     "qunit-dom": "^0.9.2"
   },
