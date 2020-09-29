@@ -21,7 +21,7 @@
     "@ember/jquery": "^1.1.0",
     "@ember/optional-features": "^2.0.0",
     "@fortawesome/ember-fontawesome": "^0.2.2",
-    "@fortawesome/free-solid-svg-icons": "^5.14.0",
+    "@fortawesome/free-solid-svg-icons": "^5.15.0",
     "babel-eslint": "^10.1.0",
     "broccoli-asset-rev": "^3.0.0",
     "ember-ajax": "^5.0.0",
