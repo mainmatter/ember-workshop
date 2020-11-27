@@ -3,6 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "lint": "echo 'no linting here…'",
+    "test": "echo 'no tests here…'",
     "start": "node app.js"
   },
   "dependencies": {
