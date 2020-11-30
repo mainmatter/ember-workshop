@@ -18,8 +18,9 @@ export default Controller.extend({
 
       try {
         await this.session.authenticate('authenticator:oauth2-password-grant', this.username, this.password);
-      } catch(error) {
-        this.set('errorMessage', error.error);
+      } catch(response) {
+        let json = await response.clone().json();
+        this.set('errorMessage', json.error);
       }
     }
   }
