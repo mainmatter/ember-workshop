@@ -1,16 +1,16 @@
 <nav>
   <ul>
     <li>
-      {{link-to "Home" "index"}}
+      <LinkTo @route="index">Home</LinkTo>
     </li>
     <li>
-      {{link-to "Protected" "protected"}}
+      <LinkTo @route="protected">Protected</LinkTo>
     </li>
     <li>
       {{#if session.isAuthenticated}}
         <button onclick={{action "invalidateSession"}}>Logout</button>
       {{else}}
-        {{link-to "Login" "login"}}
+        <LinkTo @route="login">Login</LinkTo>
       {{/if}}
     </li>
   </ul>

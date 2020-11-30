@@ -2,10 +2,10 @@
 
 <form onsubmit={{action "authenticate"}}>
   <label for="identification">Login</label>
-  <input type="text" id="identification" placeholder="Enter Login" value={{identification}} onchange={{action (mut identification) value="target.value"}}>
+  <Input @id="identification" @type="text" @placeholder="Enter Login" @value={{this.identification}} />
 
   <label for="password">Password</label>
-  <input type="password" id="password" placeholder="Enter Password" value={{password}} onchange={{action (mut password) value="target.value"}}>
+  <Input @id="password" @type="password" @placeholder="Enter Password" @value={{this.password}} />
 
   <button type="submit">Login</button>
 
