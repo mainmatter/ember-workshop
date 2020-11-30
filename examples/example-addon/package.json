@@ -14,6 +14,7 @@
   },
   "scripts": {
     "build": "ember build",
+    "lint": "npm-run-all --aggregate-output --continue-on-error --parallel lint:*",
     "lint:hbs": "ember-template-lint .",
     "lint:js": "eslint .",
     "start": "ember serve",
@@ -46,6 +47,7 @@
     "eslint-plugin-ember": "^7.7.2",
     "eslint-plugin-node": "^11.1.0",
     "loader.js": "^4.7.0",
+    "npm-run-all": "^4.1.5",
     "qunit-dom": "^1.6.0"
   },
   "engines": {
