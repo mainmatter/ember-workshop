@@ -7,8 +7,8 @@
       <LinkTo @route="protected">Protected</LinkTo>
     </li>
     <li>
-      {{#if session.isAuthenticated}}
-        <button onclick={{action "invalidateSession"}}>Logout</button>
+      {{#if this.session.isAuthenticated}}
+        <button {{on "click" this.invalidateSession}}>Logout</button>
       {{else}}
         <LinkTo @route="login">Login</LinkTo>
       {{/if}}

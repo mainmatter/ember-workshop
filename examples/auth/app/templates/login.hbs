@@ -1,6 +1,6 @@
 <h1>Login</h1>
 
-<form onsubmit={{action "authenticate"}}>
+<form {{on "submit" this.authenticate}}>
   <label for="identification">Login</label>
   <Input @id="identification" @type="text" @placeholder="Enter Login" @value={{this.identification}} />
 
