@@ -48,7 +48,7 @@
     "ember-simple-auth": "^3.0.1",
     "ember-source": "~3.23.1",
     "ember-test-selectors": "^5.0.0",
-    "eslint-plugin-ember": "^7.7.2",
+    "eslint-plugin-ember": "^8.14.0",
     "eslint-plugin-node": "^11.1.0",
     "express": "^4.8.5",
     "glob": "^7.1.6",
