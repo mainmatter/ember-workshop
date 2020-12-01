@@ -1,14 +1,14 @@
+import { action } from '@ember/object';
 import Route from '@ember/routing/route';
 
-export default Route.extend({
+export default class FailRoute extends Route {
   model() {
     return Promise.reject('an error occured!');
-  },
-
-  actions: {
-    error(e) {
-      //eslint-disable-next-line no-console
-      console.error('Routing error:', e);
-    }
   }
-});
+
+  @action
+  error(e) {
+    //eslint-disable-next-line no-console
+    console.error('Routing error:', e);
+  }
+}
