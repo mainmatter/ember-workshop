@@ -1,9 +1,11 @@
-import Model, { attr, hasMany } from '@ember-data/model';
+import Model, { attr, hasMany } from "@ember-data/model";
 
-export default Model.extend({
-  title:    attr('string'),
-  coverUrl: attr('string'),
+export default class Album extends Model {
+  @attr("string") title;
 
-  songs: hasMany(),
-  comments: hasMany()
-});
+  @attr("string") coverUrl;
+
+  @hasMany songs;
+
+  @hasMany comments;
+}
