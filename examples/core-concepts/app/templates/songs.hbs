@@ -1,8 +1,8 @@
-<h1>{{songCount}} songs</h1>
+<h1>{{this.songCount}} songs</h1>
 
 <ul>
-  {{#each model as |song|}}
-    <li>
+  {{#each this.model as |song|}}
+    <li class="song">
       <SongTile @song={{song}} />
     </li>
   {{/each}}
