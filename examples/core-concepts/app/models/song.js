@@ -1,7 +1,7 @@
-import Model from 'ember-data/model';
-import attr from 'ember-data/attr';
+import Model from '@ember-data/model';
+import { attr } from '@ember-data/model';
 
-export default Model.extend({
-  name:     attr('string'),
-  coverUrl: attr('string')
-});
+export default class Song extends Model {
+  @attr name;
+  @attr coverUrl;
+}
