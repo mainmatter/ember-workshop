@@ -1,15 +1,19 @@
-import Controller from '@ember/controller';
-import { computed } from '@ember/object';
-import { equal } from '@ember/object/computed';
+import { computed } from "@ember/object";
+import { equal } from "@ember/object/computed";
+import Controller from "@ember/controller";
 
-export default Controller.extend({
-  queryParams: ['filter'],
-  filter: 'albums',
+export default class MediaController extends Controller {
+  queryParams = ["filter"];
+  filter = "albums";
 
-  showAlbums: equal('filter', 'albums'),
-  showMovies: equal('filter', 'movies'),
+  @equal("filter", "albums")
+  showAlbums;
 
-  media: computed('showAlbums', 'showMovies', function() {
+  @equal("filter", "movies")
+  showMovies;
+
+  @computed("showAlbums", "showMovies")
+  get media() {
     if (this.showAlbums) {
       return this.model.albums;
     } else if (this.showMovies) {
@@ -17,5 +21,5 @@ export default Controller.extend({
     } else {
       return [];
     }
-  })
-});
+  }
+}

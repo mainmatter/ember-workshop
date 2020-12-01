@@ -18,11 +18,11 @@ const MOVIES = [
   { title: "Creed – Rocky’s Legacy" }
 ];
 
-export default Route.extend({
+export default class MediaRoute extends Route {
   model() {
     return hash({
       albums: delayedResponse(ALBUMS),
       movies: delayedResponse(MOVIES)
     });
   }
-});
+}
