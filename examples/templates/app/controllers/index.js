@@ -1,31 +1,32 @@
 import Controller from '@ember/controller';
+import { action } from '@ember/object';
+import { tracked } from '@glimmer/tracking';
 
-export default Controller.extend({
-  favoriteWhitneySong: 'The Greatest Love of All',
+export default class IndexController extends Controller {
+  @tracked
+  favoriteWhitneySong = 'The Greatest Love of All';
 
-  init() {
-    this._super(...arguments);
+  whiteneySongs = [
+    'The Greatest Love of All',
+    'I Will Always Love You',
+    'My Love Is Your Love'
+  ];
 
-    this.whiteneySongs = [
-      'The Greatest Love of All',
-      'I Will Always Love You',
-      'My Love Is Your Love'
-    ];
-  },
-
-  actions: {
-    handleAction() {
-      alert('Handled action in the controller!');
-    },
-
-    submitForm(e) {
-      e.preventDefault();
-
-      alert('Form submitted!');
-    },
-
-    textChanged(text) {
-      alert(`Text changed to ${text}!`);
-    }
+  @action
+  handleAction() {
+    alert('Handled action in the controller!');
   }
-});
+
+  @action
+  submitForm(e) {
+    e.preventDefault();
+
+    alert('Form submitted!');
+  }
+
+  @action
+  textChanged(e) {
+    let { value: text } = e.target;
+    alert(`Text changed to ${text}!`);
+  }
+}
