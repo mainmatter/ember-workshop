@@ -13,7 +13,7 @@ export default class LoginController extends Controller {
     this.session
       .authenticate("authenticator:oauth2", this.identification, this.password)
       .catch((reason) => {
-        this.set("errorMessage", reason.error || reason);
+        this.errorMessage = reason.error || reason;
       });
   }
 }
