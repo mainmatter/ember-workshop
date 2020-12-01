@@ -1,12 +1,12 @@
-import Controller from '@ember/controller';
-import { inject } from '@ember/service';
+import { action } from "@ember/object";
+import { inject as service } from "@ember/service";
+import Controller from "@ember/controller";
 
-export default Controller.extend({
-  session: inject(),
+export default class ApplicationController extends Controller {
+  @service session;
 
-  actions: {
-    invalidateSession() {
-      this.session.invalidate();
-    }
+  @action
+  invalidateSession() {
+    this.session.invalidate();
   }
-});
+}
