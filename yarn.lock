@@ -5904,6 +5904,20 @@ ember-simple-auth@^3.0.1:
     ember-cookies "^0.5.0"
     silent-error "^1.0.0"
 
+ember-simple-auth@^3.1.0-beta.1:
+  version "3.1.0-beta.1"
+  resolved "https://registry.yarnpkg.com/ember-simple-auth/-/ember-simple-auth-3.1.0-beta.1.tgz#22df3007aa2897d213dc05532bfcfbff7b853622"
+  integrity sha512-Wg9AUfIcY6nbj4nBSdvMu+juW5GdZH+lztRRu14BjUx39btNpOm5Fe76BiU/ST0PLhGyXPCs1npgT6RBp7CdRg==
+  dependencies:
+    base-64 "^0.1.0"
+    broccoli-file-creator "^2.0.0"
+    broccoli-funnel "^1.2.0 || ^2.0.0"
+    broccoli-merge-trees "^2.0.0 || ^3.0.0"
+    ember-cli-babel "^7.20.5"
+    ember-cli-is-package-missing "^1.0.0"
+    ember-cookies "^0.5.0"
+    silent-error "^1.0.0"
+
 ember-source-channel-url@^1.0.1:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/ember-source-channel-url/-/ember-source-channel-url-1.2.0.tgz#77eb9d0889e5f5370e6c70fcb2696c63ff4a34a1"
