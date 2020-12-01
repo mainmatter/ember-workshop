@@ -25,8 +25,8 @@ export default class IndexController extends Controller {
   }
 
   @action
-  textChanged(e) {
-    let { value: text } = e.target;
-    alert(`Text changed to ${text}!`);
+  updateFavoriteSong(e) {
+    let { value } = e.target;
+    this.favoriteWhitneySong = value;
   }
 }
