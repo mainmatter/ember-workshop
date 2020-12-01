@@ -8,7 +8,7 @@
     </li>
     <li>
       {{#if this.session.isAuthenticated}}
-        <button {{on "click" this.invalidateSession}}>Logout</button>
+        <button type="button" {{on "click" this.invalidateSession}}>Logout</button>
       {{else}}
         <LinkTo @route="login">Login</LinkTo>
       {{/if}}
