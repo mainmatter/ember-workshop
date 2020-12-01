@@ -1,17 +1,20 @@
 import Controller from '@ember/controller';
-import { computed } from '@ember/object';
-import { reads } from '@ember/object/computed';
+import { action } from "@ember/object";
+import { tracked } from "@glimmer/tracking";
 
-export default Controller.extend({
-  songCount: reads('model.length'),
+export default class SongsController extends Controller {
+  @tracked rating = null;
 
-  orderedSongs: computed('model.@each.rating', function() {
-    return this.model.sortBy('rating').reverse();
-  }),
-
-  actions: {
-    setSongRating(song, rating) {
-      song.set('rating', Number(rating));
-    }
+  get songCount() {
+    return this.model.length;
   }
-});
+
+  get orderedSongs() {
+    return this.model.toArray().sort((a, b) => b.rating - a.rating);
+  }
+
+  @action
+  setSongRating(song, rating) {
+    song.rating = Number(rating);
+  }
+}
