@@ -1,10 +1,9 @@
 import { action } from "@ember/object";
-import { inject } from "@ember/service";
+import { inject as service } from "@ember/service";
 import Controller from "@ember/controller";
 
 export default class ApplicationController extends Controller {
-  @inject()
-  session;
+  @service session;
 
   @action
   invalidateSession() {

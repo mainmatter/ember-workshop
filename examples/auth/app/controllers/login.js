@@ -1,11 +1,10 @@
 import { action } from "@ember/object";
-import { inject } from "@ember/service";
+import { inject as service } from "@ember/service";
 import Controller from "@ember/controller";
 import { tracked } from "@glimmer/tracking";
 
 export default class LoginController extends Controller {
-  @inject()
-  session;
+  @service session;
   @tracked errorMessage = null;
 
   @action
