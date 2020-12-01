@@ -22,7 +22,6 @@ jobs:
           - dependencies
           - ember-data
           - example-addon
-          - object-model
           - routing
           - services
           - templates
@@ -66,7 +65,6 @@ jobs:
           - dependencies
           - ember-data
           - example-addon
-          - object-model
           - routing
           - services
           - templates
