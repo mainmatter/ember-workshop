@@ -1,14 +1,14 @@
 <h1>Media</h1>
 
-{{link-to "Albums" (query-params filter="albums")}}
-{{link-to "Movies" (query-params filter="movies")}}
+<LinkTo @query={{hash filter="albums"}} class="album-link">Albums</LinkTo>
+<LinkTo @query={{hash filter="movies"}} class="movies-link">Movies</LinkTo>
 
 <ul>
-  {{#each media as |medium i|}}
+  {{#each this.media as |medium i|}}
     <li>
-      {{#link-to "media.medium" i}}
+      <LinkTo @route="media.medium" @model={{i}} class="media-link">
         {{medium.title}}
-      {{/link-to}}
+      </LinkTo>
     </li>
   {{/each}}
 </ul>

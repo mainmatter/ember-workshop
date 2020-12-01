@@ -1,21 +1,25 @@
-import Controller from '@ember/controller';
-import { computed } from '@ember/object';
-import { equal } from '@ember/object/computed';
+import Controller from "@ember/controller";
+import { tracked } from "@glimmer/tracking";
 
-export default Controller.extend({
-  queryParams: ['filter'],
-  filter: 'albums',
+export default class MediaController extends Controller {
+  queryParams = ["filter"];
+  @tracked filter = "albums";
 
-  showAlbums: equal('filter', 'albums'),
-  showMovies: equal('filter', 'movies'),
+  get showAlbums() {
+    return this.filter === "albums";
+  }
 
-  media: computed('showAlbums', 'showMovies', function() {
+  get showMovies() {
+    return this.filter === "movies";
+  }
+
+  get media() {
     if (this.showAlbums) {
       return this.model.albums;
     } else if (this.showMovies) {
       return this.model.movies;
-    } else {
-      return [];
     }
-  })
-});
+
+    return [];
+  }
+}
