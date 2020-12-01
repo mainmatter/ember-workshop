@@ -1,5 +1,5 @@
-<h1>{{songCount}} songs</h1>
+<h1>{{this.songCount}} songs</h1>
 
-{{#each orderedSongs as |song|}}
-  <SongTile @song={{song}} @onRatingChange={{action "setSongRating" song}} />
+{{#each this.orderedSongs as |song|}}
+  <SongTile @song={{song}} @onChangeRating={{fn this.setSongRating song}} />
 {{/each}}
