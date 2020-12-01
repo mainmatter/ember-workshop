@@ -11,7 +11,7 @@
 </style>
 <div class={{if this.favoriteWhitneySong "val" "no-val"}}>
   <label class="form-control-label">Change your choice:</label>
-  <input type="text" value={{this.favoriteWhitneySong}} {{on "keydown" this.updateFavoriteSong}}>
+  <input type="text" value={{this.favoriteWhitneySong}} {{on "change" this.updateFavoriteSong}}>
 </div>
 
 <div class="row">
