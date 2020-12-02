@@ -1,16 +1,14 @@
-import Service from '@ember/service';
-import { reads } from '@ember/object/computed';
+import Service from "@ember/service";
+import { tracked } from "@glimmer/tracking";
 
-export default Service.extend({
-  errorCount: reads('errors.length'),
+export default class ErrorReportingService extends Service {
+  @tracked errors = [];
 
-  init() {
-    this._super(...arguments);
-
-    this.set('errors', []);
-  },
+  get errorCount() {
+    return this.errors.length;
+  }
 
   reportError(error) {
     this.errors.pushObject(error);
   }
-});
+}

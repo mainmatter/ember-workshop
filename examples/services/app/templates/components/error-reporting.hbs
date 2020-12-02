@@ -1,16 +1,16 @@
-<h1>{{errorCount}} Error(s)</h1>
+<h1>{{this.errorCount}} Error(s)</h1>
 
 <ul>
-  {{#each errors as |error|}}
+  {{#each this.errors as |error|}}
     <li>{{error}}</li>
   {{/each}}
 </ul>
 
 <h2>Report Error</h2>
 
-<form onsubmit={{action "reportError"}}>
+<form {{on "submit" this.reportError}}>
   <fieldset>
-    <textarea onblur={{action "textEntered" value="currentTarget.value"}}>{{errorText}}</textarea>
+    <Textarea {{on "blur" this.textEntered}} @value={{this.errorText}} />
     <button type="submit">Report Error</button>
   </fieldset>
 </form>
