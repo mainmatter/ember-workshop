@@ -1,9 +1,7 @@
 {
   "private": true,
   "workspaces": [
-    "examples/*",
-    "mock-server",
-    "tomster-player"
+    "examples/*"
   ],
   "resolutions": {
     "@babel/plugin-transform-typescript": "7.4.5"
