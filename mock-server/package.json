@@ -1,0 +1,19 @@
+{
+  "name": "mock-server",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "lint": "echo 'no linting here…'",
+    "test": "echo 'no tests here…'",
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "cors": "^2.8.1",
+    "glob": "^7.1.6",
+    "morgan": "^1.10.0",
+    "express": "^4.15.2",
+    "socket.io": "^3.0.4",
+    "uuid": "^8.3.1"
+  }
+}

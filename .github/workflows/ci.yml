@@ -33,6 +33,7 @@ jobs:
           - services
           - templates
           - web-sockets
+          - tomster-player
 
     steps:
       - uses: actions/checkout@v3
@@ -71,6 +72,7 @@ jobs:
           - services
           - templates
           - web-sockets
+          - tomster-player
 
     steps:
       - uses: actions/checkout@v3
