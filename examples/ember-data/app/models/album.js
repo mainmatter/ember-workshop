@@ -1,9 +1,9 @@
 import Model, { attr, hasMany } from "@ember-data/model";
 
 export default class Album extends Model {
-  @attr("string") title;
+  @attr title;
 
-  @attr("string") coverUrl;
+  @attr coverUrl;
 
   @hasMany songs;
 

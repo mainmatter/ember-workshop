@@ -1,11 +1,11 @@
 import Model, { attr, belongsTo } from "@ember-data/model";
 
 export default class Song extends Model {
-  @attr("string") title;
+  @attr title;
 
-  @attr("number") duration;
+  @attr duration;
 
-  @attr("string") mp3Url;
+  @attr mp3Url;
 
   @belongsTo album;
 }
