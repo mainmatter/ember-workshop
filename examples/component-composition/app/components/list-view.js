@@ -1,23 +1,24 @@
-import Component from '@ember/component';
-import { computed } from '@ember/object';
+import { action, computed } from "@ember/object";
+import Component from "@ember/component";
 
-export default Component.extend({
-  displayItems: computed('items.[]', 'selectedItem', function() {
+export default class ListView extends Component {
+  @computed("items.[]", "selectedItem")
+  get displayItems() {
     return this.items.map((item) => {
       return {
         item,
-        isSelected: item === this.selectedItem
+        isSelected: item === this.selectedItem,
       };
     });
-  }),
-
-  actions: {
-    selectItem(item) {
-      this.set('selectedItem', item);
-    },
-
-    removeItem(item) {
-      this.onRemoveItem(item);
-    }
   }
-});
+
+  @action
+  selectItem(item) {
+    this.set("selectedItem", item);
+  }
+
+  @action
+  removeItem(item) {
+    this.onRemoveItem(item);
+  }
+}

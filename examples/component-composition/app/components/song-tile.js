@@ -1,7 +1,7 @@
-import Component from '@ember/component';
+import Component from "@ember/component";
 
-export default Component.extend({
+export default class SongTile extends Component {
   doubleClick() {
     this.onSelectSong(this.song);
   }
-});
+}

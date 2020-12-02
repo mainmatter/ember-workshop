@@ -1,12 +1,13 @@
-import Controller from '@ember/controller';
-import { reads } from '@ember/object/computed';
+import { action } from "@ember/object";
+import { reads } from "@ember/object/computed";
+import Controller from "@ember/controller";
 
-export default Controller.extend({
-  songCount: reads('model.length'),
+export default class SongsController extends Controller {
+  @reads("model.length")
+  songCount;
 
-  actions: {
-    deleteSong(song) {
-      song.destroyRecord();
-    }
+  @action
+  deleteSong(song) {
+    song.destroyRecord();
   }
-});
+}
