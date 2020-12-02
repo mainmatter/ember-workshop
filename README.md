@@ -2,7 +2,7 @@
 
 This repository contains the sample projects for simplabs' Ember.js workshop.
 
-* [`tomster-player`](https://github.com/simplabs/ember-workshop/tree/master/tomster-player)
+* [`tomster-player`](https://github.com/simplabs/ember-workshop/tree/tomster-player/tomster-player)
   contains the main sample application, the Tomster music player; this app is
   also deployed at https://brave-gates-bc4632.netlify.com
 * [`examples`](https://github.com/simplabs/ember-workshop/tree/master/examples)
