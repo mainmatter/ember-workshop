@@ -6,6 +6,8 @@ on:
       - master
       - github-actions
       - tomster-player
+    tags:
+      - step*
   pull_request: {}
 
 jobs:
