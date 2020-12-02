@@ -5,6 +5,7 @@ on:
     branches:
       - master
       - github-actions
+      - tomster-player
   pull_request: {}
 
 jobs:
