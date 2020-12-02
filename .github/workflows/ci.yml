@@ -26,6 +26,7 @@ jobs:
           - services
           - templates
           - web-sockets
+          - tomster-player
 
     steps:
       - uses: actions/checkout@v1
@@ -68,6 +69,7 @@ jobs:
           - services
           - templates
           - web-sockets
+          - tomster-player
 
     steps:
       - uses: actions/checkout@v1
