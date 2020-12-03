@@ -1,8 +1,8 @@
-<h1>{{songCount}} songs</h1>
+<h1>{{this.songCount}} songs</h1>
 
-<ListView @items={{model}} @onRemoveItem={{action "deleteSong"}} as |list item|>
-  <SongTile @song={{item}} @onSelectSong={{list.selectItem}} />
-  {{#list.delete-button}}
+<ListView @items={{this.model}} @onRemoveItem={{fn this.deleteSong}} as |list item|>
+  <SongTile @song={{item}} {{on 'dblclick' (fn list.selectItem item)}} />
+  <list.delete-button>
     Delete
-  {{/list.delete-button}}
+  </list.delete-button>
 </ListView>

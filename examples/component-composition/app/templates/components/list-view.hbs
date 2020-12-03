@@ -5,9 +5,9 @@
 </style>
 
 <div>
-  {{#each displayItems as |item|}}
-    <div class={{if item.isSelected "active-item"}}>
-      {{yield (hash delete-button=(component "danger-button" onClick=(action "removeItem" item.item)) selectItem=(action "selectItem")) item.item}}
+  {{#each this.displayItems as |displayItem|}}
+    <div class={{if displayItem.isSelected "active-item"}}>
+      {{yield (hash delete-button=(component "danger-button" onClick=(fn this.removeItem displayItem.item)) selectItem=this.selectItem) displayItem.item}}
     </div>
   {{/each}}
 </div>

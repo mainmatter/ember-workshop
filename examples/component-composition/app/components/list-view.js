@@ -1,10 +1,12 @@
-import { action, computed } from "@ember/object";
-import Component from "@ember/component";
+import Component from "@glimmer/component";
+import { tracked } from "@glimmer/tracking";
+import { action } from "@ember/object";
 
 export default class ListView extends Component {
-  @computed("items.[]", "selectedItem")
+  @tracked selectedItem;
+
   get displayItems() {
-    return this.items.map((item) => {
+    return this.args.items.map((item) => {
       return {
         item,
         isSelected: item === this.selectedItem,
@@ -14,11 +16,11 @@ export default class ListView extends Component {
 
   @action
   selectItem(item) {
-    this.set("selectedItem", item);
+    this.selectedItem = item;
   }
 
   @action
   removeItem(item) {
-    this.onRemoveItem(item);
+    this.args.onRemoveItem(item);
   }
 }
