@@ -1,5 +1,4 @@
 import Route from '@ember/routing/route';
-import { hash } from 'rsvp';
 import delayedResponse from '../utils/delayed-response';
 
 const ALBUMS = [
@@ -19,10 +18,12 @@ const MOVIES = [
 ];
 
 export default class MediaRoute extends Route {
-  model() {
-    return hash({
-      albums: delayedResponse(ALBUMS),
-      movies: delayedResponse(MOVIES)
-    });
+  async model() {
+    let [albums, movies] = await Promise.all([
+      delayedResponse(ALBUMS),
+      delayedResponse(MOVIES)
+    ]);
+
+    return { albums, movies };
   }
 }
