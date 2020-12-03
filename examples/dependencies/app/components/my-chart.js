@@ -1,8 +1,10 @@
-import Component from "@ember/component";
+import Component from "@glimmer/component";
+import { action } from "@ember/object";
 
-export default Component.extend({
-  didRender() {
-    this.highcharts.chart(this.element, {
+export default class MyChartComponent extends Component {
+  @action
+  initializeChart(element) {
+    this.args.highcharts.chart(element, {
       series: [
         {
           name: "Some data",
@@ -10,5 +12,5 @@ export default Component.extend({
         },
       ],
     });
-  },
-});
+  }
+}
