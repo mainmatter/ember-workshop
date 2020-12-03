@@ -1,19 +1,19 @@
 <h2>
   Chat
-  {{#if connected}}
+  {{#if this.connected}}
     <small>✅ connected</small>
   {{else}}
     <small>🚫 disconnected</small>
   {{/if}}
 </h2>
 <ul>
-  {{#each messages as |message|}}
+  {{#each this.messages as |message|}}
     <li>{{message.text}}</li>
   {{/each}}
 </ul>
 
 <h3>Send Message</h3>
-<form onsubmit={{action "send"}}>
-  <input type="text" value={{text}} onchange={{action (mut text) value="currentTarget.value"}}>
+<form {{on "submit" this.send}}>
+  <Input @type="text" @value={{this.text}}/>
   <button type="submit">Send</button>
 </form>

@@ -1,17 +1,20 @@
-import Service from '@ember/service';
-import Evented from '@ember/object/evented'
-import io from 'socket.io-client';
+import Service from "@ember/service";
+import Evented from "@ember/object/evented";
+import io from "socket.io-client";
+import { tracked } from "@glimmer/tracking";
 
-export default Service.extend(Evented, {
+export default class MessagingService extends Service.extend(Evented) {
+  @tracked connected = false;
+
   connect() {
-    let socket = io('ws://localhost:3000');
-    socket.on('connect', () => this.set('connected', true));
-    socket.on('disconnect', () => this.set('connected', false));
-    socket.on('messaging', (data) => this.trigger('received', data));
-    this.set('socket', socket);
-  },
+    let socket = io("ws://localhost:3000");
+    socket.on("connect", () => (this.connected = true));
+    socket.on("disconnect", () => (this.connected = false));
+    socket.on("messaging", (data) => this.trigger("received", data));
+    this.socket = socket;
+  }
 
   send(text) {
-    this.socket.emit('messaging', { text });
+    this.socket.emit("messaging", { text });
   }
-});
+}
