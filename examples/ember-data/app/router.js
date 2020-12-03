@@ -1,12 +1,9 @@
-import EmberRouter from '@ember/routing/router';
-import config from './config/environment';
+import EmberRouter from "@ember/routing/router";
+import config from "ember-data/config/environment"; // eslint-disable-line ember/use-ember-data-rfc-395-imports
 
-const Router = EmberRouter.extend({
-  location: config.locationType,
-  rootURL: config.rootURL
-});
+export default class Router extends EmberRouter {
+  location = config.locationType;
+  rootURL = config.rootURL;
+}
 
-Router.map(function() {
-});
-
-export default Router;
+Router.map(function () {});

@@ -1,10 +1,10 @@
-import Route from '@ember/routing/route';
-import { inject } from '@ember/service';
+import { inject as service } from "@ember/service";
+import Route from "@ember/routing/route";
 
-export default Route.extend({
-  store: inject(),
+export default class IndexRoute extends Route {
+  @service store;
 
   beforeModel() {
     window.store = this.store;
   }
-});
+}

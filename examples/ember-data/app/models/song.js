@@ -1,11 +1,11 @@
-import Model from 'ember-data/model';
-import attr from 'ember-data/attr';
-import { belongsTo } from 'ember-data/relationships';
+import Model, { attr, belongsTo } from "@ember-data/model";
 
-export default Model.extend({
-  title:    attr('string'),
-  duration: attr('number'),
-  mp3Url:   attr('string'),
+export default class Song extends Model {
+  @attr title;
 
-  album: belongsTo()
-});
+  @attr duration;
+
+  @attr mp3Url;
+
+  @belongsTo album;
+}

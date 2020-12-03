@@ -1,11 +1,11 @@
-import Model from 'ember-data/model';
-import attr from 'ember-data/attr';
-import { belongsTo } from 'ember-data/relationships';
+import Model, { attr, belongsTo } from "@ember-data/model";
 
-export default Model.extend({
-  rating:    attr('number'),
-  text:      attr('string'),
-  createdAt: attr('date'),
+export default class Comment extends Model {
+  @attr rating;
 
-  album: belongsTo()
-});
+  @attr text;
+
+  @attr createdAt;
+
+  @belongsTo album;
+}
