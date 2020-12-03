@@ -19,7 +19,6 @@ jobs:
       matrix:
         workspace:
           - auth
-          - component-composition
           - components
           - core-concepts
           - dependencies
@@ -61,7 +60,6 @@ jobs:
       matrix:
         workspace:
           - auth
-          - component-composition
           - components
           - core-concepts
           - dependencies
