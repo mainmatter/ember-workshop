@@ -1,5 +1,5 @@
-import JSONAPIAdapter from 'ember-data/adapters/json-api';
+import JSONAPIAdapter from '@ember-data/adapter/json-api';
 
-export default JSONAPIAdapter.extend({
-  namespace: 'api'
-});
+export default class Application extends JSONAPIAdapter {
+  namespace = "api";
+}
