@@ -6,7 +6,7 @@
 
 <div>
   {{#each this.displayItems as |displayItem|}}
-    <div class={{if displayItem.isSelected "active-item"}}>
+    <div class="list-view-item {{if displayItem.isSelected "active-item"}}">
       {{yield (hash delete-button=(component "danger-button" onClick=(fn this.removeItem displayItem.item)) selectItem=this.selectItem) displayItem.item}}
     </div>
   {{/each}}
