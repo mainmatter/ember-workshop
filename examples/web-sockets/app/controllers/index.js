@@ -1,25 +1,29 @@
-import Controller from '@ember/controller';
-import { inject } from '@ember/service';
-import { reads } from '@ember/object/computed';
+import Controller from "@ember/controller";
+import { inject as service } from "@ember/service";
+import { action } from "@ember/object";
+import { tracked } from "@glimmer/tracking";
 
-export default Controller.extend({
-  messaging: inject(),
+export default class IndexController extends Controller {
+  @tracked messages = [];
+  @tracked text = null;
 
-  connected: reads('messaging.connected'),
+  @service messaging;
 
-  init() {
-    this._super(...arguments);
-    this.set('messages', []);
+  constructor() {
+    super(...arguments);
 
-    this.messaging.on('received', (data) => this.messages.pushObject(data));
-  },
-
-  actions: {
-    send(e) {
-      e.preventDefault();
-
-      this.messaging.send(this.text);
-      this.set('text', null);
-    }
+    this.messaging.on("received", (data) => this.messages.pushObject(data));
   }
-});
+
+  get connected() {
+    return this.messaging.connected;
+  }
+
+  @action
+  send(e) {
+    e.preventDefault();
+
+    this.messaging.send(this.text);
+    this.text = null;
+  }
+}

@@ -1,10 +1,11 @@
-import Route from '@ember/routing/route';
-import { inject } from '@ember/service';
+import { inject } from "@ember/service";
+import Route from "@ember/routing/route";
 
-export default Route.extend({
-  messaging: inject(),
+export default class IndexRoute extends Route {
+  @inject()
+  messaging;
 
   afterModel() {
     this.messaging.connect();
   }
-});
+}
