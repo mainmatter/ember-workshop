@@ -1,8 +1,8 @@
-<h1 data-test-error-count>{{this.errorCount}} Error(s)</h1>
+<h1 class="error-count">{{this.errorCount}} Error(s)</h1>
 
 <ul>
   {{#each this.errors as |error|}}
-    <li data-test-error-item>{{error}}</li>
+    <li class="error-item">{{error}}</li>
   {{/each}}
 </ul>
 
@@ -10,7 +10,7 @@
 
 <form {{on "submit" this.reportError}}>
   <fieldset>
-    <Textarea data-test-textarea {{on "blur" this.textEntered}} @value={{this.errorText}} />
-    <button type="submit" data-test-submit-btn>Report Error</button>
+    <Textarea class="textarea" {{on "blur" this.textEntered}} @value={{this.errorText}} />
+    <button type="submit" class="submit-btn">Report Error</button>
   </fieldset>
 </form>
