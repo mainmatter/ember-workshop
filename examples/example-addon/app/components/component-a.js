@@ -1,1 +1,1 @@
-export { default } from 'example-addon/components/component-a';
+export { default } from "example-addon/components/component-a";
