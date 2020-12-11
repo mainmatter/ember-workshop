@@ -7,12 +7,12 @@ export default class SockerService extends Service {
   @service session;
 
   connect() {
-    this.socket = io.connect('http://localhost:3000', {
+    this.socket = io.connect(window.location.origin, {
       query: {
         token: this.session.data.authenticated.access_token
       }
     });
-    this.socket.on('comments:broadcast', (data) => this._pushNewComment(data));
+    this.socket.on('new-comment', (data) => this._pushNewComment(data));
   }
 
   disconnect() {

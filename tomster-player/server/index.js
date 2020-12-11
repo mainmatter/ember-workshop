@@ -9,7 +9,10 @@
 //   });
 // };
 
-module.exports = function(app) {
+module.exports = function(app, options) {
+  const io = require("socket.io")(options.httpServer);
+  app.set("io", io);
+
   const globSync   = require('glob').sync;
   const mocks      = globSync('./mocks/**/*.js', { cwd: __dirname }).map(require);
   const proxies    = globSync('./proxies/**/*.js', { cwd: __dirname }).map(require);
