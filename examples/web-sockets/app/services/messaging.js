@@ -7,7 +7,7 @@ export default class MessagingService extends Service.extend(Evented) {
   @tracked connected = false;
 
   connect() {
-    let socket = io("ws://localhost:3000");
+    let socket = io(window.location.origin);
     socket.on("connect", () => (this.connected = true));
     socket.on("disconnect", () => (this.connected = false));
     socket.on("messaging", (data) => this.trigger("received", data));
