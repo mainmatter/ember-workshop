@@ -4,40 +4,40 @@
 <p>You can play with the <code>store</code> in the browser console. The available model definition is this:</p>
 
 <h4>Album</h4>
-<pre><code>import Model from 'ember-data/model';
-import attr from 'ember-data/attr';
-import { hasMany } from 'ember-data/relationships';
+<pre><code>import Model, { attr, hasMany } from "@ember-data/model";
 
-export default Model.extend({
-  title:    attr('string'),
-  coverUrl: attr('string'),
+export default class Album extends Model {
+  @attr title;
 
-  songs: hasMany(),
-  comments: hasMany()
-});</code></pre>
+  @attr coverUrl;
+
+  @hasMany songs;
+
+  @hasMany comments;
+}</code></pre>
 
 <h4>Song</h4>
-<pre><code>import Model from 'ember-data/model';
-import attr from 'ember-data/attr';
-import { belongsTo } from 'ember-data/relationships';
+<pre><code>import Model, { attr, belongsTo } from "@ember-data/model";
 
-export default Model.extend({
-  title:    attr('string'),
-  duration: attr('number'),
-  mp3Url:   attr('string'),
+export default class Song extends Model {
+  @attr title;
 
-  album: belongsTo()
-});</code></pre>
+  @attr duration;
+
+  @attr mp3Url;
+
+  @belongsTo album;
+}</code></pre>
 
 <h4>Comment</h4>
-<pre><code>import Model from 'ember-data/model';
-import attr from 'ember-data/attr';
-import { belongsTo } from 'ember-data/relationships';
+<pre><code>import Model, { attr, belongsTo } from "@ember-data/model";
 
-export default Model.extend({
-  rating:    attr('number'),
-  text:      attr('string'),
-  createdAt: attr('date'),
+export default class Comment extends Model {
+  @attr rating;
 
-  album: belongsTo()
-});</code></pre>
+  @attr text;
+
+  @attr createdAt;
+
+  @belongsTo album;
+}</code></pre>
