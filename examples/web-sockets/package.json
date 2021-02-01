@@ -45,7 +45,7 @@
     "ember-template-lint": "^2.18.0",
     "ember-welcome-page": "^4.0.0",
     "eslint": "^7.19.0",
-    "eslint-plugin-ember": "^10.1.2",
+    "eslint-plugin-ember": "^10.2.0",
     "eslint-plugin-node": "^11.1.0",
     "express": "^4.17.1",
     "glob": "^7.1.6",
