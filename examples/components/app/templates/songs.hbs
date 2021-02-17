@@ -1,5 +1,0 @@
-<h1>{{this.songCount}} songs</h1>
-
-{{#each this.orderedSongs as |song|}}
-  <SongTile @song={{song}} @onChangeRating={{fn this.setSongRating song}} />
-{{/each}}
