@@ -6,7 +6,13 @@ module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
     babel: {
       plugins: [ require.resolve('ember-auto-import/babel-plugin') ]
-    }
+    },
+
+    fontawesome: {
+      icons: {
+        'free-solid-svg-icons': 'all',
+      },
+    },
   });
 
   // Use `app.import` to add additional libraries to the generated
