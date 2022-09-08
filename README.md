@@ -9,5 +9,5 @@ This repository contains the sample projects for simplabs' Ember.js workshop.
   contains multiple smaller sample applications for the individual topic blocks
   discussed in the workshop
 
-Copyright &copy; 2015-2019 simplabs GmbH (http://simplabs.com); released under
+Copyright &copy; 2015-2019 [Mainmatter GmbH](http://mainmatter.com); released under
 the Attribution NonCommercial ShareAlike 3.0 Unported license.
