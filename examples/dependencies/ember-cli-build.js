@@ -1,17 +1,11 @@
-'use strict';
+"use strict";
 
-const EmberApp = require('ember-cli/lib/broccoli/ember-app');
+const EmberApp = require("ember-cli/lib/broccoli/ember-app");
 
-module.exports = function(defaults) {
+module.exports = function (defaults) {
   let app = new EmberApp(defaults, {
     babel: {
-      plugins: [ require.resolve('ember-auto-import/babel-plugin') ]
-    },
-
-    fontawesome: {
-      icons: {
-        'free-solid-svg-icons': 'all',
-      },
+      plugins: [require.resolve("ember-auto-import/babel-plugin")],
     },
   });
 
