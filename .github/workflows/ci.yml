@@ -10,12 +10,16 @@ on:
       - step*
   pull_request: {}
 
+env:
+  PNPM_VERSION: 6.32.4
+
 jobs:
   lint:
     name: Linting
     runs-on: ubuntu-latest
 
     strategy:
+      fail-fast: false
       matrix:
         workspace:
           - auth
@@ -31,23 +35,29 @@ jobs:
           - web-sockets
 
     steps:
-      - uses: actions/checkout@v1
-      - uses: actions/setup-node@v2
+      - uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v2.2.1
         with:
-          node-version: 10.x
-          cache: yarn
+          version: ${{ env.PNPM_VERSION }}
 
-      - name: install dependencies
-        run: yarn install
+      - name: Install Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 12.x
+          cache: pnpm
+
+      - name: Install Dependencies
+        run: pnpm install --frozen-lockfile
 
       - name: lint
-        run: yarn workspace ${{ matrix.workspace }} lint
+        run: pnpm --filter ${{ matrix.workspace }} lint
 
   tests:
     name: Tests
     runs-on: ubuntu-latest
 
     strategy:
+      fail-fast: false
       matrix:
         workspace:
           - auth
@@ -63,14 +73,19 @@ jobs:
           - web-sockets
 
     steps:
-      - uses: actions/checkout@v1
-      - uses: actions/setup-node@v2
+      - uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v2.2.1
         with:
-          node-version: 10.x
-          cache: yarn
+          version: ${{ env.PNPM_VERSION }}
 
-      - name: install dependencies
-        run: yarn install
+      - name: Install Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 12.x
+          cache: pnpm
+
+      - name: Install Dependencies
+        run: pnpm install --frozen-lockfile
 
       - name: tests
-        run: yarn workspace ${{ matrix.workspace }} test
+        run: pnpm --filter ${{ matrix.workspace }} test

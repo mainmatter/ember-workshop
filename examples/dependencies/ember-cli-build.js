@@ -1,12 +1,12 @@
-'use strict';
+"use strict";
 
-const EmberApp = require('ember-cli/lib/broccoli/ember-app');
+const EmberApp = require("ember-cli/lib/broccoli/ember-app");
 
-module.exports = function(defaults) {
+module.exports = function (defaults) {
   let app = new EmberApp(defaults, {
     babel: {
-      plugins: [ require.resolve('ember-auto-import/babel-plugin') ]
-    }
+      plugins: [require.resolve("ember-auto-import/babel-plugin")],
+    },
   });
 
   // Use `app.import` to add additional libraries to the generated
