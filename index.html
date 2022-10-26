@@ -1,48 +1,79 @@
 <!doctype html>
-<html>
+<html lang="en">
+
 	<head>
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>reveal.js - Markdown Example</title>
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+		<link rel="stylesheet" href="/dist/reveal.css">
+		<link rel="stylesheet" href="/dist/theme/white.css" id="theme">
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+        <link rel="stylesheet" href="plugin/highlight/monokai.css">
 	</head>
+
 	<body>
+
 		<div class="reveal">
+
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2
-						<aside class="notes">
-						<p>Some notes</p>
-						</aside>
-						<p>Some slide text</p>
-						<aside class="notes">
-						<p>and some more notes</p>
-					</aside>
-				</section>
-			</div>
+
+					<section>
+
+							<h1 class="r-fit-text">
+								EmberJS Workshop
+							</h1>
+
+							<div class="r-hstack">
+								<img
+									src="/decks/00-welcome/assets/ember-logo-tomster.png"
+									alt="Ember Logo with Tomster"
+									width="500"
+								>
+
+								<ol start="0">
+									<li><a href="/decks/00-welcome/">Welcome</a></li>
+									<li><a href="/decks/01-ember-introduction/">Ember introduction</a></li>
+									<li><a href="/decks/02-object-model/">Object model</a></li>
+									<li><a href="/decks/03-ember-basics/">Ember Basics</a></li>
+									<li><a href="/decks/04-templates/">Templates</a></li>
+
+									<li><a href="/decks/05-routing/">Routing</a></li>
+									<li><a href="/decks/06-ember-data/">Ember Data</a></li>
+									<li><a href="/decks/07-components/">Components</a></li>
+									<li><a href="/decks/08-services/">Services</a></li>
+									<li><a href="/decks/09-testing/">Testing</a></li>
+								</ol>
+							</div>
+
+					</section>
 		</div>
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+		<script src="/dist/reveal.js"></script>
+        <script src="/plugin/markdown/markdown.js"></script>
+        <script src="/plugin/highlight/highlight.js"></script>
+        <script src="/plugin/notes/notes.js"></script>
+        <script src="/plugin/math/math.js"></script>
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+		<script>
+
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				mouseWheel: false,
+				slideNumber: true,
+				transition: 'none',
+
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.KaTeX ],
+
+				markdown: {
+
+				},
 			});
+
 		</script>
+
 	</body>
 </html>

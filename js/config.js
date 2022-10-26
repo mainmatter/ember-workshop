@@ -66,7 +66,7 @@ export default {
 	respondToHashChanges: true,
 
 	// Push each slide change to the browser history.  Implies `hash: true`
-	history: false,
+	history: true,
 
 	// Enable keyboard shortcuts for navigation
 	keyboard: true,

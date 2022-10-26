@@ -24,7 +24,7 @@ const autoprefixer = require('gulp-autoprefixer')
 
 const root = yargs.argv.root || '.'
 const port = yargs.argv.port || 8000
-const host = yargs.argv.host || 'localhost'
+const host = yargs.argv.host || '0.0.0.0'
 
 const banner = `/*!
 * reveal.js ${pkg.version}
@@ -265,9 +265,12 @@ gulp.task('eslint', () => gulp.src(['./js/**', 'gulpfile.js'])
 
 gulp.task('test', gulp.series( 'eslint', 'qunit' ))
 
-gulp.task('default', gulp.series(gulp.parallel('js', 'css', 'plugins'), 'test'))
+gulp.task('public',() => gulp.src('./**/*.txt')
+        .pipe(gulp.dest('./dist')))
 
-gulp.task('build', gulp.parallel('js', 'css', 'plugins'))
+gulp.task('default', gulp.series(gulp.parallel('js', 'css', 'plugins', 'public'), 'test'))
+
+gulp.task('build', gulp.parallel('js', 'css', 'plugins', 'public'))
 
 gulp.task('package', gulp.series(() =>
 
@@ -278,7 +281,8 @@ gulp.task('package', gulp.series(() =>
             './lib/**',
             './images/**',
             './plugin/**',
-            './**.md'
+            './**/*.md',
+            './**/*.txt'
         ],
         { base: './' }
     )
@@ -286,7 +290,7 @@ gulp.task('package', gulp.series(() =>
 
 ))
 
-gulp.task('reload', () => gulp.src(['*.html', '*.md'])
+gulp.task('reload', () => gulp.src(['**/*.html', '**/*.md'])
     .pipe(connect.reload()));
 
 gulp.task('serve', () => {
@@ -298,7 +302,7 @@ gulp.task('serve', () => {
         livereload: true
     })
 
-    gulp.watch(['*.html', '*.md'], gulp.series('reload'))
+    gulp.watch(['**/*.html', '**/*.md'], gulp.series('reload'))
 
     gulp.watch(['js/**'], gulp.series('js', 'reload', 'eslint'))
 

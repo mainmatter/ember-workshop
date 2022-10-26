@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>reveal.js - Markdown Example</title>
+
+		<link rel="stylesheet" href="/dist/reveal.css">
+		<link rel="stylesheet" href="/dist/theme/white.css" id="theme">
+
+			<link rel="stylesheet" href="/plugin/highlight/monokai.css">
+	</head>
+
+	<body>
+
+		<div class="reveal">
+				<div class="slides">
+
+						<!-- Use external markdown resource, separate slides by three newlines; vertical slides by two newlines -->
+						<section
+							data-markdown="text.md"
+							data-separator="^\n---\n"
+							data-separator-vertical="^\n\*\*\*\n">
+						</section>
+
+				</div>
+
+				<a
+					href="../../"
+					style="
+						position: fixed;
+						bottom: 1em;
+						left: 1em;
+						font-size: 0.5em;
+						z-index: 11;
+					"
+				>
+					← Index
+				</a>
+		</div>
+
+		<script src="/dist/reveal.js"></script>
+        <script src="/plugin/markdown/markdown.js"></script>
+        <script src="/plugin/highlight/highlight.js"></script>
+        <script src="/plugin/notes/notes.js"></script>
+        <script src="/plugin/math/math.js"></script>
+
+		<script>
+
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				mouseWheel: false,
+				slideNumber: true,
+				transition: 'none',
+
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.KaTeX ],
+
+				markdown: {
+
+				},
+			});
+
+		</script>
+
+	</body>
+</html>
+ 

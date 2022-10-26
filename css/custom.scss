@@ -1,0 +1,36 @@
+.r-syntax-classic, .r-syntax-octane {
+  position: relative;
+
+  &:before {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    width: 80px;
+    padding: 5px;
+
+    pointer-events: none;
+
+    background: black;
+    color: white;
+    opacity: 0.7;
+
+    font-size: 0.7em;
+    line-height: 1.2;
+    text-align: center;
+
+    border-radius: 10px;
+  }
+
+  &.code-wrapper:before {
+    right: calc(1em - 5px);
+  }
+}
+
+.r-syntax-classic:before {
+  content: "Classic syntax";
+}
+
+.r-syntax-octane:before {
+  content: "Octane syntax";
+}
+ 
