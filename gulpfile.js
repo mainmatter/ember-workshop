@@ -265,12 +265,9 @@ gulp.task('eslint', () => gulp.src(['./js/**', 'gulpfile.js'])
 
 gulp.task('test', gulp.series( 'eslint', 'qunit' ))
 
-gulp.task('public',() => gulp.src('./**/*.txt')
-        .pipe(gulp.dest('./dist')))
+gulp.task('default', gulp.series(gulp.parallel('js', 'css', 'plugins'), 'test'))
 
-gulp.task('default', gulp.series(gulp.parallel('js', 'css', 'plugins', 'public'), 'test'))
-
-gulp.task('build', gulp.parallel('js', 'css', 'plugins', 'public'))
+gulp.task('build', gulp.parallel('js', 'css', 'plugins'))
 
 gulp.task('package', gulp.series(() =>
 
@@ -282,7 +279,6 @@ gulp.task('package', gulp.series(() =>
             './images/**',
             './plugin/**',
             './**/*.md',
-            './**/*.txt'
         ],
         { base: './' }
     )

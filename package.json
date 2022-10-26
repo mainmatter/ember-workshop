@@ -18,7 +18,7 @@
     "web": "https://hakim.se"
   },
   "repository": {
-      "type": "git", 
+    "type": "git",
     "url": "git://github.com/hakimel/reveal.js.git"
   },
   "engines": {
