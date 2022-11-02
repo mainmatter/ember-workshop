@@ -1,0 +1,19 @@
+<h1>
+  Tight coupling
+
+  <button
+    disabled={{this.areAllComponentsCollapsed}}
+    {{action "collapseAll"}}
+  >
+    Collapse all
+  </button>
+</h1>
+
+{{#each this.people as |person|}}
+  {{person-tight-coupling
+    person=person
+    controller=this
+  }}
+
+  <hr>
+{{/each}}

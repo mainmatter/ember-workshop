@@ -1,12 +1,19 @@
+# IDE
 .idea/
+.history/
+.vscode/
 *.iml
 *.iws
 *.eml
+
+# Build
 out/
+dist/
+!slides/dist/
+
+# Artifacts
 .DS_Store
-.svn
 log/*.log
 tmp/**
 node_modules/
 .sass-cache
-.history/

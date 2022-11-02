@@ -1,0 +1,14 @@
+<h3>
+  {{this.fullName}}
+
+  <button {{action "toggle"}}>
+    Toggle
+  </button>
+</h3>
+
+{{#if this.isExpanded}}
+  <div>
+     <p>First name: {{this.person.firstName}}</p>
+     <p>Last name: {{this.person.lastName}}</p>
+  </div>
+{{/if}}

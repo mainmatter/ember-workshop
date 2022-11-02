@@ -1,0 +1,16 @@
+<h1>
+  Send signal from controller
+
+  <button {{action "collapseAll"}}>
+    Collapse all
+  </button>
+</h1>
+
+{{#each this.people as |person|}}
+  {{person-send-signal-from-controller
+    person=person
+    eventBus=this.eventBus
+  }}
+
+  <hr>
+{{/each}}

@@ -1,0 +1,20 @@
+<h1>
+  Move state to controller
+
+  <button
+    disabled={{this.areAllComponentsCollapsed}}
+    {{action "collapseAll"}}
+  >
+    Collapse all
+  </button>
+</h1>
+
+{{#each this.peopleWrapped as |wrapper|}}
+  {{person-move-state-to-controller
+    person=wrapper.person
+    isExpanded=wrapper.isExpanded
+    toggle=(action "toggle" wrapper)
+  }}
+
+  <hr>
+{{/each}}
