@@ -5,14 +5,12 @@ export default Controller.extend({
   firstName: "John",
   lastName: "Doe",
 
-  fullNameLength: null,
+  fullNameLength: computed("fullName", function () {
+    return this.get("fullName.length");
+  }),
 
   fullName: computed("firstName", "lastName", function () {
-    const fullName = `${this.get("firstName")} ${this.get("lastName")}`;
-
-    this.set("fullNameLength", fullName.length); //
-
-    return fullName;
+    return `${this.get("firstName")} ${this.get("lastName")}`;
   }),
 
   actions: {
