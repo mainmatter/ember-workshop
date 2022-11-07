@@ -17,7 +17,7 @@ export default Controller.extend({
 
   actions: {
     setName(event) {
-      this.set('name', event.target.value);
+      this.set('person.name', event.target.value);
     },
   },
 });
