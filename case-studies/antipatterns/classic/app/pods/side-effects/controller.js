@@ -1,16 +1,16 @@
-import Controller from '@ember/controller';
-import { computed } from '@ember/object';
+import Controller from "@ember/controller";
+import { computed } from "@ember/object";
 
 export default Controller.extend({
-  firstName: 'John',
-  lastName: 'Doe',
+  firstName: "John",
+  lastName: "Doe",
 
   fullNameLength: null,
 
-  fullName: computed('firstName', 'lastName', function () {
-    const fullName = `${this.get('firstName')} ${this.get('lastName')}`;
+  fullName: computed("firstName", "lastName", function () {
+    const fullName = `${this.get("firstName")} ${this.get("lastName")}`;
 
-    this.set('fullNameLength', fullName.length);
+    this.set("fullNameLength", fullName.length); //
 
     return fullName;
   }),
@@ -18,6 +18,6 @@ export default Controller.extend({
   actions: {
     change(property, event) {
       this.set(property, event.target.value);
-    }
+    },
   },
 });
