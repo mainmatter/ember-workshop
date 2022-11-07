@@ -8,25 +8,25 @@ const Person = EmberObject.extend({
   name: computed('_name', {
     get: function () {
       return this.get('_name').toUpperCase();
-    },
+    },}),
 
-    set: function (_key, nameUpperCase) {
-      this.set('_name', nameUpperCase.toLowerCase());
-      return nameUpperCase;
-    },
-  }),
+  setName(value){
+    this.set("_name", value)
+  }
 });
 
 export default Controller.extend({
   person: null,
 
   init() {
-    this.set('person', Person.create({ name: 'JOHN DOE'}));
+    const person =  Person.create();
+    person.setName("hagar");
+    this.set('person', person);
   },
 
   actions: {
     setName(event) {
-      this.set('person.name', event.target.value.toUpperCase());
+      this.get('person').setName(event.target.value);
     },
   },
 });
