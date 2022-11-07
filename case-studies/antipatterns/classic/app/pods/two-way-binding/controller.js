@@ -1,6 +1,6 @@
 import Controller from '@ember/controller';
 import EmberObject from '@ember/object';
-import { alias } from '@ember/object/computed';
+import { readOnly } from "@ember/object/computed";
 
 const Person = EmberObject.extend({
   name: null,
@@ -13,11 +13,11 @@ export default Controller.extend({
     this.set('person', Person.create({ name: 'John Doe'}));
   },
 
-  name: alias('person.name'),
+  name: readOnly("person.name"),
 
   actions: {
     setName(event) {
-      this.set('name', event.target.value);
+      this.set("person.name", event.target.value);
     },
   },
 });
