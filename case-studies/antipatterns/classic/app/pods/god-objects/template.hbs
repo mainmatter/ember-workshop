@@ -1,0 +1,43 @@
+<h1>Observers</h1>
+
+<p>
+  First name:
+
+  <input
+    value={{this.firstName}}
+    oninput={{action "setValue" "firstName"}}
+  />
+</p>
+
+<p>
+  Last name:
+
+  <input
+    value={{this.lastName}}
+    oninput={{action "setValue" "firstName"}}
+  />
+</p>
+
+<p>
+  Full name: {{this.data.fullName}}
+</p>
+
+<p>
+  First name in uppercase: {{this.data.firstNameUppercase}}
+</p>
+
+<p>
+  Last name in reverse: {{this.data.lastNameReverse}}
+</p>
+
+<p>
+  Last name character counts:
+
+  <ul>
+    {{#each this.data.lastNameCharacterCounts as |count|}}
+      <li>
+        {{get count "0"}}: {{get count "1"}}
+      </li>
+    {{/each}}
+  </ul>
+</p>

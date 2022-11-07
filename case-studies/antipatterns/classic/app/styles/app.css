@@ -1,0 +1,6 @@
+a.active {
+  cursor: default;
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+}

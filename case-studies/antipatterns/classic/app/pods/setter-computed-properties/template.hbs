@@ -1,0 +1,14 @@
+<h1>Two-way binding</h1>
+
+<p>
+  Name: {{this.person.name}}
+</p>
+
+<p>
+  Name:
+
+  <input
+    value={{this.person.name}}
+    oninput={{action "setName"}}
+  />
+</p>

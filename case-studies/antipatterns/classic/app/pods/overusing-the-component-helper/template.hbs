@@ -1,0 +1,19 @@
+<h1>Overusing the component helper</h1>
+
+<p>Value: {{this.value}}</p>
+
+<h2>Components</h2>
+
+<ul>
+  {{#each this.model as |component|}}
+    <li>
+      {{component component.componentName
+        name=component.name
+        src=component.src
+        types=component.types
+        width=component.width
+        toggle=(action "toggle")
+      }}
+    </li>
+  {{/each}}
+</ul>

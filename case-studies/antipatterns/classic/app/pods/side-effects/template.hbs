@@ -1,0 +1,32 @@
+<h1>00 Side effects in computed properties</h1>
+
+
+<h2>Input</h2>
+
+<label>
+  First name:
+
+  <input
+    value={{this.firstName}}
+    oninput={{action "change" "firstName"}}
+  >
+</label>
+
+<label>
+  Last name:
+
+  <input
+    value={{this.lastName}}
+    oninput={{action "change" "lastName"}}
+  >
+</label>
+
+<h2>Output</h2>
+
+<p>
+  Full name: {{this.fullName}}
+</p>
+
+<p>
+  Full name length: {{this.fullNameLength}}
+</p>
