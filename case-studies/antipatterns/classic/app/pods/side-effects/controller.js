@@ -5,8 +5,6 @@ export default Controller.extend({
   firstName: "John",
   lastName: "Doe",
 
-  fullNameLength: null,
-
   fullName: computed("firstName", "lastName", function () {
     const fullName = `${this.get("firstName")} ${this.get("lastName")}`;
     return fullName;
