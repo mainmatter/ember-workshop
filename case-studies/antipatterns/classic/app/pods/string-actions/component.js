@@ -19,10 +19,10 @@ export default Component.extend({
   `,
 
   actions: {
-    alert2: null, // Arg, string that references an action
+    alert: null, // Arg, string that references an action
 
     one() {
-      this.get("alert2")("One");
+      this.sendAction("alert", "One");
     },
 
     two() {
@@ -30,7 +30,7 @@ export default Component.extend({
     },
 
     three(str) {
-      this.get("alert2")(`${str} and Three`);
+      this.sendAction("alert", `${str} and Three`);
     },
   },
 });
