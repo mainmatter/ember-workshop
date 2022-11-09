@@ -1,6 +1,7 @@
 import Component from '@ember/component';
 import hbs from 'htmlbars-inline-precompile';
 import EmberObject from '@ember/object';
+import { computed } from '@ember/object';
 
 export default Component.extend({
   // Component's tempalte is defined here to make exercise navigation easier.
@@ -15,9 +16,10 @@ export default Component.extend({
   `,
 
   tagName: 'label',
-
-  droid: EmberObject.create({
-    name: 'R2D2',
+  droid: computed(function () {
+    return EmberObject.create({
+      name: 'R2D2',
+    });
   }),
 
   actions: {
