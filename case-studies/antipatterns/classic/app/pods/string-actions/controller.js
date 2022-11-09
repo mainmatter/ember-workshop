@@ -3,7 +3,7 @@ import { computed } from '@ember/object';
 
 export default Controller.extend({
   actions: {
-    alert(value) {
+    alert1(value) {
       alert(value);
     }
   },
