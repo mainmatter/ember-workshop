@@ -1,13 +1,20 @@
 # Ember.js
 
-Introduction
+/assets/About-blend.png
+background: true
 
+Introduction
 ---
 
-/assets/Clipboard.png
+/assets/MainMatter-logo-Negative.svg
 size: contain
-	https://simplabs.com  
-	@simplabs
+
+	https://mainmatter.com
+	@mainmatter
+
+/assets/About-blend.png
+background: true
+
 ---
 
 ## Marco Otte-Witte
@@ -95,6 +102,7 @@ This is probably the most important and longest part of the whole workshop
 ---
 
 /assets/Clipboard_2.png
+size: contain
 
 - yes, it plays Whitney Houston only
 - Yours might look different but should have the functionality in the end
@@ -109,7 +117,11 @@ This is probably the most important and longest part of the whole workshop
 
 ---
 
-/assets/Clipboard.png
+/assets/MainMatter-logo-Negative.svg
 size: contain
-	https://simplabs.com  
-	@simplabs
+
+	https://mainmatter.com
+	@mainmatter
+
+/assets/About-blend.png
+background: true

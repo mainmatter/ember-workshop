@@ -1,12 +1,18 @@
 # Introduction
 
+/assets/About-blend.png
+background: true
+
 ---
 
-/assets/Clipboard_13.png
+/assets/MainMatter-logo-Negative.svg
 size: contain
-	https://simplabs.com
-	@simplabs
 
+	https://mainmatter.com
+	@mainmatter
+
+/assets/About-blend.png
+background: true
 
 ---
 
@@ -87,6 +93,7 @@ Ember handles the complete app, user flow, loading of data, building etc.
 
 
 /assets/Clipboard.png
+size: contain
 	the base Framework with the core functionality
 	https://github.com/emberjs/ember.js
 
@@ -95,6 +102,7 @@ routing, rendering, UI state management etc.
 ---
 
 /assets/Clipboard_1.png
+size: contain
 	the command line interface
 	https://github.com/ember-cli/ember-cli
 
@@ -104,6 +112,7 @@ routing, rendering, UI state management etc.
 ---
 
 /assets/Clipboard_2.png
+size: contain
 	the data persistence library
 	https://github.com/emberjs/data
 
@@ -128,6 +137,7 @@ We will be using the Inspector throughout the workshop to better understand what
 ---
 
 /assets/Clipboard_4.png
+size: contain
 	transpiles ESXY code to ES5 that runs in all browsers
 	https://babeljs.io
 
@@ -347,6 +357,7 @@ we will use this mostly for calling `super` for framework methods
 ---
 
 /assets/Clipboard_5.png
+background: true
 size: contain
 
 - 5 steps
@@ -461,7 +472,7 @@ npm install -g ember-cli
 ---
 
 ### If you are on Windows
-```
+```txt
 npm install ember-cli-windows -g
 ember-cli-windows
 ```
@@ -511,7 +522,11 @@ ember serve
 
 ---
 
-/assets/Clipboard_13.png
+/assets/MainMatter-logo-Negative.svg
 size: contain
-	https://simplabs.com
-	@simplabs
+
+	https://mainmatter.com
+	@mainmatter
+
+/assets/About-blend.png
+background: true
