@@ -1,12 +1,19 @@
+# Ember.js Object Model
 
-/assets/Clipboard.png
-size: contain
-	https://simplabs.com
-	@simplabs
+/assets/About-blend.png
+background: true
 
 ---
 
-# Ember.js Object Model
+/assets/MainMatter-logo-Negative.svg
+size: contain
+
+	https://mainmatter.com
+	@mainmatter
+
+/assets/About-blend.png
+background: true
+
 
 ---
 
@@ -540,7 +547,11 @@ song.set('isGreat', true);
 
 ---
 
-/assets/Clipboard.png
+/assets/MainMatter-logo-Negative.svg
 size: contain
-	https://simplabs.com
-	@simplabs
+
+	https://mainmatter.com
+	@mainmatter
+
+/assets/About-blend.png
+background: true
