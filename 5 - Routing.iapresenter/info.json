@@ -1,5 +1,5 @@
 {
-  "type" : "net.daringfireball.markdown",
+  "version" : 2,
   "transient" : false,
   "creatorIdentifier" : "net.ia.presenter",
   "net.ia.presenter" : {
@@ -7,5 +7,5 @@
     "preset" : "Default",
     "appearance" : "light"
   },
-  "version" : 2
+  "type" : "net.daringfireball.markdown"
 }

@@ -1,12 +1,12 @@
 {
+  "version" : 2,
   "net.ia.presenter" : {
     "appearance" : "light",
+    "preset" : "Default",
     "logo" : "\/assets\/Mainmatter_Symbol_Purple_RGB_500px.svg",
-    "template" : "mainmatter",
-    "preset" : "Default"
+    "template" : "mainmatter"
   },
-  "type" : "net.daringfireball.markdown",
   "transient" : false,
-  "version" : 2,
+  "type" : "net.daringfireball.markdown",
   "creatorIdentifier" : "net.ia.presenter"
 }

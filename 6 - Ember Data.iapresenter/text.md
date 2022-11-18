@@ -1,12 +1,21 @@
 # Ember Data
 
+/assets/About-blend.png
+background: true
+
 ---
 
-/assets/MainMatter-logo-Purple-1000px.png
+/assets/MainMatter-logo-Negative.svg
 size: contain
 
+
+
 	https://mainmatter.com
-	@_mainmatter
+	@mainmatter
+
+
+/assets/About-blend.png
+background: true
 
 ---
 
@@ -54,7 +63,7 @@ All persistent data that an application uses should generally be represented as 
 
 ---
 
-## Defining models
+##  Defining models
 
 ---
 
@@ -211,7 +220,8 @@ export default class Album extends Model {
 
 ---
 
-### `belongsTo` defines a to-one relationship
+### `belongsTo`
+	defines a to-one relationship
 
 ---
 
@@ -441,23 +451,6 @@ try {
 ---
 
 	The `hasDirtyAttributes` property returns a boolean indicating whether the model has any dirty (changed but unsaved) attributes
-
----
-
-```js
-let song = await this.store.findRecord('song', 1);
-song.name = 'The Greatest Love of All';
-song.hasDirtyAttributes;
-// => true
-
-await song.save();
-song.hasDirtyAttributes;
-// => false
-```
-
----
-
-	The `changedAttributes()` method returns an object containing all dirty attributes with their old and new values
 
 ---
 
