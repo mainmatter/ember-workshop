@@ -1,11 +1,18 @@
-/assets/Simplabs Logo.png
-size: contain
-	https://simplabs.com
-	@simplabs
+# Ember.js Core Concepts
+
+/assets/About-blend.png
+background: true
 
 ---
 
-# Ember.js Core Concepts
+/assets/MainMatter-logo-Negative.svg
+size: contain
+
+	https://mainmatter.com
+	@mainmatter
+
+/assets/About-blend.png
+background: true
 
 ---
 
@@ -62,6 +69,7 @@ will be deprecated once routable components land and removed in the following ma
 ---
 
 /assets/Clipboard_5.png
+size: contain
 
 ---
 
@@ -71,6 +79,7 @@ will be deprecated once routable components land and removed in the following ma
 ---
 
 /assets/Clipboard_6.png
+size: contain
 
 ---
 
@@ -260,7 +269,11 @@ ember generate <element>
 
 ---
 
-/assets/Simplabs Logo.png
+/assets/MainMatter-logo-Negative.svg
 size: contain
-	https://simplabs.com
-	@simplabs
+
+	https://mainmatter.com
+	@mainmatter
+
+/assets/About-blend.png
+background: true
