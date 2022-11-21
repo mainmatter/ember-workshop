@@ -1,12 +1,18 @@
 # Components
 
+/assets/About-blend.png
+background: true
+
 ---
 
-/assets/Clipboard_1.png
+/assets/MainMatter-logo-Negative.svg
 size: contain
 
-[https://simplabs.com](https://simplabs.com)
-[@simplabs](https://twitter.com/simplabs)
+	https://mainmatter.com
+	@mainmatter
+
+/assets/About-blend.png
+background: true
 
 ---
 
@@ -434,8 +440,19 @@ Use the Ember Inspector to have a look at the internals of the demo application
 	also add comments to albums and a component that creates a new comment for an album
 	(optional: display the average rating for each album)
 
-@ [https://github.com/simplabs/ember-workshop/commit/5906f7d0a11d0b88dc93b14d38eb34dc00960156](https://github.com/simplabs/ember-workshop/commit/5906f7d0a11d0b88dc93b14d38eb34dc00960156)
+// [https://github.com/simplabs/ember-workshop/commit/5906f7d0a11d0b88dc93b14d38eb34dc00960156](https://github.com/simplabs/ember-workshop/commit/5906f7d0a11d0b88dc93b14d38eb34dc00960156)
 
 (the server handles comments already)
 
-@ `git reset --hard step-3`
+// `git reset --hard step-3`
+
+---
+
+/assets/MainMatter-logo-Negative.svg
+size: contain
+
+	https://mainmatter.com
+	@mainmatter
+
+/assets/About-blend.png
+background: true

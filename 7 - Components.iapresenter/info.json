@@ -1,9 +1,10 @@
 {
-  "version" : 2,
   "creatorIdentifier" : "net.ia.presenter",
-  "net.ia.presenter" : {
-
-  },
+  "version" : 2,
+  "type" : "net.daringfireball.markdown",
   "transient" : false,
-  "type" : "net.daringfireball.markdown"
+  "net.ia.presenter" : {
+    "preset" : "Default",
+    "template" : "mainmatter"
+  }
 }
