@@ -3,7 +3,6 @@
 /assets/About-blend.png
 background: true
 
-Introduction
 ---
 
 /assets/MainMatter-logo-Negative.svg
