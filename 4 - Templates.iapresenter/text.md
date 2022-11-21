@@ -1,16 +1,23 @@
-/assets/Clipboard.png
-size: contain
-	https://simplabs.com
-	@simplabs
+# Ember.js Templates
+
+/assets/About-blend.png
+background: true
 
 ---
 
-# Ember.js Templates
+/assets/MainMatter-logo-Negative.svg
+size: contain
+
+	https://mainmatter.com
+	@mainmatter
+
+/assets/About-blend.png
+background: true
 
 ---
 
 	Ember.js uses Handlebars (or actually a dialect of it with some added syntax and features) for its templating
-	http://handlebarsjs.com
+	[http://handlebarsjs.com](http://handlebarsjs.com)
 
 ---
 
@@ -118,6 +125,7 @@ as we don't only want to keep the DOM in sync with the app data but also react t
 ```hbs
 {{!-- app/templates/song/edit.hbs --}}
 <button {{on "click" this.applyChanges}}>Apply</button>
+
 <button {{on "click" this.discardChanges}}>Cancel</button>
 ```
 	`on "click"` connects the action to the click even of the button
@@ -277,3 +285,14 @@ Use the Ember Inspector to have a look at the internals of the demo application
 
 // https://github.com/simplabs/ember-workshop/commit/736c99c4712e3170140e29a927d0735d62de2626  
 you can use `this.model` in the index.hbs template
+
+---
+
+/assets/MainMatter-logo-Negative.svg
+size: contain
+
+	https://mainmatter.com
+	@mainmatter
+
+/assets/About-blend.png
+background: true
