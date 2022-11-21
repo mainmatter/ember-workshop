@@ -1,8 +1,18 @@
-![simplabs logo](/images/simplabs-logo.png)
+# Ember.js Routing
+
+/assets/About-blend.png
+background: true
 
 ---
 
-# Ember.js Routing
+/assets/MainMatter-logo-Negative.svg
+size: contain
+
+	https://mainmatter.com
+	@mainmatter
+
+/assets/About-blend.png
+background: true
 
 ---
 
@@ -713,4 +723,11 @@ reuse the route data from the previous step)
 
 ---
 
-![simplabs logo](/images/simplabs-logo.png)
+/assets/MainMatter-logo-Negative.svg
+size: contain
+
+	https://mainmatter.com
+	@mainmatter
+
+/assets/About-blend.png
+background: true
