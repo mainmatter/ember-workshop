@@ -1,12 +1,18 @@
 # Testing
 
+/assets/About-blend.png
+background: true
+
 ---
 
-/assets/Clipboard_1.png
+/assets/MainMatter-logo-Negative.svg
 size: contain
 
-[https://simplabs.com](https://simplabs.com)
-[@simplabs](https://twitter.com/simplabs)
+	https://mainmatter.com
+	@mainmatter
+
+/assets/About-blend.png
+background: true
 
 ---
 
@@ -108,6 +114,7 @@ ok 15 Chrome 75.0 - [24 ms] - Unit | Controller | index: it exists
 ---
 
 /assets/Clipboard_2.png
+size: contain
 
 ---
 
@@ -579,4 +586,15 @@ Use the Ember Inspector to have a look at the internals of the demo application
 
 (we added tests in the previous steps already - use them as inspiration)
 
-@ `git reset --hard step-5`
+// `git reset --hard step-5`
+
+---
+
+/assets/MainMatter-logo-Negative.svg
+size: contain
+
+	https://mainmatter.com
+	@mainmatter
+
+/assets/About-blend.png
+background: true
