@@ -537,16 +537,6 @@ song.set('isGreat', true);
 
 ---
 
-## Demo
-	https://github.com/mainmatter/ember-workshop/tree/master/examples/object-model
-
----
-
-## Practice Session
-	Play around with the Object Model and get a feeling for how it works
-
----
-
 /assets/MainMatter-logo-Negative.svg
 size: contain
 
