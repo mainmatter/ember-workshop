@@ -23,7 +23,7 @@ background: true
 ## Unit Tests
 	test isolated chunks of functionality in non-Ember specific code
 
-these are really just general QUnit/Mocha tests
+these are really just general QUnit tests
 
 ---
 
@@ -49,11 +49,6 @@ these are really just general QUnit/Mocha tests
 ---
 
 	Ember.js adds a few helpers that make testing applications using QUnit easier
-
----
-
-## mocha
-	can be used instead of QUnit with the ember-cli-mocha addon
 
 ---
 
