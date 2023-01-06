@@ -260,7 +260,7 @@ ember generate <element>
 ---
 
 ## Demo
-	https://github.com/simplabs/ember-workshop/tree/master/examples/core-concepts
+	https://github.com/mainmatter/ember-workshop/tree/master/examples/core-concepts
 
 ---
 

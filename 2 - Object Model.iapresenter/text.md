@@ -538,7 +538,7 @@ song.set('isGreat', true);
 ---
 
 ## Demo
-	https://github.com/simplabs/ember-workshop/tree/master/examples/object-model
+	https://github.com/mainmatter/ember-workshop/tree/master/examples/object-model
 
 ---
 

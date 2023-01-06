@@ -102,7 +102,7 @@ export default class ErrorComponent extends Component {
 ---
 
 # Demo
-[https://github.com/simplabs/ember-workshop/tree/master/examples/services](https://github.com/simplabs/ember-workshop/tree/master/examples/services)
+[https://github.com/mainmatter/ember-workshop/tree/master/examples/services](https://github.com/mainmatter/ember-workshop/tree/master/examples/services)
 
 Use the Ember Inspector to have a look at the internals of the demo application
 
@@ -111,7 +111,7 @@ Use the Ember Inspector to have a look at the internals of the demo application
 # Practice Session
 	Add a component that is always visible and plays a song using a service (optional: persist the currently playing song in `localStorage` so that it is restored after a page reload)
 
-// [https://github.com/simplabs/ember-workshop/commit/7fe0326c2cc610e409d664e404489a1814f0a732](https://github.com/simplabs/ember-workshop/commit/7fe0326c2cc610e409d664e404489a1814f0a732)
+// [https://github.com/mainmatter/ember-workshop/commit/7fe0326c2cc610e409d664e404489a1814f0a732](https://github.com/mainmatter/ember-workshop/commit/7fe0326c2cc610e409d664e404489a1814f0a732)
 
 (fake dev data has mp3 urls already)
 (you can use an audio element for playing the music)

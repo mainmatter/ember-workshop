@@ -706,7 +706,7 @@ export default class AlbumsRoute extends Route {
 ---
 
 ## Demo
-https://github.com/simplabs/ember-workshop/tree/master/examples/routing
+https://github.com/mainmatter/ember-workshop/tree/master/examples/routing
 
 Use the Ember Inspector to have a look at the internals of the demo application
 
@@ -715,7 +715,7 @@ Use the Ember Inspector to have a look at the internals of the demo application
 ## Practice Session
 	Add a route that displays a single album by its ID as well as a loading route (make sure the `model` method does not resolve immediately)
 
-// https://github.com/simplabs/ember-workshop/commit/af83eb6cbffaa0a205b5321acc9c0d01fd726ef5
+// https://github.com/mainmatter/ember-workshop/commit/af83eb6cbffaa0a205b5321acc9c0d01fd726ef5
  
 reuse the route data from the previous step)
 

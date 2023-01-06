@@ -274,7 +274,7 @@ This is equivalent to the previously shown helper
 ---
 
 # Demo
-	https://github.com/simplabs/ember-workshop/tree/master/examples/templates
+	https://github.com/mainmatter/ember-workshop/tree/master/examples/templates
 
 Use the Ember Inspector to have a look at the internals of the demo application
 
@@ -283,7 +283,7 @@ Use the Ember Inspector to have a look at the internals of the demo application
 # Practice Session
 	Render a list of albums and their songs and handle clicks on albums and songs
 
-// https://github.com/simplabs/ember-workshop/commit/736c99c4712e3170140e29a927d0735d62de2626  
+// https://github.com/mainmatter/ember-workshop/commit/736c99c4712e3170140e29a927d0735d62de2626  
 you can use `this.model` in the index.hbs template
 
 ---

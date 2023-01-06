@@ -498,27 +498,27 @@ brew install git
 
 ### Run the sample application
 ```txt
-git clone https://github.com/simplabs/ember-workshop.git
+git clone https://github.com/mainmatter/ember-workshop.git
 cd ember-workshop
 git checkout tomster-player
 yarn --pure-lockfile
 cd tomster-player
 yarn start
 ```
-	https://github.com/simplabs/ember-workshop
+	https://github.com/mainmatter/ember-workshop
 
 ---
 
 ### Bootstrap your own application
 ```txt
-git clone https://github.com/simplabs/ember-workshop.git
+git clone https://github.com/mainmatter/ember-workshop.git
 cd ember-workshop
 git branch <your-branch-name> step-0
 yarn install —-pure-lockfile
 cd tomster-player
 ember serve
 ```
-	https://github.com/simplabs/ember-workshop
+	https://github.com/mainmatter/ember-workshop
 
 ---
 

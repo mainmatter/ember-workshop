@@ -868,7 +868,7 @@ export default class ApplicationAdapter extends JSONAPIAdapter {
 ---
 
 # Demo
-	[https://github.com/simplabs/ember-workshop/tree/master/examples/ember-data](https://github.com/simplabs/ember-workshop/tree/master/examples/ember-data)
+	[https://github.com/mainmatter/ember-workshop/tree/master/examples/ember-data](https://github.com/mainmatter/ember-workshop/tree/master/examples/ember-data)
 
 Use the Ember Inspector to have a look at the internals of the demo application
 
@@ -877,7 +877,7 @@ Use the Ember Inspector to have a look at the internals of the demo application
 # Practice Session
 	Add models for albums and songs and load them from the backend
 
-// [https://github.com/simplabs/ember-workshop/commit/daaa87697a5f64effa5e4d159a6e5a25b0355ded](https://github.com/simplabs/ember-workshop/commit/daaa87697a5f64effa5e4d159a6e5a25b0355ded)
+// [https://github.com/mainmatter/ember-workshop/commit/daaa87697a5f64effa5e4d159a6e5a25b0355ded](https://github.com/mainmatter/ember-workshop/commit/daaa87697a5f64effa5e4d159a6e5a25b0355ded)
 
 (there’s a dev server running in your example app, namespace is `/api`)
 

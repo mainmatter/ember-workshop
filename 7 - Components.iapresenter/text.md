@@ -372,7 +372,7 @@ export default class SongController extends Controller {
 ---
 
 # Demo
-	[https://github.com/simplabs/ember-workshop/tree/master/examples/components](https://github.com/simplabs/ember-workshop/tree/master/examples/components)
+	[https://github.com/mainmatter/ember-workshop/tree/master/examples/components](https://github.com/mainmatter/ember-workshop/tree/master/examples/components)
 
 ---
 
@@ -429,7 +429,7 @@ as |item removeItem|>
 ---
 
 # Demo
-	[https://github.com/simplabs/ember-workshop/tree/master/examples/component-composition](https://github.com/simplabs/ember-workshop/tree/master/examples/component-composition)
+	[https://github.com/mainmatter/ember-workshop/tree/master/examples/component-composition](https://github.com/mainmatter/ember-workshop/tree/master/examples/component-composition)
 
 Use the Ember Inspector to have a look at the internals of the demo application
 
@@ -440,7 +440,7 @@ Use the Ember Inspector to have a look at the internals of the demo application
 	also add comments to albums and a component that creates a new comment for an album
 	(optional: display the average rating for each album)
 
-// [https://github.com/simplabs/ember-workshop/commit/5906f7d0a11d0b88dc93b14d38eb34dc00960156](https://github.com/simplabs/ember-workshop/commit/5906f7d0a11d0b88dc93b14d38eb34dc00960156)
+// [https://github.com/mainmatter/ember-workshop/commit/5906f7d0a11d0b88dc93b14d38eb34dc00960156](https://github.com/mainmatter/ember-workshop/commit/5906f7d0a11d0b88dc93b14d38eb34dc00960156)
 
 (the server handles comments already)
 

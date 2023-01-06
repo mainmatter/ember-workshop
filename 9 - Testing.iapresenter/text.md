@@ -573,7 +573,7 @@ really only pure util functions etc.
 ---
 
 # Demo
-[https://github.com/simplabs/ember-workshop/tree/master/tomster-player](https://github.com/simplabs/ember-workshop/tree/master/tomster-player)
+[https://github.com/mainmatter/ember-workshop/tree/master/tomster-player](https://github.com/mainmatter/ember-workshop/tree/master/tomster-player)
 
 Use the Ember Inspector to have a look at the internals of the demo application
 
@@ -582,7 +582,7 @@ Use the Ember Inspector to have a look at the internals of the demo application
 # Practice Session
 	Test your application using integration and acceptance tests
 
-// [https://github.com/simplabs/ember-workshop/commit/be2d0fdd35ec937646fce8e0c217177e0f1cc65f](https://github.com/simplabs/ember-workshop/commit/be2d0fdd35ec937646fce8e0c217177e0f1cc65f)
+// [https://github.com/mainmatter/ember-workshop/commit/be2d0fdd35ec937646fce8e0c217177e0f1cc65f](https://github.com/mainmatter/ember-workshop/commit/be2d0fdd35ec937646fce8e0c217177e0f1cc65f)
 
 (we added tests in the previous steps already - use them as inspiration)
 
