@@ -28,15 +28,20 @@ size: contain
 
 ---
 
-	Components (like W3C Custom Elements) must have at least one dash in their name to distinguish them from native elements
+	Component names can consist of one or more words
 
 ---
 
 ```hbs
 <SongTile @song={{currentSong}} />
 ```
+	or
+```hbs
+<Tile @song={{currentSong}} />
+```
+	both work just fine
 
-@ [https://github.com/rwjblue/ember-angle-bracket-invocation-polyfill](https://github.com/rwjblue/ember-angle-bracket-invocation-polyfill)
+// [https://github.com/rwjblue/ember-angle-bracket-invocation-polyfill](https://github.com/rwjblue/ember-angle-bracket-invocation-polyfill)
 
 ---
 
