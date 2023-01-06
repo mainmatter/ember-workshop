@@ -94,8 +94,7 @@ export default class SongComponent extends Component {
 ```hbs
 <SongTile @song={{currentSong}} class="song-element" />
 ```
-
-will set the class on the component's root element
+	`class="song-element"` will set the class on the component's root element
 
 ---
 
