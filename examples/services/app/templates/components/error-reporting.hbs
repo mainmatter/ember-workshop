@@ -10,6 +10,7 @@
 
 <form {{on "submit" this.reportError}}>
   <fieldset>
+    {{!-- template-lint-disable require-input-label --}}
     <Textarea class="textarea" {{on "blur" this.textEntered}} @value={{this.errorText}} />
     <button type="submit" class="submit-btn">Report Error</button>
   </fieldset>

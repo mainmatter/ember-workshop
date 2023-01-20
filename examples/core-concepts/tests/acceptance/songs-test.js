@@ -39,7 +39,7 @@ module('Acceptance | songs', function(hooks) {
     });
     await visit('/songs');
 
-    assert.equal(currentURL(), '/songs');
+    assert.strictEqual(currentURL(), '/songs');
     assert.dom('img[src="https://upload.wikimedia.org/wikipedia/en/f/f3/TheBodyguardSoundtrack.jpg"]').exists();
     assert.dom('img[src="https://upload.wikimedia.org/wikipedia/en/d/d2/Whitney_Houston_-_Whitney_Houston_%28album%29.jpg"]').exists();
     assert.dom('ul li.song').exists({ count: 2 });

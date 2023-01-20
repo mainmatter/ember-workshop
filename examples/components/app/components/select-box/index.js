@@ -1,15 +1,14 @@
 import Component from '@glimmer/component';
-import { action } from "@ember/object";
+import { action } from '@ember/object';
 
 export default class SelectBoxComponent extends Component {
-
   get displayOptions() {
     return this.args.options.map((option) => {
       return {
         label: option,
         value: option,
-        isSelected: String(this.args.value) === String(option)
-      }
+        isSelected: String(this.args.value) === String(option),
+      };
     });
   }
 

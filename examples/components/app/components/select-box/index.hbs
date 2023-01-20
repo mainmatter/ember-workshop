@@ -1,3 +1,4 @@
+{{!-- template-lint-disable require-input-label --}}
 <select {{on "change" this.changeSelection}}>
   {{#each this.displayOptions as |opt|}}
     <option value={{opt.value}} selected={{opt.isSelected}}>{{opt.label}}</option>

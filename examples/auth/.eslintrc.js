@@ -8,7 +8,7 @@ module.exports = {
     sourceType: 'module',
     requireConfigFile: false,
     babelOptions: {
-      plugins: [["@babel/plugin-proposal-decorators", { legacy: true }]],
+      plugins: [['@babel/plugin-proposal-decorators', { legacy: true }]],
     },
     ecmaFeatures: {
       legacyDecorators: true,
