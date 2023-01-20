@@ -12,7 +12,9 @@ export default class IndexController extends Controller {
   constructor() {
     super(...arguments);
 
-    this.messaging.on("received", (data) => this.messages.pushObject(data));
+    this.messaging.on("received", (data) => {
+      this.messages = [...this.messages, data];
+    });
   }
 
   get connected() {

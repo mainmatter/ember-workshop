@@ -9,6 +9,6 @@ export default class ErrorReportingService extends Service {
   }
 
   reportError(error) {
-    this.errors.pushObject(error);
+    this.errors = [...this.errors, error];
   }
 }
