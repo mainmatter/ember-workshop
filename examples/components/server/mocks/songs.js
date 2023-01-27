@@ -9,7 +9,7 @@ var SONGS = [
       name: 'I will always love you',
       rating: '1',
       'cover-url':
-        'https://upload.wikimedia.org/wikipedia/en/f/f3/TheBodyguardSoundtrack.jpg',
+        'https://upload.wikimedia.org/wikipedia/en/0/03/Whitney_Houston_-_The_Bodyguard.png',
     },
   },
   {
@@ -19,7 +19,7 @@ var SONGS = [
       name: 'The Greatest Love of All',
       rating: '2',
       'cover-url':
-        'https://upload.wikimedia.org/wikipedia/en/d/d2/Whitney_Houston_-_Whitney_Houston_%28album%29.jpg',
+        'https://upload.wikimedia.org/wikipedia/en/9/96/Whitney_Houston%2C_Self_Titled.png',
     },
   },
   {
@@ -29,7 +29,7 @@ var SONGS = [
       name: "It's Not Right, But It's Okay",
       rating: '3',
       'cover-url':
-        'https://upload.wikimedia.org/wikipedia/en/5/51/Whitney_Houston_-_My_Love_Is_Your_Love_album_cover.jpg',
+        'https://upload.wikimedia.org/wikipedia/en/7/7a/Whitney_Houston_%E2%80%93_My_Love_Is_Your_Love_%28album%29.png',
     },
   },
 ];

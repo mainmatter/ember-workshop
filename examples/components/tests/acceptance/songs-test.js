@@ -27,7 +27,7 @@ module('Acceptance | songs', function (hooks) {
               attributes: {
                 name: 'I will always love you',
                 'cover-url':
-                  'https://upload.wikimedia.org/wikipedia/en/f/f3/TheBodyguardSoundtrack.jpg',
+                  'https://upload.wikimedia.org/wikipedia/en/0/03/Whitney_Houston_-_The_Bodyguard.png',
                 rating: 1,
               },
             },
@@ -37,7 +37,7 @@ module('Acceptance | songs', function (hooks) {
               attributes: {
                 name: 'The Greatest Love of All',
                 'cover-url':
-                  'https://upload.wikimedia.org/wikipedia/en/d/d2/Whitney_Houston_-_Whitney_Houston_%28album%29.jpg',
+                  'https://upload.wikimedia.org/wikipedia/en/9/96/Whitney_Houston%2C_Self_Titled.png',
                 rating: 3,
               },
             },
@@ -66,7 +66,7 @@ module('Acceptance | songs', function (hooks) {
               attributes: {
                 name: 'I will always love you',
                 'cover-url':
-                  'https://upload.wikimedia.org/wikipedia/en/f/f3/TheBodyguardSoundtrack.jpg',
+                  'https://upload.wikimedia.org/wikipedia/en/0/03/Whitney_Houston_-_The_Bodyguard.png',
                 rating: 1,
               },
             },
@@ -76,7 +76,7 @@ module('Acceptance | songs', function (hooks) {
               attributes: {
                 name: 'The Greatest Love of All',
                 'cover-url':
-                  'https://upload.wikimedia.org/wikipedia/en/d/d2/Whitney_Houston_-_Whitney_Houston_%28album%29.jpg',
+                  'https://upload.wikimedia.org/wikipedia/en/9/96/Whitney_Houston%2C_Self_Titled.png',
                 rating: 3,
               },
             },
