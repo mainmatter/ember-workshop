@@ -2,10 +2,10 @@
 
 <form {{on "submit" this.authenticate}}>
   <label for="identification">Login</label>
-  <Input @id="identification" @type="text" @placeholder="Enter Login" @value={{this.identification}} />
+  <Input id="identification" @type="text" placeholder="Enter Login" @value={{this.identification}} />
 
   <label for="password">Password</label>
-  <Input @id="password" @type="password" @placeholder="Enter Password" @value={{this.password}} />
+  <Input id="password" @type="password" placeholder="Enter Password" @value={{this.password}} />
 
   <button type="submit">Login</button>
 

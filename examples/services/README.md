@@ -10,7 +10,7 @@ You will need the following things properly installed on your computer.
 * [Git](https://git-scm.com/)
 * [Node.js](https://nodejs.org/)
 * [pNPM](https://pnpm.io/)
-* [Ember CLI](https://ember-cli.com/)
+* [Ember CLI](https://cli.emberjs.com/release/)
 * [Google Chrome](https://google.com/chrome/)
 
 ## Installation
@@ -36,9 +36,9 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ### Linting
 
-* `pnpm lint:hbs`
-* `pnpm lint:js`
-* `pnpm lint:js --fix`
+* `pnpm run lint:hbs`
+* `pnpm run lint:js`
+* `pnpm run lint:js --fix`
 
 ### Building
 
@@ -52,7 +52,7 @@ Specify what it takes to deploy your app.
 ## Further Reading / Useful Links
 
 * [ember.js](https://emberjs.com/)
-* [ember-cli](https://ember-cli.com/)
+* [ember-cli](https://cli.emberjs.com/release/)
 * Development Browser Extensions
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)

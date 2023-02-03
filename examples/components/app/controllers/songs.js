@@ -1,6 +1,6 @@
 import Controller from '@ember/controller';
-import { action } from "@ember/object";
-import { tracked } from "@glimmer/tracking";
+import { action } from '@ember/object';
+import { tracked } from '@glimmer/tracking';
 
 export default class SongsController extends Controller {
   @tracked rating = null;

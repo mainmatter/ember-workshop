@@ -9,7 +9,7 @@ module("Integration | Component | component-a", function (hooks) {
   test("it renders", async function (assert) {
     await render(hbs`<ComponentA />`);
 
-    assert.equal(
+    assert.strictEqual(
       this.element.textContent.trim(),
       "This is Component A, defined in the Ember Addon!"
     );

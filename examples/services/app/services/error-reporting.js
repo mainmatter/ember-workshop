@@ -1,5 +1,5 @@
-import Service from "@ember/service";
-import { tracked } from "@glimmer/tracking";
+import Service from '@ember/service';
+import { tracked } from '@glimmer/tracking';
 
 export default class ErrorReportingService extends Service {
   @tracked errors = [];
@@ -9,6 +9,6 @@ export default class ErrorReportingService extends Service {
   }
 
   reportError(error) {
-    this.errors.pushObject(error);
+    this.errors = [...this.errors, error];
   }
 }

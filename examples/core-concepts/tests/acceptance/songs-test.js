@@ -23,7 +23,7 @@ module('Acceptance | songs', function(hooks) {
             type: "song",
             attributes: {
               name: "I will always love you",
-              "cover-url": "https://upload.wikimedia.org/wikipedia/en/f/f3/TheBodyguardSoundtrack.jpg"
+              "cover-url": "https://upload.wikimedia.org/wikipedia/en/0/03/Whitney_Houston_-_The_Bodyguard.png"
             }
           },
           {
@@ -31,7 +31,7 @@ module('Acceptance | songs', function(hooks) {
             type: "song",
             attributes: {
               name: "The Greatest Love of All",
-              "cover-url": "https://upload.wikimedia.org/wikipedia/en/d/d2/Whitney_Houston_-_Whitney_Houston_%28album%29.jpg"
+              "cover-url": "https://upload.wikimedia.org/wikipedia/en/9/96/Whitney_Houston%2C_Self_Titled.png"
             }
           }
         ]
@@ -39,9 +39,9 @@ module('Acceptance | songs', function(hooks) {
     });
     await visit('/songs');
 
-    assert.equal(currentURL(), '/songs');
-    assert.dom('img[src="https://upload.wikimedia.org/wikipedia/en/f/f3/TheBodyguardSoundtrack.jpg"]').exists();
-    assert.dom('img[src="https://upload.wikimedia.org/wikipedia/en/d/d2/Whitney_Houston_-_Whitney_Houston_%28album%29.jpg"]').exists();
+    assert.strictEqual(currentURL(), '/songs');
+    assert.dom('img[src="https://upload.wikimedia.org/wikipedia/en/0/03/Whitney_Houston_-_The_Bodyguard.png"]').exists();
+    assert.dom('img[src="https://upload.wikimedia.org/wikipedia/en/9/96/Whitney_Houston%2C_Self_Titled.png"]').exists();
     assert.dom('ul li.song').exists({ count: 2 });
     assert.dom(this.element).containsText('I will always love you');
     assert.dom(this.element).containsText('The Greatest Love of All');

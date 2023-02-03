@@ -5,13 +5,14 @@
   <dd>{{this.favoriteWhitneySong}}</dd>
 </dl>
 
+{{!-- template-lint-disable no-forbidden-elements --}}
 <style>
   .no-val { color: red; }
   .val { color: green; }
 </style>
 <div class={{if this.favoriteWhitneySong "val" "no-val"}}>
-  <label class="form-control-label">Change your choice:</label>
-  <input type="text" value={{this.favoriteWhitneySong}} {{on "change" this.updateFavoriteSong}}>
+  <label for="favorite-song-input" class="form-control-label">Change your choice:</label>
+  <input id="favorite-song-input" type="text" value={{this.favoriteWhitneySong}} {{on "change" this.updateFavoriteSong}}>
 </div>
 
 <div class="row">
@@ -40,6 +41,7 @@
 
     <form {{on "submit" this.submitForm}}>
       <fieldset class="form-group">
+        {{!-- template-lint-disable require-input-label --}}
         <Input @value={{this.favoriteWhitneySong}} />
         <button type="submit" class="btn btn-primary">Submit</button>
       </fieldset>

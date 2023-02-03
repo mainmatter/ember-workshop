@@ -8,7 +8,7 @@ module("Acceptance | smoke test", function (hooks) {
   test("visiting /", async function (assert) {
     await visit("/");
     let faIcons = document.querySelectorAll(".font-awesome-paragraph svg");
-    assert.equal(faIcons.length, 3, "it renders the fa icons");
+    assert.strictEqual(faIcons.length, 3, "it renders the fa icons");
 
     assert
       .dom("[data-highcharts-chart]")

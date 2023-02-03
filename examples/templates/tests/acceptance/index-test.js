@@ -8,7 +8,7 @@ module('Acceptance | index', function(hooks) {
   test('visiting / works', async function(assert) {
     await visit('/');
 
-    assert.equal(currentURL(), '/');
+    assert.strictEqual(currentURL(), '/');
   });
 
   test('it prefills the input fields', async function(assert) {

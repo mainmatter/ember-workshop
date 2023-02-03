@@ -27,7 +27,7 @@ module("Acceptance | smoke", function (hooks) {
               attributes: {
                 name: "I will always love you",
                 "cover-url":
-                  "https://upload.wikimedia.org/wikipedia/en/f/f3/TheBodyguardSoundtrack.jpg",
+                  "https://upload.wikimedia.org/wikipedia/en/0/03/Whitney_Houston_-_The_Bodyguard.png",
               },
             },
             {
@@ -36,7 +36,7 @@ module("Acceptance | smoke", function (hooks) {
               attributes: {
                 name: "The Greatest Love of All",
                 "cover-url":
-                  "https://upload.wikimedia.org/wikipedia/en/d/d2/Whitney_Houston_-_Whitney_Houston_%28album%29.jpg",
+                  "https://upload.wikimedia.org/wikipedia/en/9/96/Whitney_Houston%2C_Self_Titled.png",
               },
             },
           ],
@@ -54,16 +54,16 @@ module("Acceptance | smoke", function (hooks) {
     assert.dom(".song-count").hasText("2 songs");
 
     let songTiles = document.querySelectorAll(".song-tile");
-    assert.equal(songTiles.length, 2, "displays 2 songs tiles");
+    assert.strictEqual(songTiles.length, 2, "displays 2 songs tiles");
 
     let deleteBtns = document.querySelectorAll(".delete-btn");
-    assert.equal(deleteBtns.length, 2, "displays 2 delete buttons");
+    assert.strictEqual(deleteBtns.length, 2, "displays 2 delete buttons");
 
     await click(deleteBtns[0]);
     assert.dom(".song-count").hasText("1 songs");
 
     songTiles = document.querySelectorAll(".song-tile");
-    assert.equal(songTiles.length, 1, "displays 1 songs tile");
+    assert.strictEqual(songTiles.length, 1, "displays 1 songs tile");
 
     assert.dom(".list-view-item.active-item").doesNotExist();
     await triggerEvent(songTiles[0], "dblclick");

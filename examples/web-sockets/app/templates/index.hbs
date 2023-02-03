@@ -14,6 +14,7 @@
 
 <h3>Send Message</h3>
 <form {{on "submit" this.send}}>
+  {{!-- template-lint-disable require-input-label --}}
   <Input @type="text" @value={{this.text}}/>
   <button type="submit">Send</button>
 </form>
