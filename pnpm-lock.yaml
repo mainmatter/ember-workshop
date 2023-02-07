@@ -8,10 +8,10 @@ importers:
 
   .:
     specifiers:
-      '@fortawesome/fontawesome-svg-core': ^6.2.0
-      '@fortawesome/free-solid-svg-icons': ^5.15.4
+      '@fortawesome/fontawesome-svg-core': 6.2.1
+      '@fortawesome/free-solid-svg-icons': 5.15.4
     devDependencies:
-      '@fortawesome/fontawesome-svg-core': 6.2.0
+      '@fortawesome/fontawesome-svg-core': 6.2.1
       '@fortawesome/free-solid-svg-icons': 5.15.4
 
   examples/auth:
@@ -3050,24 +3050,10 @@ packages:
     requiresBuild: true
     dev: true
 
-  /@fortawesome/fontawesome-common-types/6.2.0:
-    resolution: {integrity: sha512-rBevIsj2nclStJ7AxTdfsa3ovHb1H+qApwrxcTVo+NNdeJiB9V75hsKfrkG5AwNcRUNxrPPiScGYCNmLMoh8pg==}
-    engines: {node: '>=6'}
-    requiresBuild: true
-    dev: true
-
   /@fortawesome/fontawesome-common-types/6.2.1:
     resolution: {integrity: sha512-Sz07mnQrTekFWLz5BMjOzHl/+NooTdW8F8kDQxjWwbpOJcnoSg4vUDng8d/WR1wOxM0O+CY9Zw0nR054riNYtQ==}
     engines: {node: '>=6'}
     requiresBuild: true
-    dev: true
-
-  /@fortawesome/fontawesome-svg-core/6.2.0:
-    resolution: {integrity: sha512-Cf2mAAeMWFMzpLC7Y9H1I4o3wEU+XovVJhTiNG8ZNgSQj53yl7OCJaS80K4YjrABWZzbAHVaoHE1dVJ27AAYXw==}
-    engines: {node: '>=6'}
-    requiresBuild: true
-    dependencies:
-      '@fortawesome/fontawesome-common-types': 6.2.0
     dev: true
 
   /@fortawesome/fontawesome-svg-core/6.2.1:
