@@ -4,7 +4,7 @@
     "examples/*"
   ],
   "resolutions": {
-    "@babel/plugin-transform-typescript": "7.20.13"
+    "@babel/plugin-transform-typescript": "7.21.0"
   },
   "pnpm": {
     "overrides": {
