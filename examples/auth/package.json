@@ -58,7 +58,7 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-qunit": "^7.3.4",
-    "express": "^4.17.1",
+    "express": "^4.19.2",
     "glob": "^7.1.7",
     "loader.js": "^4.7.0",
     "morgan": "^1.10.0",

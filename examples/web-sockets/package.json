@@ -52,7 +52,7 @@
     "eslint": "^8.31.0",
     "eslint-plugin-ember": "^11.2.1",
     "eslint-plugin-node": "^11.1.0",
-    "express": "^4.17.1",
+    "express": "^4.19.2",
     "glob": "^7.1.7",
     "http": "^0.0.0",
     "loader.js": "^4.7.0",
