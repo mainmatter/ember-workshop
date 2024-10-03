@@ -19,7 +19,7 @@
     }
   },
   "volta": {
-    "node": "18.15.0"
+    "node": "20.18.0"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-svg-core": "6.3.0",
