@@ -2,7 +2,7 @@ lockfileVersion: 5.4
 
 overrides:
   '@babel/parser': 7.17.3
-  ember-cli-htmlbars: ~6.1.1
+  ember-cli-htmlbars: ~6.3.0
 
 importers:
 
@@ -31,7 +31,7 @@ importers:
       ember-cli-app-version: ^5.0.0
       ember-cli-babel: ^7.26.11
       ember-cli-dependency-checker: ^3.3.1
-      ember-cli-htmlbars: ~6.1.1
+      ember-cli-htmlbars: ~6.3.0
       ember-cli-inject-live-reload: ^2.1.0
       ember-cli-sri: ^2.1.1
       ember-cli-terser: ^4.0.2
@@ -75,7 +75,7 @@ importers:
       ember-cli-app-version: 5.0.0
       ember-cli-babel: 7.26.11
       ember-cli-dependency-checker: 3.3.1_ember-cli@4.9.2
-      ember-cli-htmlbars: 6.1.1
+      ember-cli-htmlbars: 6.3.0
       ember-cli-inject-live-reload: 2.1.0
       ember-cli-sri: 2.1.1
       ember-cli-terser: 4.0.2
@@ -120,7 +120,7 @@ importers:
       ember-cli-app-version: ^5.0.0
       ember-cli-babel: ^7.26.11
       ember-cli-dependency-checker: ^3.3.1
-      ember-cli-htmlbars: ~6.1.1
+      ember-cli-htmlbars: ~6.3.0
       ember-cli-inject-live-reload: ^2.1.0
       ember-cli-sri: ^2.1.1
       ember-cli-terser: ^4.0.2
@@ -158,7 +158,7 @@ importers:
       ember-cli-app-version: 5.0.0
       ember-cli-babel: 7.26.11
       ember-cli-dependency-checker: 3.3.1_ember-cli@4.9.2
-      ember-cli-htmlbars: 6.1.1
+      ember-cli-htmlbars: 6.3.0
       ember-cli-inject-live-reload: 2.1.0
       ember-cli-sri: 2.1.1
       ember-cli-terser: 4.0.2
@@ -198,7 +198,7 @@ importers:
       ember-cli-app-version: ^5.0.0
       ember-cli-babel: ^7.26.11
       ember-cli-dependency-checker: ^3.3.1
-      ember-cli-htmlbars: ~6.1.1
+      ember-cli-htmlbars: ~6.3.0
       ember-cli-inject-live-reload: ^2.1.0
       ember-cli-sri: ^2.1.1
       ember-cli-terser: ^4.0.2
@@ -241,7 +241,7 @@ importers:
       ember-cli-app-version: 5.0.0
       ember-cli-babel: 7.26.11
       ember-cli-dependency-checker: 3.3.1_ember-cli@4.9.2
-      ember-cli-htmlbars: 6.1.1
+      ember-cli-htmlbars: 6.3.0
       ember-cli-inject-live-reload: 2.1.0
       ember-cli-sri: 2.1.1
       ember-cli-terser: 4.0.2
@@ -286,7 +286,7 @@ importers:
       ember-cli-app-version: ^5.0.0
       ember-cli-babel: ^7.26.11
       ember-cli-dependency-checker: ^3.3.1
-      ember-cli-htmlbars: ~6.1.1
+      ember-cli-htmlbars: ~6.3.0
       ember-cli-inject-live-reload: ^2.1.0
       ember-cli-sri: ^2.1.1
       ember-cli-terser: ^4.0.2
@@ -324,7 +324,7 @@ importers:
       ember-cli-app-version: 5.0.0
       ember-cli-babel: 7.26.11
       ember-cli-dependency-checker: 3.3.1_ember-cli@4.9.2
-      ember-cli-htmlbars: 6.1.1
+      ember-cli-htmlbars: 6.3.0
       ember-cli-inject-live-reload: 2.1.0
       ember-cli-sri: 2.1.1
       ember-cli-terser: 4.0.2
@@ -368,7 +368,7 @@ importers:
       ember-cli-app-version: ^5.0.0
       ember-cli-babel: ^7.26.11
       ember-cli-dependency-checker: ^3.3.1
-      ember-cli-htmlbars: ~6.1.1
+      ember-cli-htmlbars: ~6.3.0
       ember-cli-inject-live-reload: ^2.1.0
       ember-cli-sri: ^2.1.1
       ember-cli-terser: ^4.0.2
@@ -408,7 +408,7 @@ importers:
       ember-cli-app-version: 5.0.0
       ember-cli-babel: 7.26.11
       ember-cli-dependency-checker: 3.3.1_ember-cli@4.9.2
-      ember-cli-htmlbars: 6.1.1
+      ember-cli-htmlbars: 6.3.0
       ember-cli-inject-live-reload: 2.1.0
       ember-cli-sri: 2.1.1
       ember-cli-terser: 4.0.2
@@ -447,7 +447,7 @@ importers:
       ember-cli-app-version: ^5.0.0
       ember-cli-babel: ^7.26.11
       ember-cli-dependency-checker: ^3.3.1
-      ember-cli-htmlbars: ~6.1.1
+      ember-cli-htmlbars: ~6.3.0
       ember-cli-inject-live-reload: ^2.1.0
       ember-cli-sri: ^2.1.1
       ember-cli-terser: ^4.0.2
@@ -485,7 +485,7 @@ importers:
       ember-cli-app-version: 5.0.0
       ember-cli-babel: 7.26.11
       ember-cli-dependency-checker: 3.3.1_ember-cli@4.9.2
-      ember-cli-htmlbars: 6.1.1
+      ember-cli-htmlbars: 6.3.0
       ember-cli-inject-live-reload: 2.1.0
       ember-cli-sri: 2.1.1
       ember-cli-terser: 4.0.2
@@ -524,7 +524,7 @@ importers:
       ember-cli: ~4.9.2
       ember-cli-babel: ^7.26.11
       ember-cli-dependency-checker: ^3.3.1
-      ember-cli-htmlbars: ~6.1.1
+      ember-cli-htmlbars: ~6.3.0
       ember-cli-inject-live-reload: ^2.1.0
       ember-cli-sri: ^2.1.1
       ember-cli-terser: ^4.0.2
@@ -544,7 +544,7 @@ importers:
       webpack: ^5.75.0
     dependencies:
       ember-cli-babel: 7.26.11
-      ember-cli-htmlbars: 6.1.1
+      ember-cli-htmlbars: 6.3.0
     devDependencies:
       '@babel/eslint-parser': 7.19.1_eslint@8.35.0
       '@babel/plugin-proposal-decorators': 7.21.0
@@ -593,7 +593,7 @@ importers:
       ember-cli-app-version: ^5.0.0
       ember-cli-babel: ^7.26.11
       ember-cli-dependency-checker: ^3.3.1
-      ember-cli-htmlbars: ~6.1.1
+      ember-cli-htmlbars: ~6.3.0
       ember-cli-inject-live-reload: ^2.1.0
       ember-cli-sri: ^2.1.1
       ember-cli-terser: ^4.0.2
@@ -627,7 +627,7 @@ importers:
       ember-cli-app-version: 5.0.0
       ember-cli-babel: 7.26.11
       ember-cli-dependency-checker: 3.3.1_ember-cli@4.9.2
-      ember-cli-htmlbars: 6.1.1
+      ember-cli-htmlbars: 6.3.0
       ember-cli-inject-live-reload: 2.1.0
       ember-cli-sri: 2.1.1
       ember-cli-terser: 4.0.2
@@ -663,7 +663,7 @@ importers:
       ember-cli-app-version: ^5.0.0
       ember-cli-babel: ^7.26.11
       ember-cli-dependency-checker: ^3.3.1
-      ember-cli-htmlbars: ~6.1.1
+      ember-cli-htmlbars: ~6.3.0
       ember-cli-inject-live-reload: ^2.1.0
       ember-cli-sri: ^2.1.1
       ember-cli-terser: ^4.0.2
@@ -701,7 +701,7 @@ importers:
       ember-cli-app-version: 5.0.0
       ember-cli-babel: 7.26.11
       ember-cli-dependency-checker: 3.3.1_ember-cli@4.9.2
-      ember-cli-htmlbars: 6.1.1
+      ember-cli-htmlbars: 6.3.0
       ember-cli-inject-live-reload: 2.1.0
       ember-cli-sri: 2.1.1
       ember-cli-terser: 4.0.2
@@ -741,7 +741,7 @@ importers:
       ember-cli-app-version: ^5.0.0
       ember-cli-babel: ^7.26.11
       ember-cli-dependency-checker: ^3.3.1
-      ember-cli-htmlbars: ~6.1.1
+      ember-cli-htmlbars: ~6.3.0
       ember-cli-inject-live-reload: ^2.1.0
       ember-cli-sri: ^2.1.1
       ember-cli-terser: ^4.0.2
@@ -775,7 +775,7 @@ importers:
       ember-cli-app-version: 5.0.0
       ember-cli-babel: 7.26.11
       ember-cli-dependency-checker: 3.3.1_ember-cli@4.9.2
-      ember-cli-htmlbars: 6.1.1
+      ember-cli-htmlbars: 6.3.0
       ember-cli-inject-live-reload: 2.1.0
       ember-cli-sri: 2.1.1
       ember-cli-terser: 4.0.2
@@ -811,7 +811,7 @@ importers:
       ember-cli-app-version: ^5.0.0
       ember-cli-babel: ^7.26.11
       ember-cli-dependency-checker: ^3.3.1
-      ember-cli-htmlbars: ~6.1.1
+      ember-cli-htmlbars: ~6.3.0
       ember-cli-inject-live-reload: ^2.1.0
       ember-cli-sri: ^2.1.1
       ember-cli-terser: ^4.0.2
@@ -851,7 +851,7 @@ importers:
       ember-cli-app-version: 5.0.0
       ember-cli-babel: 7.26.11
       ember-cli-dependency-checker: 3.3.1_ember-cli@4.9.2
-      ember-cli-htmlbars: 6.1.1
+      ember-cli-htmlbars: 6.3.0
       ember-cli-inject-live-reload: 2.1.0
       ember-cli-sri: 2.1.1
       ember-cli-terser: 4.0.2
@@ -2661,7 +2661,7 @@ packages:
       broccoli-debug: 0.6.5
       broccoli-funnel: 3.0.8
       ember-cli-babel: 7.26.11
-      ember-cli-htmlbars: 6.1.1
+      ember-cli-htmlbars: 6.3.0
       ember-destroyable-polyfill: 2.0.3
       ember-source: 4.9.3_umjy2qep55frc2p7bsvims6xpm
     transitivePeerDependencies:
@@ -2801,7 +2801,7 @@ packages:
       camel-case: 4.1.2
       ember-ast-helpers: 0.3.5
       ember-cli-babel: 7.26.11
-      ember-cli-htmlbars: 6.1.1
+      ember-cli-htmlbars: 6.3.0
       ember-get-config: 2.1.1
       find-yarn-workspace-root: 2.0.0
       glob: 7.2.3
@@ -2898,6 +2898,12 @@ packages:
       '@simple-dom/interface': 1.4.0
     dev: true
 
+  /@glimmer/interfaces/0.94.6:
+    resolution: {integrity: sha512-sp/1WePvB/8O+jrcUHwjboNPTKrdGicuHKA9T/lh0vkYK2qM5Xz4i25lQMQ38tEMiw7KixrjHiTUiaXRld+IwA==}
+    dependencies:
+      '@simple-dom/interface': 1.4.0
+      type-fest: 4.41.0
+
   /@glimmer/reference/0.83.1:
     resolution: {integrity: sha512-BThEwDlMkJB1WBPWDrww+VxgGyDbwxh5FFPvGhkovvCZnCb7fAMUCt9pi6CUZtviugkWOBFtE9P4eZZbOLkXeg==}
     dependencies:
@@ -2935,6 +2941,15 @@ packages:
       simple-html-tokenizer: 0.5.11
     dev: true
 
+  /@glimmer/syntax/0.95.0:
+    resolution: {integrity: sha512-W/PHdODnpONsXjbbdY9nedgIHpglMfOzncf/moLVrKIcCfeQhw2vG07Rs/YW8KeJCgJRCLkQsi+Ix7XvrurGAg==}
+    dependencies:
+      '@glimmer/interfaces': 0.94.6
+      '@glimmer/util': 0.94.8
+      '@glimmer/wire-format': 0.94.8
+      '@handlebars/parser': 2.2.2
+      simple-html-tokenizer: 0.5.11
+
   /@glimmer/tracking/1.1.2:
     resolution: {integrity: sha512-cyV32zsHh+CnftuRX84ALZpd2rpbDrhLhJnTXn9W//QpqdRZ5rdMsxSY9fOsj0CKEc706tmEU299oNnDc0d7tA==}
     dependencies:
@@ -2966,6 +2981,11 @@ packages:
       '@simple-dom/interface': 1.4.0
     dev: true
 
+  /@glimmer/util/0.94.8:
+    resolution: {integrity: sha512-HfCKeZ74clF9BsPDBOqK/yRNa/ke6niXFPM6zRn9OVYw+ZAidLs7V8He/xljUHlLRL322kaZZY8XxRW7ALEwyg==}
+    dependencies:
+      '@glimmer/interfaces': 0.94.6
+
   /@glimmer/validator/0.44.0:
     resolution: {integrity: sha512-i01plR0EgFVz69GDrEuFgq1NheIjZcyTy3c7q+w7d096ddPVeVcRzU3LKaqCfovvLJ+6lJx40j45ecycASUUyw==}
     dev: true
@@ -2991,9 +3011,18 @@ packages:
       '@glimmer/util': 0.27.0
     dev: true
 
+  /@glimmer/wire-format/0.94.8:
+    resolution: {integrity: sha512-A+Cp5m6vZMAEu0Kg/YwU2dJZXyYxVJs2zI57d3CP6NctmX7FsT8WjViiRUmt5abVmMmRH5b8BUovqY6GSMAdrw==}
+    dependencies:
+      '@glimmer/interfaces': 0.94.6
+
   /@handlebars/parser/2.0.0:
     resolution: {integrity: sha512-EP9uEDZv/L5Qh9IWuMUGJRfwhXJ4h1dqKTT4/3+tY0eu7sPis7xh23j61SYUnNF4vqCQvvUXpDo9Bh/+q1zASA==}
     dev: true
+
+  /@handlebars/parser/2.2.2:
+    resolution: {integrity: sha512-n/SZW+12rwikx/f8YcSv9JCi5p9vn1Bnts9ZtVvfErG4h0gbjHI1H1ZMhVUnaOC7yzFc6PtsCKIK8XeTnL90Gw==}
+    engines: {node: ^18 || ^20 || ^22 || >=24}
 
   /@humanwhocodes/config-array/0.11.8:
     resolution: {integrity: sha512-UybHIJzJnR5Qc/MsD9Kr+RpO2h+/P1GhOwdiLPXK5TWk5sgTdu88bTD9UP+CKbPPh5Rni1u0GjAdYQLemG8g+g==}
@@ -3107,7 +3136,6 @@ packages:
 
   /@simple-dom/interface/1.4.0:
     resolution: {integrity: sha512-l5qumKFWU0S+4ZzMaLXFU8tQZsicHEMEyAxI5kDFGhJsRqDwe0a7/iPA/GdxlGyDKseQQAgIz5kzU7eXTrlSpA==}
-    dev: true
 
   /@sindresorhus/is/0.14.0:
     resolution: {integrity: sha512-9NET910DNaIPngYnLLPeg+Ogzqsi9uM4mSboU5y6p8S5DzMTVEsJZrawi+BoDNUVBa2DhJqQYUFvMDfgU062LQ==}
@@ -3832,6 +3860,11 @@ packages:
   /babel-import-util/1.3.0:
     resolution: {integrity: sha512-PPzUT17eAI18zn6ek1R3sB4Krc/MbnmT1MkZQFmyhjoaEGBVwNABhfVU9+EKcDSKrrOm9OIpGhjxukx1GCiy1g==}
     engines: {node: '>= 12.*'}
+    dev: true
+
+  /babel-import-util/3.0.1:
+    resolution: {integrity: sha512-2copPaWQFUrzooJVIVZA/Oppx/S/KOoZ4Uhr+XWEQDMZ8Rvq/0SNQpbdIyMBJ8IELWt10dewuJw+tX4XjOo7Rg==}
+    engines: {node: '>= 12.*'}
 
   /babel-loader/8.3.0_tkx7iv5lytdmlhrwm4n6r336ei:
     resolution: {integrity: sha512-H8SvsMF+m9t15HNLMipppzkC+Y2Yq+v3SonZyU70RBL/h1gxPkH08Ot8pEE9Z4Kd+czyWJClmFS8qzIP9OZ04Q==}
@@ -3899,14 +3932,12 @@ packages:
     dependencies:
       ember-rfc176-data: 0.3.18
 
-  /babel-plugin-ember-template-compilation/1.0.2:
-    resolution: {integrity: sha512-4HBMksmlYsWEf/C/n3uW5rkBRbUp4FNaspzdQTAHgLbfCJnkLze8R6i6sUSge48y/Wne7mx+vcImI1o6rlUwXQ==}
+  /babel-plugin-ember-template-compilation/2.4.1:
+    resolution: {integrity: sha512-n+ktQ3JeyWrpRutSyPn2PsHeH+A94SVm+iUoogzf9VUqpP47FfWem24gpQXhn+p6+x5/BpuFJXMLXWt7ZoYAKA==}
     engines: {node: '>= 12.*'}
     dependencies:
-      babel-import-util: 1.3.0
-      line-column: 1.0.2
-      magic-string: 0.26.7
-      string.prototype.matchall: 4.0.8
+      '@glimmer/syntax': 0.95.0
+      babel-import-util: 3.0.1
 
   /babel-plugin-filter-imports/4.0.0:
     resolution: {integrity: sha512-jDLlxI8QnfKd7PtieH6pl4tZJzymzfCDCPGdTq/grgbiYAikwDPp/oL0IlFJn0HQjLpcLkyYhPKkUVneRESw5w==}
@@ -5832,12 +5863,12 @@ packages:
     resolution: {integrity: sha512-k47TDwcJ2zPideBCZE8sCiShSxQSpebY2BHcX2DdipMmBox5gsfyVrbKJWIHeSTTKyEUgmBIvQkqTOozEziCZA==}
     dev: true
 
-  /ember-cli-htmlbars/6.1.1:
-    resolution: {integrity: sha512-DKf2rjzIVw9zWCuFsBGJScrgf5Mz7dSg08Cq+FWFYIxnpssINUbNUoB0NHWnUJK4QqCvaExOyOmjm0kO455CPg==}
+  /ember-cli-htmlbars/6.3.0:
+    resolution: {integrity: sha512-N9Y80oZfcfWLsqickMfRd9YByVcTGyhYRnYQ2XVPVrp6jyUyOeRWmEAPh7ERSXpp8Ws4hr/JB9QVQrn/yZa+Ag==}
     engines: {node: 12.* || 14.* || >= 16}
     dependencies:
       '@ember/edition-utils': 1.2.0
-      babel-plugin-ember-template-compilation: 1.0.2
+      babel-plugin-ember-template-compilation: 2.4.1
       babel-plugin-htmlbars-inline-precompile: 5.3.1
       broccoli-debug: 0.6.5
       broccoli-persistent-filter: 3.1.3
@@ -7928,6 +7959,7 @@ packages:
 
   /glob/5.0.15:
     resolution: {integrity: sha512-c9IPMazfRITpmAAKi22dK1VKxGDX9ehhqfABDriL/lzO92xcUKEJPQHrVA/2YHSNFB4iFlykVmWvwo48nr3OxA==}
+    deprecated: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
     dependencies:
       inflight: 1.0.6
       inherits: 2.0.4
@@ -8349,6 +8381,7 @@ packages:
 
   /inflight/1.0.6:
     resolution: {integrity: sha512-k92I/b08q4wvFscXCLvqfsHCrjrF7yiXsQuIVvVE7N82W3+aqpzuUdBbfhWcy/FZR3/4IgflMgKLOsvPDrGCJA==}
+    deprecated: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
     dependencies:
       once: 1.4.0
       wrappy: 1.0.2
@@ -9259,12 +9292,6 @@ packages:
 
   /magic-string/0.25.9:
     resolution: {integrity: sha512-RmF0AsMzgt25qzqqLc1+MbHmhdx0ojF2Fvs4XnOqz2ZOBXzzkEwc/dJQZCYHAn7v1jbVOjAZfK8msRn4BxO4VQ==}
-    dependencies:
-      sourcemap-codec: 1.4.8
-
-  /magic-string/0.26.7:
-    resolution: {integrity: sha512-hX9XH3ziStPoPhJxLq1syWuZMxbDvGNbVchfrdCtanC7D13888bMFow61x8axrx+GfHLtVeAx2kxL7tTGRl+Ow==}
-    engines: {node: '>=12'}
     dependencies:
       sourcemap-codec: 1.4.8
 
@@ -10673,6 +10700,7 @@ packages:
 
   /rimraf/2.6.3:
     resolution: {integrity: sha512-mwqeW5XsA2qAejG46gYdENaxXjx9onRNCfn7L0duuP4hCuTIi/QO7PDK07KJfp1d+izWPrzEJDcSqBa0OZQriA==}
+    deprecated: Rimraf versions prior to v4 are no longer supported
     hasBin: true
     dependencies:
       glob: 7.2.3
@@ -10680,12 +10708,14 @@ packages:
 
   /rimraf/2.7.1:
     resolution: {integrity: sha512-uWjbaKIK3T1OSVptzX7Nl6PvQ3qAGtKEtVRjRuazjfL3Bx5eI409VZSqgND+4UNnmzLVdPj9FqFJNPqBZFve4w==}
+    deprecated: Rimraf versions prior to v4 are no longer supported
     hasBin: true
     dependencies:
       glob: 7.2.3
 
   /rimraf/3.0.2:
     resolution: {integrity: sha512-JZkJMZkAGFFPP2YqXZXPbMlMBgsxzE8ILs4lMIX/2o0L9UBw9O/Y3o6wFw/i9YLapcUJWwqbi3kdxIPdC62TIA==}
+    deprecated: Rimraf versions prior to v4 are no longer supported
     hasBin: true
     dependencies:
       glob: 7.2.3
@@ -11014,7 +11044,6 @@ packages:
 
   /simple-html-tokenizer/0.5.11:
     resolution: {integrity: sha512-C2WEK/Z3HoSFbYq8tI7ni3eOo/NneSPRoPpcM7WdLjFOArFuyXEjAoCdOC3DgMfRyziZQ1hCNR4mrNdWEvD0og==}
-    dev: true
 
   /slash/3.0.0:
     resolution: {integrity: sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==}
@@ -11795,6 +11824,10 @@ packages:
     resolution: {integrity: sha512-t0rzBq87m3fVcduHDUFhKmyyX+9eo6WQjZvf51Ea/M0Q7+T374Jp1aUiyUl0GKxp8M/OETVHSDvmkyPgvX+X2w==}
     engines: {node: '>=10'}
     dev: true
+
+  /type-fest/4.41.0:
+    resolution: {integrity: sha512-TeTSQ6H5YHvpqVwBRcnLDCBnDOHWYu7IvGbHT6N8AOymcr9PJGjc1GTtiWZTYg0NCgYwvnYWEkVChQAr9bjfwA==}
+    engines: {node: '>=16'}
 
   /type-is/1.6.18:
     resolution: {integrity: sha512-TkRKr9sUTxEH8MdfuCSP7VizJyzRNMjj2J2do2Jr3Kym598JVdEksuzPQCnlFPW4ky9Q+iA+ma9BGm06XQBy8g==}
