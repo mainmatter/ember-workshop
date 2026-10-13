@@ -9,7 +9,7 @@
   "pnpm": {
     "overrides": {
       "@babel/parser": "7.17.3",
-      "ember-cli-htmlbars": "~6.1.1"
+      "ember-cli-htmlbars": "~6.3.0"
     },
     "peerDependencyRules": {
       "ignoreMissing": [
